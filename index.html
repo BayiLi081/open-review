@@ -1,124 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Progress Report</title>
+    <title>Bayi's academic repo</title>
     <link href="imgs/logo.svg" rel="icon" type="image/svg"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="src/custom.css" />
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-      body {
-        font-family: 'Droid Serif', serif;
-        font-size: 1.2em;
-        color: #333;
-        background: #fff;
-        margin: 0;
-        padding: 0;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Droid Serif';
-        font-weight: normal;
-        margin: 0em;
-        padding: 0em;
-        margin-bottom: 15px !important; 
-      }
-
-      h1 { 
-        font-size: 2.5em;
-        color: #00A6D6;
-        font-weight: bold;
-      }
-      h2 { 
-        font-size: 1.6em;
-        color: #00A6D6;
-        font-weight: bold;
-      }
-      h3 {
-        font-size: 1.3  em;
-      }
-      h4 { font-size: 1.2em; }
-      h5 { font-size: 1em; }
-      h6 { font-size: 0.8em; }
-
-      .inverse {
-        background: #272822;
-        color: #777872;
-        text-shadow: 0 0 20px #333;
-      }
-      .inverse h1, .inverse h2 {
-        color: #00A6D6;
-        line-height: 0.8em;
-      }
-      code {
-        word-wrap: break-word;
-        white-space:pre-wrap;
-      }
-      a {
-        color: #777872;
-        text-decoration: underline;
-      }
-      strong {
-        color: #00A6D6;
-        text-decoration: none;
-      }
-      keyword {
-        font-weight: bold;
-        text-decoration: none;
-      }
-      .task {
-        float: right;
-        font-size: 0.9em;
-        padding-top: 0.6em;
-      }
-      .task a {
-        color: #080;
-        text-decoration: none;
-      }
-      .right {
-        float: right;
-        margin-left: 1em;
-      }
-      .pushdown {
-        margin-top: 12em;
-      }
-
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-
-      .image-40 img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-      }
-
-      .image-50 img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-      }
-
-      .image-60 img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
-      }
-
-      .image-75 img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%;
-      }
-        #slideshow .slide > .left
-        {
-          text-align: left;
-        }
-
-      #slideshow .slide .content { font-family: 'Consolas', monospace; font-size: 24px; }
-      iframe { border: 0; width: 100%; }
     </style>
   </head>
   <body>
@@ -201,6 +91,8 @@ To view the progress on SLR, please go to the following url
 
 https://www.bayi.in/paper-review
 
+Open https://github.com/BayiLi081/ABM-Economic-Inequality/blob/main/research_design/architecture/ResearchDesignStructure.svg to view the research theoretical framwork. ([the original github repo](https://github.com/BayiLi081/ABM-Economic-Inequality))
+
 ---
 
 
@@ -229,11 +121,22 @@ The life course model will be a simplified version of the real life course with 
 
 ### Life course model
 
-#### The trigger events 
+#### The life events 
 
-Micro life events will **trigger the relocation desire** and affect **the the preference and affordability** of the household. These micro events refer to the life course of the household, such as the birth of a child, the death of a family member, the change of job, the change of marital status, etc.
+Micro life events, happening in a household or individual life trajectory, could **trigger the relocation desire** and affect **the preference for residence and affordability for the move**. These micro events involved with, residential and economic mobility, can be further categorised into individual and family events. life course of the household, such as the birth of a child, the death of a family member, the change of job, the change of marital status, etc.
 
-*Macro events refer included unexpected events such as the economic crisis, the pandemic, the war, etc, also long term regulation from upper level. The unexpected events will not be included for not being our focus, but the **more consistent macro regulators** such as the interest rate, immigrants number and employment rate will be included in the exogenous dynamics section.*
+<!-- the table of representative life events -->
+
+| Type | Event |
+| --- | --- |
+| **Individual Event** | Job switch, decease, etc. |
+| **Family Event** | Marry, divorce, give birth, etc. |
+
+These events will act as trigger of further responses on residential and economic mobility.
+
+*Notes: Macro events refer included unexpected events such as the economic crisis, the pandemic, the war, etc, also long term regulation from upper level. The unexpected events will not be included for not being our focus, but the **more consistent macro regulators** such as the interest rate, immigrants number and employment rate will be included in the exogenous dynamics section.*
+
+---
 
 #### The preference
 

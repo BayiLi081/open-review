@@ -1,0 +1,134 @@
+body {
+  font-family: 'Droid Serif', serif;
+  font-size: 1.2em;
+  color: #333;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Droid Serif';
+  font-weight: normal;
+  margin: 0em;
+  padding: 0em;
+  margin-bottom: 15px !important; 
+}
+
+h1 { 
+  font-size: 2.5em;
+  color: #00A6D6;
+  font-weight: bold;
+}
+h2 { 
+  font-size: 1.6em;
+  color: #00A6D6;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.3em;
+}
+h4 { font-size: 1.2em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.8em; }
+
+em { 
+  font-size: 0.75em;
+  font-style: italic; 
+  color: #777872;
+}
+
+.caption {
+  font-size: 0.8em;
+  position: fixed;
+  left: 50%;
+  color: #777872;
+  font-style: italic;
+  margin-top: -20px;
+  opacity: 0.7;
+}
+
+blockquote { 
+  font-size: 0.8em;
+  color: #777872;
+  font-style: italic;
+  opacity: 0.7;
+}
+.inverse {
+  background: #272822;
+  color: #777872;
+  text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2 {
+  color: #00A6D6;
+  line-height: 0.8em;
+}
+code {
+  word-wrap: break-word;
+  white-space:pre-wrap;
+}
+a {
+  color: #777872;
+  text-decoration: underline;
+}
+strong {
+  color: #00A6D6;
+  text-decoration: none;
+}
+keyword {
+  font-weight: bold;
+  text-decoration: none;
+}
+.task {
+  float: right;
+  font-size: 0.9em;
+  padding-top: 0.6em;
+}
+.task a {
+  color: #080;
+  text-decoration: none;
+}
+.right {
+  float: right;
+  margin-left: 1em;
+}
+.pushdown {
+  margin-top: 12em;
+}
+
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+.image-40 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  margin-bottom: 30px;
+}
+
+.image-50 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.image-60 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.image-75 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+  #slideshow .slide > .left
+  {
+    text-align: left;
+  }
+
+#slideshow .slide .content { font-family: 'Consolas', monospace; font-size: 24px; }
+iframe { border: 0; width: 100%; }
