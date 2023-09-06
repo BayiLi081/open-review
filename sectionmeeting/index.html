@@ -5,6 +5,7 @@
     <link href="../imgs/logo.svg" rel="icon" type="../image/svg"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="../src/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../src/font-awesome.min.css">
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
@@ -13,6 +14,11 @@
   </head>
   <body>
     <textarea id="source">
+
+layout: true
+<div class="my-footer"><img src="../imgs/TUBK_Logo_ URBA.svg" alt></div>
+
+---
 
 class: top, center
 
@@ -30,7 +36,7 @@ Progress Report:
 
 Bayi Li
 
-Date: August 2023
+Date: September 2023
  
 ???
 10s
@@ -44,147 +50,174 @@ Hi, today I am going to introduce the current working progress about my PhD proj
 ### Personal trajectory
 
 .image-70[![](../imgs/cv-migration.svg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
 
 ???
 30s
 
-I will start with some brief introduction of myself. I grew up in a small town in the middle China, then migrated to the big city, Guangzhou, in the southern part of China. I got into urban planning for my undergraduate study in Shanghai, and master degree of GIS at Edinburgh. I got a job as GIS analyst in Reading then switch my career to academia, as a research assistant, in Singapore.
+- I'd like to start by giving you a brief introduction to my background and academic journey.
+
+- I grew up in a small town in the southern but close to middle of China.
+
+- Later, I migrated to the Guangzhou with my family, one of the biggest cities in the real southern part.
+
+- I finished my undergraduate studies in the Shanghai University, then steered myself for my master's degree in Geographical Information Science at Edinburgh.
+
+- After completing my master's degree, I took on the role of a GIS analyst in Reading. Then I joined a research team as a research assistant in Singapore, where I started my research career. Finally, I am here, as a PhD student.
+
+- The crazy migration trajectory is not only a personal experience, but also an example of migration driven by life events, which is one of the key components of my research. I will talk about it later.
 
 ---
 
-## Overview
+<!-- About Agent-Based Modelling -->
 
-### Purpose
+## About Agent-Based Modelling (ABM)
 
-To simulate the urban economic segregation as collective social phenomena of residential mobility and economic mobility over individual's life course.
+.right[.image-90[![](../imgs/whatisABM.svg)]
+.caption[.center[Figure. The basic structure of an agent-based model <br> adapted from (Nikolic, 2012; Manley, 2013)]]]
 
----
+ABM is a bottom-up approach to modelling, which builds understanding of **complex social phenomena** from **individual behaviours** regulated by <u>simple rules and interactions</u>.
 
-## Overview
+> The components of an agent-based model are <u>a collection of agents and their states</u>, <u>the rules</u> governing the **interactions of the agents** and <u>the environment</u> within which they live. (Shalizi, 2006)
 
-### Process overview and scheduling
+**Active agents** are the <u>entities (human actors)</u> that can move around and interact with each other. **Passive agents** are the <u>environment</u> where the active agents live in.
+
+The active agents are guided by **rules** that define their behaviour and interaction. The rules are based on the **dynamic attributes** (e.g., own states, social tie, etc) and the **static attributes** (e.g., the social norms, etc).
+
+Active agents **interact** with each other and the passive agents, altering their states. The <u>social and environmental impacts</u> contribute to **the phenomena of the system** collectively.
 
 ???
 
----
+- ABM is a bottom-up approach to modelling.
 
-## Design concepts
+- It aims to understand complex social phenomena by simulating individual behaviours governed.
 
-- Basic principles
+- The components of an agent-based model consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment within which they live.
 
-  What are the general concepts and theories underlying the model’s design?
+- Active agents in agent-based modeling are the entities, often represented as human actors, capable of moving around and interacting with each other.
 
-- Emergence
+- Passive agents represent the environment in which the active agents reside.
 
-  What emerges from the model (rather than being imposed)?
+- The behaviour of active agents is guided by rules that define how they behave and interact with each other.
 
-- Adaptation
+- These rules are based on both dynamic attributes (such as the agent's own states and social ties) and static attributes (such as social norms).
 
-  How do the agents adapt to improve their fitness? (Directly and indirectly)
+- Active agents interact with each other and with the environment.
 
-- Fitness
+- These interactions lead to changes in the state of the system.
 
-  What are the goals of the agents? What determines their survival?
-
-- Learning
-
-  Do individuals change their behavior as a consequence of their experience?
-
-???
+- These social and environmental impacts collectively contribute to the emergence of phenomena within the system.
 
 ---
 
-## Design concepts
-
-- Prediction
-
-  How do agents predict the consequences of their decisions?
-  
-  Use of learning, memory, environmental cues, embedded assumptions
-
-- Sensing
-
-  What are agents assumed to know or perceive when making decisions?
-  
-  Is the sensing process itself explicitly modelled?
-
-- Interaction
-
-  What forms of interaction among agents are there?
-
----
-
-## Design concepts
-
-- Stochasticity
-
-  Justification for any stochasticity in the model
-
-- Collectives
-
-  Grouping of individuals
-
-- Observation
-
-  How are data collected from the model for analysis?
-
-???
-
----
+<!-- Supplementary notes on the general ABM -->
 
 ## About ABM
 
-### What is Agent-Based Modelling?
+### Approaches of ABM
 
-<!-- #### Elements -->
+.right[.image-90[![](../imgs/design/typeofABM.svg)]
+.caption[.center[Approaches and theory basis to design agents’ behaviours in ABMs <br>(adapted from Ravaioli et al. (2023) and Mehdizadeh (2022))]]]
 
-<!-- - Agents that can move around and interact -->
+- **Theory-based ABM**
 
-<!-- - A world or environment for them to operate in -->
+  The pros of theory-based model is that it is more interpretable and generalisable, but the cons is that it may oversimplify the reality.
 
-<!-- --- -->
+- **Heuristic ABM**
 
-<!-- ## About ABM -->
+  The pros of heuristic model is that it is more flexible and exploratory, but the cons is that it has limited generalisability and more subjectivity.
 
-<!-- #### Core Themes -->
+- **Data-driven ABM**
+  
+  The pros of data-driven model is that it is more accurate, but the cons is that it is hard to interpret and understand the model.
 
-<!-- - Behaviour modelling -->
+*Notes: Data driven ABM rises from the development of machine learning and big data. But given that one of our research aim is to understand the mechanism of urban economic segregation, we will not be focusing on this approach.*
 
-<!-- Each agent has a rule set of their own that defines how they gonna behave and react. -->
+???
 
-<!-- - Modelling interactions -->
+The behaviour of agents is based on the well-established theories of human behaviour.
 
-<!-- Action in real world is infinite. Careful selection of finite sets of actions and interactions is required to avoid bias to the target (UES). -->
+The behaviour rule of agents is adopted ad hoc implementations of agents’ behaviours based on the knowledge and data collected for the specific case study and without theoretical justifications.
 
-<!-- - Scaling -->
-
-<!-- The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take. -->
-
-<!-- Modelling a city or country could be extremely computational consuming but not impossible as the development of computing power and new framework (e.g., distributed discrete event simulation) -->
-
-<!-- References: -->
-
-<!-- 1. [Agent-based Modelling for Digital Twins](https://www.slingshotsimulations.com/slingshot-life/agent-based-modelling-for-digital-twins/) -->
-<!-- 2. [] -->
-
-<!-- --- -->
-
-<!-- ## Propostions / Hypothesis -->
-
-<!-- ??? -->
-
-<!-- --- -->
-
-# Progress on SLR
-
-To view the progress on SLR, please go to the following url
-
-https://www.bayi.in/paper-review
-
-Open https://github.com/BayiLi081/ABM-Economic-Inequality/blob/main/research_design/architecture/ResearchDesignStructure.svg to view the research theoretical framwork. ([the original github repo](https://github.com/BayiLi081/ABM-Economic-Inequality))
+The behaviour of agents completely relies on the data collected from the real world. 
 
 ---
+
+<!-- The overview of the ABM's theoretical framework -->
+
+# Overview
+
+.right[.image-80[![](../imgs/design/theoreticalframework.svg)]
+.caption[.center[Figure. Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
+
+## The target social phenomena
+
+**Urban economic segregation**
+
+> The uneven distribution of groups with **different economic status** across **residential neighbourhoods** of a city or an urban region (adapted from Van Ham et al. (2021)).
+
+Two fundamental questions:
+
+- Why do people choose to live where they live?
+
+- How the their economic status change over time?
+
+## Purpose
+
+- To simulate the urban economic segregation as collective social phenomena of <u>micro residential mobility and economic mobility behaviours</u> over individual's life course.
+
+- To gain a deeper understanding of the broader social dynamics and their interplay that contribute to urban economic segregation.
+
+- To provide simulated evidence from scenarios modelling of policy interventions for policy makers.
+
+???
+
+- Our research focuses on the social phenomenon: "Urban economic segregation." We interpret this term as the spatial differences between households with different economic status. It indicates two essential aspects: location and economic status. (Van Ham et al., 2021: Urban Socio-Economic Segregation and Income Inequality: A Global Perspective)
+
+- Therefore, we aim to address two fundamental questions:
+
+  1. "Why do people live where they live?" - This question addresses the factor of residential choices. This facet examines how individuals make decisions about where they choose to live within an urban area.
+
+  2. "How does an individual's economic status change over time?" - This question pertains to the dynamics of economic mobility. This aspect explores how an individual's economic status evolves over their life course.
+
+- From the framework, the micro social simulation at large scale connects the housing decision, economic behaviours and the economic segregation.
+
+- We are able to observe the processes of these components, and gain a deeper understanding of the broader social dynamics.
+
+- The ABM is nature to create a virtual environment to test the impact of policy interventions. The knowledge gained from the simulation can inform policies and interventions aimed at creating more equitable urban environments.
+
+---
+
+# Review
+
+## The key actors
+
+The key actors 
+
+Depending on the social phenomena and mechanism selected, the key actors of the model are different. The key actors of the model are summarised as the following table:
+
+- **Household**
+
+  The household is the key actor of the model, which is the basic unit of the model. The household is the agent of the model, which is the active agent of the model. The household is the environment of the model, which is the passive agent of the model.
+
+- **Renter/Tenant and homeowner**
+
+---
+
+# Review
+
+## Decision and behaviour Rules
+
+The theory-based model is prominent in the literature of ABM of urban economic segregation. The key actors and their decision and behaviour rules are summarised as the following table:
+
+---
+
+# Review
+
+## The key mechanisms
+
+- Pure theory-based ABM 
+
+- The life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model [1, ] to the more dynamic life course model [2, ].
 
 Three central components of migration behaviour include (Wolpert, 1965):
 
@@ -196,13 +229,90 @@ Three central components of migration behaviour include (Wolpert, 1965):
 
 ---
 
+# Overview
+
+## Project structure
+
+Expected contribution and outcomes
+
+| Year | Expected Outcomes | Expected Contribution |
+| --- | --- | --- |
+| 1 | A review on ABM and UES;  | - Identify the key actors and key mechanisms |
+| | A prototype model focus on residential mobility based on case of Groningen | - Identify the insufficiency of previous similar works |
+| | | - Finish the design the preliminary model framework |
+| | | - Identify the key challenges and potential solutions |
+| | | - Test the performance of residential mobility component in a abstracted social context from reality |
+| | | - Build the foundation from the key component to be extended in next phase |
+| - - - | - - - - - - - - - - - - - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 2 | A further development on other components | - Expand the single component model to full model |
+| | calibration and validation based on the case of Groningen | - Identify the optimal parameter input space to acquire  |
+
+???
+
+presenting a empirically specified model that demonstrates how urban economic segregation pattern emerges from rules, local context and interactions.
+
+---
+
+# Overview
+
+## Project structure
+
+Expected contribution and outcomes
+
+| Year | Expected Outcomes | Expected Contribution |
+| --- | --- | --- |
+| 3 | Scale up to the regional and national level; |  |
+| | A resource-effective large scale ABM  |  |
+| - - - | - - - - - - - - - - - - - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+| 4 | Policy scenario analysis; | - Provide practical recommendations and strategies to reduce segregation pattern |
+| | Test of extended model incorporating more contextual factors | - Potential refinements to  |
+
+???
+
+presenting a empirically specified model that demonstrates how urban economic segregation pattern emerges from rules, local context and interactions.
+
+---
+
+# Overview
+
+.right[![](../imgs/design/ResearchDesignStructure_supersimplified.svg)
+.caption[.center[Figure. the theory of life in ABM<br>and the key events to segregation]]]
+
+## Process overview
+
+- From the framework, the micro social simulation at large scale connects the housing decsision, economic behaviours and the economic segregation.
+
+- We are able to observe the processes of these components, and gain a deeper understanding of the broader social dynamics.
+
+- The ABM is nature to create a virtual environment to test the impact of policy interventions. The knowledge gained from the simulation can inform policies and interventions aimed at creating more equitable urban environments.
+
+---
+
+# Overview
+
+.right[![](../imgs/design/Combine_Process_granularFramework.svg)
+.caption[.center[Figure. the theory of life in ABM<br>and the key events to segregation]]]
+
+## Scheduling
+
+- From the framework, the micro social simulation at large scale connects the housing decsision, economic behaviours and the economic segregation.
+
+- We are able to observe the processes of these components, and gain a deeper understanding of the broader social dynamics.
+
+- The ABM is nature to create a virtual environment to test the impact of policy interventions. The knowledge gained from the simulation can inform policies and interventions aimed at creating more equitable urban environments.
+
+
+???
+
+---
+
 ## Prototype Model design
 
 *focus on residential mobility*
 
 I propose **Groningen, the Netherlands** as the case study of this research. 
 
-.image-50[![](../imgs/nl_casestudy_locationdes.jpg)]
+.image-45[![](../imgs/nl_casestudy_locationdes.jpg)]
 .caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
 
 The environment we used in the prototype model is a centre area bounded by regional roads within the [Functional Urban Areas (FUA) by country developed by OECD and the European Commission](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm), each of which consists of a densely inhabited city and of a surrounding area (commuting zone). The population of FUA of Groningen is 194, 340 (474, 000 (total population) \* 41%) in 2011 census, and the population of our selected area is **105, 766** (estimated of 2010 CBS grid).
@@ -211,15 +321,9 @@ The environment we used in the prototype model is a centre area bounded by regio
 
 The reason is that it is more a standalone city than a metropolitan region which is more suitable for the preliminary stage of this research. The migration flow in and out of the city system is easier to measure and parameterized.
 
----
-
-## Roadmap to the prototype model
-
 A model environment that approximates the socio-demographic characteristics and spatial distribution of the population of Groningen, the Netherlands.
 
 The first study will be a mechanistic study, I do not intend these models to accurately predict real-world levels of segregation. Rather, I intend this work to highlight potential mechanisms through which social network, market behaviours and life trajectory may interact to contribute to urban economic segregation. Other mechanism mentioned will be simplified for ease of interpretation,
-
----
 
 Home location and economic change, contributing to the collective spatial pattern of economic segregation, were triggered by the events happening in the life course of each individual. 
 
@@ -227,23 +331,49 @@ In this light, the interrelated components will be design to modelling xx and th
 
 ---
 
+## Entities
+
+.image-50[![](../imgs/design/entity-des/entities_overview.svg)]
+.caption[.center[Figure. The entities in the model and their attributes.]]
+
+---
+
+## Entities
+
+### Attributes Measurement
+
+.image-50[![](../imgs/design/entity-des/passive_agents_des.svg)]
+.caption[.center[Figure. The passive agents (Spatial units and Living units) and their attributes.]]
+
+Passive agents, including spatial units and living units, are the environment where the active agents live in. The spatial units are the grids of the city, and the living units are the housing units in the grids. The attributes of the passive agents are the spatial attributes and the housing attributes.
+
+---
+
+## The life course component
+
 ### Life course model
 
 The life course model will be a simplified version of the real life course with **fundamental stages and essential events**. The evolution of household (e.g., household formation, household dissolution, etc), the individual (e.g., birth, death, etc) have been investigated and validated to have impact on residential choice (). Most of them will be parameterlised based on probability distribution mirroring the empirical data; some of them follows the change of life stage.
 
-.image-40[![](./imgs/example_life_course.svg)]
-*Figure. An example of life trajectory, events and impact on household characteristics.*
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+.image-70[![](../imgs/design/lifecoursemodel/example_life_course.svg)]
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]
 
 *The evolution of social network (e.g., friendship, family tie, etc) accompnies with the life courses change, which will be discussed in the social network component seperately.*
 
 ---
 
+## The life course component
+
 ### Life course model
 
-#### The life events 
+#### The life events
 
-Micro life events, happening in a household or individual life trajectory, could **trigger the relocation desire** and affect **the preference for residence and affordability for the move**. These micro events involved with, residential and economic mobility, can be further categorised into individual and family events. life course of the household, such as the birth of a child, the death of a family member, the change of job, the change of marital status, etc.
+.right[.image-80[![](../imgs/design/lifecoursemodel/example_life_event.svg)]
+.caption[.center[Figure. The key life stages and life events of a household <br> and their impact on other components.]]]
+
+Micro life events, happening in a household or individual life trajectory, could trigger the relocation desire and affect the preference for residence and affordability for the move. 
+
+These micro events involved with, residential and economic mobility, can be further categorised into individual and family events. life course of the household, such as the birth of a child, the death of a family member, the change of job, the change of marital status, etc.
 
 <!-- the table of representative life events -->
 
@@ -258,85 +388,26 @@ These events will act as trigger of further responses on residential and economi
 
 ---
 
-#### Utility-comparison-based relocation model
+## The residential utility
 
-#### The preference
+The preference of residential utility is defined by the economic, demographic and social attributes of the household. We assume that the households with similar characteristics have similar preference, and each group of household perceives the residential utility differently.
 
-The preference over the housing unit is based on the **utility of housing** (e.g., the size, the quality, the location, the price, etc), the **socialdemographic characteristics** of households and their member (e.g., the household size, composition, job location, etc) and the **social network** (e.g., the sociodemographic profile of their neighbours, the attachment of their current neighbours, etc).
+In the prototype model, the preference is simplified as the utility of housing, which is based on the accessibility to services, the living unit size fits the household size and the social group by income and demographic background.
 
----
-
-.image-75[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
-.caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. Scenario for the equal preferences for each attribute.]]
-
----
-
-.image-75[![](../imgs/accservices_scenarios.jpg)]
+.image-60[![](../imgs/design/preference/preference_composition.svg)]
 .caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
-
----
-
-#### The affordability
-
-The affordability is based on the **income** of the household, the **household wealth** (e.g., the saving, the inheritance, etc) and the **household debt** (e.g., the mortgage, the loan, etc).
-
-*The selection of events or weights of measurements on preference and affordability will be further determined from the literature and empirical evidence. **How desire change to further action** and **how preference and affordability being engaged in the decision making process** will be discussed in the residential mobility component.*
-
----
-
-### Life course model - unfinished task
-
-- The assignment of job location
-
-  The prototype is based on one city, but should not be a closed system without individuals moving out of the city. The migration in and out of the system is also crucial for the future upscaled model. (Build OD matrix of these flows could disaggregate the national model into compartments of cities to save parallel load of computing? TBC)
-
-- Details of the process unsettled
-
-  The mating process? Let's assume we assign a probability toward marriage for two individuals with similar sociodemographic backgrounds. Will their location attributes matter? Will social network matter? Is the rise of dating apps considered beyond distance restriction? More importantly, is it necessary to complicate this one mechanism to this level? This is also applied to other mechanisms such as non-binary relationships and education levels.
-
-- Technical detail
-
-  How to achieve the life trajectories generated from life courses? How to incorporate social network influence and environmental influence on life course direction? How to store them in numerical format in the class of agent? The function realisation, and deactivation of them at certain states? Do we need to really add one agent when the birth happens? Considering that minors are dependent on their parents, can they just be one attribute of adult agents until they are independent, to save computing power? How to tie a family (group of individuals) together?
-
----
-
-<!-- Economic mobility component -->
-
-### Economic mobility component
-
-Not only the change in economic status reflects the affordability, but also incentivises or suppresses the desire to move (citation here).
-
-The events from the life course model include being independent, marriage, divorce, giving birth, retirement, death (wealth transfer), and job switch.
-
-#### Unfinished task
-
-- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist in the component built up. As the research aim of SLR does not lay on it, it requires additional reading on the relevant.
-
-  For example, the switching of housing mortgage, impacted by interest rate, is more researched in economic ABMs on housing market behaviour. Similarly, most of them are not included in SLR for completely focusing on trading behaviour than residential behaviour. Considering its impact on the housing market ([obeserved by WSJ](https://www.wsj.com/articles/in-todays-housing-market-its-timing-over-location-eefdb890)), the literature scope might be also expanded here.
-
-- The environmental exposure to economic change has been discussed in former research. We discussed it in the expected opportunity gain part of the residential decision part, but are we incorporating the spatial heterogeneity of opportunities in the probability of gaining economic dis or advantage? (citation here) used the distance from the city centre to measure it, while (citation here) weighted it from GDP by district.
-
----
-
-### Social network component
-
-the social network (e.g., friendship, family tie, etc)
-
-but the evolution of social network have symmetric relation with residence location and household events, which will be modelled as a dynamic process.
-
-### Unfinished task
-
-- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist on the component built up. As the research aim of SLR does not lay on it, the future 
 
 ---
 
 <!-- Residential mobility component -->
 
+## Residential mobility component
+
 ### Residential mobility component
 
 The concept of satisfaction, as the driver of relocation, is adopted in this research. Along with opportunity gain of relocation, mandatory relocation driven by problem arises and radical change, the interplay of these factors drives the relocation decision as the following diagram:
 
-.image-50[![](./imgs/behavior_preference_relocation.svg)]
+.image-50[![](./imgs/behaviour_preference_relocation.svg)]
 .caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
 
 - The opportunity gain is benefit minus the cost of moving. The benefit is based on the new demand, induced by a trigger, which the potential housing can fulfil meanwhile the current one cannot. Plus the difference in job opportunities. Meanwhile, the cost is mainly the fixed searching cost, breaking the old neighbour tie, and fixed relocation cost. The cost of breaking the old tie is positively correlated to the previous residing years. Mandatory demand induced by problems to solve or radical changes must be fulfilled. In this case, hesitation will be skipped and the agent will be put straight into the search process.
@@ -351,9 +422,9 @@ The desire change triggered by the micro events depends on the nature of the eve
 
 <!-- Residential mobility component -->
 
-### Residential mobility component
+## Residential mobility component
 
-#### Processes
+### Processes
 
 - A trigger aries for the household to relocate
 
@@ -374,6 +445,73 @@ The desire change triggered by the micro events depends on the nature of the eve
 - The deal is made and the relocation is completed
 
 *Rent market is simplified here, as tenant normally has lower place attachment and simpler searching and bidding process*
+
+---
+
+### The preference
+
+#### Utility-comparison-based relocation model
+
+.image-50[![](../imgs/design/place_accessibility_utility_calculation.svg)]
+.caption[.center[Figure. The composition of utility based on accessibility to services.]]
+
+---
+
+.image-75[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
+.caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. Scenario for the equal preferences for each attribute.]]
+
+---
+
+.image-75[![](../imgs/accservices_scenarios.jpg)]
+.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+
+---
+
+#### The housing decision process
+preference, expectation, affordability, decision
+
+.right[.image-80[![](../imgs/design/housingdecisionprocess.svg)]
+.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]]
+
+Rules:
+
+- The household will not move if the utility of the current housing is higher than the expected utility of the new housing.
+
+- The household will not move if the affordability is lower than the expected price of the new housing.
+
+- The household will not move if the expected utility of the new housing is lower than the expected utility of the current housing.
+
+- The household will not move if the expected price of the new housing is higher than the affordability.
+
+???
+
+---
+
+<!-- Submodel: Economic mobility component -->
+
+### Economic mobility component
+
+Not only the change in economic status reflects the affordability, but also incentivises or suppresses the desire to move (citation here).
+
+The events from the life course model include being independent, marriage, divorce, giving birth, retirement, death (wealth transfer), and job switch.
+
+#### The affordability
+
+The affordability is based on the **income** of the household, the **household wealth** (e.g., the saving, the inheritance, etc) and the **household debt** (e.g., the mortgage, the loan, etc).
+
+*The selection of events or weights of measurements on preference and affordability will be further determined from the literature and empirical evidence. **How desire change to further action** and **how preference and affordability being engaged in the decision making process** will be discussed in the residential mobility component.*
+
+---
+
+### Social network component
+
+#### the social network (e.g., friendship, family tie, etc)
+
+but the evolution of social network have symmetric relation with residence location and household events, which will be modelled as a dynamic process.
+
+#### The social group
+
+The social group is the group of people who share the same social network. The social group is the key factor of the social network, which is the key factor of the preference and affordability.
 
 ---
 
@@ -399,11 +537,26 @@ It includes two parts: population socioeconomic synthesis environment spatial sy
 
 #### Population socioeconomic synthesis
 
+1. The age of agent is generated from the [2011 population pyramid](https://www.cbs.nl/en-gb/visualisations/dashboard-population/population-pyramid), and readjust to fit the count of age group in the grids of FUA of Groningen.
+
 1. Generation of synthetic population at the zonal-level (Rahman Fatmi and Ahsanul Habib, 2017), which fits the nature of the Netherlands.
 
 2. Allocation of the synthetic population to the micro-spatial unit of land parcel (standarlised lattice or the real land parcel shape depends on further review and discussion).
 
 3. Assign the socioeconomic attributes to the synthetic population based on the zonal-level data.
+
+???
+
+Notes:
+
+There are some inconsistency in the population grid by CBS (for example, the total number of age groups != the total number of genders != total number provided), but in this case, as we will only be using the age and gender distribution, we just need these two to be consistent.
+
+The under 25 population has large deviation from the real world. The issue mainly comes from the highly aggregated data doest not reflect the real age of leaving original household. It could be solved by using the micro data. But considering they are not the key actor, rather than a factor of choice preference of their parents, we will not be focusing on this issue.
+
+---
+
+.image-75[![](../imgs/synthetics/synthetic_household.jpg)]
+.caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
 
 ---
 
@@ -419,16 +572,10 @@ Create the space of land units where agents live, where each unit has a series o
   
   To mirroring the real development process, the matrix includes, the development time, the development type, estimated selling price etc.
 
-
 ---
 
-## Input data
-
-
----
-
-## Modelling components (Submodels)
-
+.image-75[![](../imgs/synthetics/synthetic_livingunits.jpg)]
+.caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
 
 ---
 
@@ -454,72 +601,90 @@ No input data were used for the test model but granular micro data will provide 
 
 Modelling components were not developed yet except for residential mobility, but modules from other components will be developed incrementally to comprehensive the overall framework.
 
-<!-- --- -->
+- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist on the component built up. As the research aim of SLR does not lay on it, the future 
 
-<!-- ## Calibration -->
+- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist in the component built up. As the research aim of SLR does not lay on it, it requires additional reading on the relevant.
 
-<!-- --- -->
+  For example, the switching of housing mortgage, impacted by interest rate, is more researched in economic ABMs on housing market behaviour. Similarly, most of them are not included in SLR for completely focusing on trading behaviour than residential behaviour. Considering its impact on the housing market ([obeserved by WSJ](https://www.wsj.com/articles/in-todays-housing-market-its-timing-over-location-eefdb890)), the literature scope might be also expanded here.
 
-<!-- ## Validation -->
-
-<!-- --- -->
-
-<!-- ## Sensitivity analysis -->
-
-<!-- --- -->
-
-<!-- ## Causality analysis -->
+- The environmental exposure to economic change has been discussed in former research. We discussed it in the expected opportunity gain part of the residential decision part, but are we incorporating the spatial heterogeneity of opportunities in the probability of gaining economic dis or advantage? (citation here) used the distance from the city centre to measure it, while (citation here) weighted it from GDP by district.
 
 ---
 
-## Expected contribution and outcomes
-
-1. SLR (year 1)
-
-  sdhifsdiufsu
-
-2. Prototype model at the case of Groningen (late year 1 to year 2)
-
-  - updating the theory of urban economic segregation that focus on xxx of .
-
-  - presenting a empirically specified model that demonstrates how urban economic segregation pattern emerges from rules, local context and interactions.
-
-3. Upscale of modelling at regional scale (late year 2 to year 3)
-
-  - methodologically advancing the ABM of economic segregation with a large-scale, high-resolution, empirically specified model.
-
-4. 
-
----
-
-## Entities and State variables defined
-
-| Entities | State variables |
-| --- | --- |
-| Individuals | sociodemographic characteristics, economic states, social network |
-| Land units | function, carry capacity |
-
----
+## Limitations of the prototype model to be developed
 
 *Clearly, the prototype of model describes a type of idea space and decision making, which does not occur in practice. However, the ideal residential choice serves as a starting point for introducing further behaviours and mechanism, mentioned in other components, from our target of an ideal comprehensive model.*
+
+### Error term
+
+The error term is not included in the prototype model for simplification reason, which will be added into calculation.
+
+### Connection with other components
+
+The prototype model is a standalone model, which will be connected with other components in the future development.
+
+### Environment initialisation without granular data input
+
+For example, the heterogeneity of the type of living units in a spatial unit is generated from the probability distribution of the type of living units in the whole city. It will be further improved with granular data input. Same with household characteristics.
+
+### Absence of migration flow in and out of the system
+
+The long-distance migration flow in and out of the system is not included in the prototype model. As it is not correlated to utilities of specific living units, other potential decision-making process will be identified (e.g., expected utility model under risks) and modelled in the future development. Or, simplified as number summarised from the empirical data.
+
+???
+
+The error term is not included in the prototype model, which is a common practice in ABM. However, the error term is crucial in the model accuracy against the real world. The error term will be included in the future development of the model.
+
+---
+
+## Overall limitations and challenges
+
+- The balance between the complexity and the simplicity of the model
+
+  The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take.
+
+  Modelling a city or country could be extremely computational consuming but not impossible as the development of computing power and new framework (e.g., distributed discrete event simulation)
+
+  Several mechanisms may have little impact on the overall outcome of economic segregation. The model will be developed incrementally, and the impact of each mechanism will be evaluated.
+
+  The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take.
+
+  Modelling a city or country could be extremely computational consuming but not impossible as the development of computing power and new framework (e.g., distributed discrete event simulation)
+
+???
+
 
 ---
 
 ## Keep it open
 
-### Scripts and Data
+.right[.image-60[![](../imgs/qrcode_sectionmeeting.png)]]
 
-- Open source all the scripts on github
+- Scripts and Data
 
-- Highly aggregated data after data masking or data obfuscation will be shared publicly 
+  - Open source all the scripts on github
 
-### A simplified web-based model to share with public
+  - Highly aggregated data after data masking or data obfuscation will be shared publicly 
 
-- eX Modelo Workshop: Model Evaluation & Exploration with OpenMOLE; 13th and 14th of 2023
+- A simplified web-based model to share with public
 
+- Today's slides is accessible via https://www.bayi.in/open-review/sectionmeeting
 
+<br>
 
-### Event
+Platforms to share the technical details and progress of the project:
+
+<!-- GitHub Logo and Link -->
+<a href="https://github.com/BayiLi081">
+    <img src="../imgs/github-mark.svg" alt="GitHub Logo" width="30" height="30" class="icon">
+    GitHub/BayiLi081
+</a>
+<!-- add a vertical line -->
+
+<a href="https://www.bayi.in">
+  <img src="../imgs/personal.svg" alt="GitHub Logo" width="30" height="30" class="icon">
+  bayi.in
+</a>
 
 ???
 
@@ -537,12 +702,150 @@ Modelling components were not developed yet except for residential mobility, but
 
 - eX Modelo Workshop: Model Evaluation & Exploration with OpenMOLE; 13th and 14th of 2023
 
-### Event
+---
+
+#### Supplementary information for the project overview
+
+##### Input data sources
+
+- OECD report
+- CBS Microdata
+- Secondary survey data and former reports
+
+##### Design concepts
+
+- Basic principles
+
+  Urban economic segregation is the collective outcome of individual's residential mobility and economic mobility behaviours over their life course.
+
+- Emergence
+
+  The spatial difference of economic status across residential neighbourhoods of a city or an urban region.
+
+- Adaptation
+
+  The active agent adjusts their preference, tolerance and expectation to their current condition and the environment.
+
+- Fitness
+
+  The goal of the household is to acquire the most suitable residence, based on their knowledge and cognitive skill, that fits their current demand and affordability.
+
+---
+
+##### Design concepts
+
+- Learning
+
+  The housing and relocation decision making is impacted by the experience of the household, such as the increasing relocation cost along with current location, residing years, tenure status, etc.
+
+- Prediction
+
+  The agents evaluate the utility of potential opportunities and the cost of their behaviours using environmental cues and embedded assumptions.
+
+- Sensing
+
+  What are agents assumed to know or perceive when making decisions?
+  
+  Is the sensing process itself explicitly modelled?
+
+- Interaction
+
+  The interactions include the form and decomposition of ties, the competition in the housing market, and the asset transfer through trading and inheritance.
+
+---
+
+##### Design concepts
+
+- Stochasticity and uncertainty
+
+  The heuristic rules are grounded in the empirical data, but the stochasticity is essential to keep the model simple and flexible.
+
+  The parametrisation of rules and following variation of them in sensitivity analysis will be the key to understand the impact of each mechanism.
+
+- Collectives
+
+  The household is presented as a collective of individuals. It is being described in different way but the trait is intertwined with individual's life trajectory through the life course model.
+
+- Observation
+
+  A continuous time series of measurement on the uneven distribution of the household by income group and the economic status of the household.
+
+  Other measurements depends on the calibration and validation process. For example, to validate the social network component, the evolution of social network of the household will be monitored.
+
+???
+
+---
+
+**References**
+
+<div class="references">
+  [1] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [2] Pagani, A., Ballestrazzi, F. and Binder, C.R., 2022, March. Shrinking Housing’s Size: Using Agent-Based Modelling to Explore Measures for a Reduction of Floor Area Per Capita. In Advances in Social Simulation: Proceedings of the 16th Social Simulation Conference, 20–24 September 2021 (pp. 275-287). Cham: Springer International Publishing.
+  <br>
+  [3] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [4] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [5] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [6] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [7] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [8] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [9] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [10] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [11] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [12] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [13] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [14] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [15] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [16] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [17] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [18] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [19] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [20] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [21] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [22] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [23] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [24] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [25] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [26] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [27] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [28] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [29] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+  [30] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+</div>
 
 ???
 
 
+
     </textarea>
+
     <script src="../src/remark-latest.min.js" type="text/javascript">
     </script>
     <script type="text/javascript">

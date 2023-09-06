@@ -14,6 +14,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px !important; 
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
 h1 { 
   font-size: 2.5em;
   color: #00A6D6;
@@ -37,10 +44,38 @@ em {
   color: #777872;
 }
 
+div.my-footer {
+  border-top: 1px solid #ccc;
+  font-size: 10pt;
+	text-align: left;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 40px;
+	width: 100%;
+}
+
+div.my-footer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+	height: 30px;
+  padding: 3px;
+}
+
+img.icon{
+  display: inline;
+}
+
+div.references {
+  font-size: 0.5em;
+  color: #777873;
+}
+
 .caption {
+  float: center;
   font-size: 0.8em;
-  color: #777872;
-  opacity: 0.7;
+  color: #777873;
 }
 
 blockquote { 
@@ -49,6 +84,7 @@ blockquote {
   font-style: italic;
   opacity: 0.7;
 }
+
 .inverse {
   background: #272822;
   color: #777872;
@@ -93,45 +129,46 @@ keyword {
 
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
+.image-20 img {
+  width: 20%;
+}
+
 .image-40 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 40%;
-  margin-bottom: 30px;
+}
+
+.image-45 img {
+  width: 40%;
 }
 
 .image-50 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 50%;
 }
 
 .image-60 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 60%;
 }
 
 .image-70 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 70%;
 }
 
 .image-75 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 75%;
 }
-  #slideshow .slide > .left
+
+.image-80 img {
+  width: 80%;
+}
+
+.image-90 img {
+  width: 90%;
+}
+
+  /* #slideshow .slide > .left
   {
     text-align: left;
-  }
+  } */
 
 #slideshow .slide .content { font-family: 'Consolas', monospace; font-size: 24px; }
 iframe { border: 0; width: 100%; }
