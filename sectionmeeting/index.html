@@ -274,7 +274,9 @@ Depending on the social phenomena and mechanism selected, the key actors of the 
 
 - **Life transition**
 
-  Life course is widely used for modelling long term social phenomena. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model [1, ] to the more dynamic life course model [2, ].
+  Life course is widely used for modelling long term social phenomena. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>[1, ]</sup> to the more dynamic life course model <sup>[2, ]</sup>.
+
+  The evolution of household (e.g., household formation, household dissolution, etc), the individual (e.g., birth, death, etc) have been investigated and validated to have impact on residential choice ().
 
 ???
 
@@ -305,25 +307,6 @@ The decision making central is the core of the model, divided into five componen
 
 ---
 
-# Review
-
-## The key mechanisms
-
-- Pure theory-based ABM 
-
-- The life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model [1, ] to the more dynamic life course model [2, ].
-
-Three central components of migration behaviour include (Wolpert, 1965):
-
-- The notion of place utility
-
-- The field theory approach to search behaviour
-
-- The life-cycle approach to threshold formation
-
-
----
-
 
 # Review
 
@@ -350,12 +333,24 @@ Three central components of migration behaviour include (Wolpert, 1965):
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg#zoom)
+.right[![](../imgs/design/Combine_Process_granularFramework.svg)
 .caption[.center[Figure. The key mechanisms and their sub-processes in the model]]]
 
 # Review
 
 ## Mechanisms and processes
+
+- Pure theory-based ABM 
+
+- The life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>[1, ]</sup> to the more dynamic life course model <sup>[2, ]</sup>.
+
+Three central components of migration behaviour include (Wolpert, 1965):
+
+- The notion of place utility
+
+- The field theory approach to search behaviour
+
+- The life-cycle approach to threshold formation
 
 Not all processes was modelled in former ABMs, and the processes are not always consistent with the theory. The key mechanisms and their sub-processes are summarised as the following table:
 
@@ -371,42 +366,76 @@ Not all processes was modelled in former ABMs, and the processes are not always 
 
 I propose **Groningen, the Netherlands** as the case study of this research. 
 
-.image-45[![](../imgs/nl_casestudy_locationdes.jpg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+.image-40[![](../imgs/nl_casestudy_locationdes.jpg)]
+.caption[.center[Figure. The case of Groningen and its population density.]]
 
-The environment we used in the prototype model is a centre area bounded by regional roads within the [Functional Urban Areas (FUA) by country developed by OECD and the European Commission](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm), each of which consists of a densely inhabited city and of a surrounding area (commuting zone). The population of FUA of Groningen is 194, 340 (474, 000 (total population) \* 41%) in 2011 census, and the population of our selected area is **105, 766** (estimated of 2010 CBS grid).
+The environment we used in the prototype model is the [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm). The population of FUA of Groningen is 194, 340 (474, 000 (total population) \* 41%) in 2011 census.
+
+*Notes: <sup>a</sup>: developed by OECD and the European Commission, each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*
 
 ???
 
-*focus on residential mobility*
+The reason is that it is more if a standalone city than a metropolitan region which is more suitable for the preliminary stage of this research without too much external influence. Even consider the out-of-system migration flow, it is easier to measure and parameterized from the micro data.
 
-The reason is that it is more a standalone city than a metropolitan region which is more suitable for the preliminary stage of this research. The migration flow in and out of the city system is easier to measure and parameterized.
+The population of FUA of Groningen is around two hundred thousand. After being aggregated to household level, the total number of household will be around 80,000. The number is computable on a personal computer.
 
-A model environment that approximates the socio-demographic characteristics and spatial distribution of the population of Groningen, the Netherlands.
-
-The first study will be a mechanistic study, I do not intend these models to accurately predict real-world levels of segregation. Rather, I intend this work to highlight potential mechanisms through which social network, market behaviours and life trajectory may interact to contribute to urban economic segregation. Other mechanism mentioned will be simplified for ease of interpretation,
-
-Home location and economic change, contributing to the collective spatial pattern of economic segregation, were triggered by the events happening in the life course of each individual. 
-
-In this light, the interrelated components will be design to modelling xx and the individual life course simultaneously.
+I intend this preliminary work to highlight the role of residential mobility across individuals' life course to contribute to economic segregation.
 
 ---
 
 ### Entities
 
-.image-50[![](../imgs/design/entity-des/entities_overview.svg)]
-.caption[.center[Figure. The entities in the model and their attributes.]]
+.right[.image-100[![](../imgs/design/entity-des/entities_overview.svg)]
+.caption[.center[Figure. The entities in the model and their attributes.]]]
+
+There are two types of agents in the model: active agents and passive agents.
+
+Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+
+Passive agents, including **spatial units and living units**, are the environment where the active agents live in. The spatial units are the grids of the city, and the living units are the housing units in the grids of residence.
+
+The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
+
+*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*
+
+???
+
+Active agents consist of individuals and households. Let's break this down further:
+- Individuals: These are the people who make up the households.
+
+- Households: Think of households as the decision-making units. They are the smallest entities within our model that make choices.
+
+  Small notes on that one adult was seen as an one-person household in our model, this is also consistent with the definition of the CBS household summary.
+
+Passive agents represent the environment where active agents operate. These include spatial units and living units:
+
+- Spatial Units: These are essentially the grids that make up our city. They form the backdrop where our active agents interact.
+
+- Living Units: These are the housing units within the grids of residence. They provide the physical spaces where our active agents live.
+
+We designed the attributes of these entities to incorporate more mechanisms from other components such as marriage preferences, social ties, and residence tenure types.
+
+
+Among these attributes, some attributes are fixed, while others change dynamically as the model runs.
 
 ---
 
 ### Entities
 
-#### Attributes Measurement
+#### Environment Attributes Measurement
 
 .image-50[![](../imgs/design/entity-des/passive_agents_des.svg)]
 .caption[.center[Figure. The passive agents (Spatial units and Living units) and their attributes.]]
 
-Passive agents, including spatial units and living units, are the environment where the active agents live in. The spatial units are the grids of the city, and the living units are the housing units in the grids. The attributes of the passive agents are the spatial attributes and the housing attributes.
+The attributes of the passive agents are the spatial attributes and the housing attributes.
+
+At neighbourhood level, there are some neighbourhood characteristics to be assigned for each land unit of residence, where the neighbourhood is defined by spatial continuity. Similar with accessibility to service, but this threshold is 400 meters.
+
+???
+
+There are some native attributes, but also some derivative attributes, such as occupy status and neighbourhood social group, which will be calculated for each step.
+
+Upper level than each land unit is the neighbourhood, which is defined by spatial continuity. Similar with accessibility to service, but this threshold is 400 meters. But overall, these attributes will be assigned to the land units instead of creating a new type of agent.
 
 ---
 
@@ -414,12 +443,20 @@ Passive agents, including spatial units and living units, are the environment wh
 
 ### The life course component
 
-The life course model will be a simplified version of the real life course with **fundamental stages and essential events**. The evolution of household (e.g., household formation, household dissolution, etc), the individual (e.g., birth, death, etc) have been investigated and validated to have impact on residential choice (). Most of them will be parameterlised based on probability distribution mirroring the empirical data; some of them follows the change of life stage.
+The life course model will be a simplified version of the real life course with **fundamental stages and essential events**. Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
 
-.image-70[![](../imgs/design/lifecoursemodel/example_life_course.svg)]
+.image-90[![](../imgs/design/lifecoursemodel/example_life_course.svg)]
 .caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]
 
-*The evolution of social network (e.g., friendship, family tie, etc) accompnies with the life courses change, which will be discussed in the social network component seperately.*
+???
+
+- Our goal with this model is to capture the key milestones and transitions that were validated in former studies. 
+
+- We've divided the life course into several fundamental stages and essential events. These stages and events are parametrized based on probability distributions that mirror real-world data. For example, we consider birth rates, marriage rates, and death rates when defining these events.
+
+- Some of these events follow a specific sequence or schedule. For instance, you have to have a partner to break up, you have to have a job to retire, ect.
+
+- This diagram showcases an example life trajectory of two people, highlighting various events and their impact on household characteristics. It's a snapshot of how our model brings together events and transitions that shape individuals' and households' life courses.
 
 ---
 
@@ -429,23 +466,37 @@ The life course model will be a simplified version of the real life course with 
 
 #### The life events
 
-.right[.image-80[![](../imgs/design/lifecoursemodel/example_life_event.svg#zoom)]
+.right[.image-100[![](../imgs/design/lifecoursemodel/example_life_event.svg)]
 .caption[.center[Figure. The key life stages and life events of a household <br> and their impact on other components.]]]
 
-Micro life events, happening in a household or individual life trajectory, could trigger the relocation desire and affect the preference for residence and affordability for the move. 
+Micro life events<sup>a</sup>, happening in a household or individual life trajectory, could trigger the relocation desire and affect the preference for residence and affordability for the move. 
 
-These micro events involved with, residential and economic mobility, can be further categorised into individual and family events. life course of the household, such as the birth of a child, the death of a family member, the change of job, the change of marital status, etc.
+These micro events can be further categorised into individual and family events. These two types of events are applied to the household and individual respectively.
 
 <!-- the table of representative life events -->
 
-| Type | Event |
-| --- | --- |
-| **Individual Event** | Job switch, decease, etc. |
-| **Family Event** | Marry, divorce, give birth, etc. |
+| Type | | Event |
+| --- | - | --- |
+| **Individual Event** |:| Job switch, decease, etc. |
+| **Family Event** |:| Marry, divorce, give birth, etc. |
 
-These events will act as trigger of further responses on residential and economic mobility.
+These events will act as trigger<sup>b</sup> of further responses on residential and economic mobility.
 
-*Notes: Macro events refer included unexpected events such as the economic crisis, the pandemic, the war, etc, also long term regulation from upper level. The unexpected events will not be included for not being our focus, but the **more consistent macro regulators** such as the interest rate, immigrants number and employment rate will be included in the exogenous dynamics section.*
+*Notes: <sup>a</sup>: Macro events included unexpected events such as the economic crisis, the pandemic, the war, etc. They will not be included for not being our focus, but the **more consistent long-term macro regulators** such as the interest rate, immigrants number and employment rate will be included in the exogenous dynamics section.*
+
+*<sup>b</sup>: Triggering events resulting from the progression in a households’ life course career can be categorised into **opportunities, problems to solve, and radical changes**.<sup>3, 4</sup>*
+
+???
+
+- This diagram illustrates the essential life stages and life events that households and individuals experience and how they impact house size requirement, preferences and disposable income on housing, that is affordability.
+
+- These are events that occur within individual or household life trajectories, and they have the potential to trigger relocation desires and influence preferences for residence and affordability for moving.
+
+- As a note, the life events included in life course component is micro life events, we're focusing on micro events within our model. While macro events such as economic crises, pandemics, and wars exist in the real world, we've excluded them to concentrate on more consistent long-term macro regulators like interest rates, immigration numbers, and employment rates, which we'll address separately in the exogenous dynamics section.
+
+- It can be categorized into two main types: individual events and family events. They can occur within individual or household life trajectories, served as triggers for subsequent responses in terms of residential and economic mobility.
+
+- Different kinds of trigger events can have different mechanism and influence intensity in the further responses. It will be internalised in a specific process.
 
 ---
 
@@ -455,84 +506,87 @@ These events will act as trigger of further responses on residential and economi
 
 #### The residential utility
 
-The preference of residential utility is defined by the economic, demographic and social attributes of the household. We assume that the households with similar characteristics have similar preference, and each group of household perceives the residential utility differently.
+Residential Utility is defined by static attributes and the preference for different residential options based on various economic, demographic, and social attributes of households. We assume that the households with similar characteristics have similar preference.
 
-In the prototype model, the preference is simplified as the utility of housing, which is based on the accessibility to services, the living unit size fits the household size and the social group by income and demographic background.
+The preference is simplified to impact perceived utility of housing, which is based on the accessibility to services, the living unit size fits the household size and the social group by income and demographic background<sup>a</sup>.
 
-.image-55[![](../imgs/design/preference/preference_composition.svg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+.image-50[![](../imgs/design/preference/preference_composition.svg)]
+.caption[.center[Figure. Expectation, preference and affordability of a household and a house unit.]]
+
+*Notes: <sup>a</sup>: The preference level of residing with similar economic and demographic neighbours.*
 
 ???
 
-The concept of satisfaction, as the driver of relocation, is adopted in this research. Along with opportunity gain of relocation, mandatory relocation driven by problem arises and radical change, the interplay of these factors drives the relocation decision as the following diagram:
+- To simplify this complex concept of preference, we've distilled it into something more manageable: the perceived utility of housing. Residential Utility is defined with static attributes and the preference for different residential options based on various economic, demographic, and social attributes of households.
 
-.image-50[![](./imgs/behaviour_preference_relocation.svg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+- The diagram display some expectations from economic, demographic and social aspects. They impact the weight of the preference for different residential attributes.
 
-- The opportunity gain is benefit minus the cost of moving. The benefit is based on the new demand, induced by a trigger, which the potential housing can fulfil meanwhile the current one cannot. Plus the difference in job opportunities. Meanwhile, the cost is mainly the fixed searching cost, breaking the old neighbour tie, and fixed relocation cost. The cost of breaking the old tie is positively correlated to the previous residing years. Mandatory demand induced by problems to solve or radical changes must be fulfilled. In this case, hesitation will be skipped and the agent will be put straight into the search process.
-
-The desire change triggered by the micro events depends on the nature of the event:
-
-> Triggering events resulting from the progression in a households’ life course career can be categorised into **opportunities, problems to solve, and radical changes** (Clark & Onaka 1983; Ma et al. 2013).
+- As a note, the preference level for residing with similar economic and demographic neighbors is a crucial aspect. It is common to parametrise it as a global parameter, allowing us to create different scenarios.
 
 ---
 
 ### The preference
 
-#### Utility-comparison-based relocation model
+#### Utility-based comparison
 
-.image-50[![](../imgs/design/place_accessibility_utility_calculation.svg)]
+Example of utility calculation based on the accessibility to services.
+
+From the land use data, we selected three types to match the expectation on the services: recreation, institutions and facilities, and transportation. Each of these has its own sub categories. The accessibility to services is counted within a 400 meter buffer.
+
+.image-40[![](../imgs/design/place_accessibility_utility_calculation.svg)]
 .caption[.center[Figure. The composition of utility based on accessibility to services.]]
 
+???
+
+- Let's illustrate this with an example of utility calculation based on the accessibility to services. Services here refer to amenities like recreation areas, institutions, facilities, and transportation options. 
+
+- This diagram illustrates the composition of utility based on accessibility to services. It shows how different types of services contribute to the overall utility calculation.
+
+- To measure accessibility to services, we use land use data. From this data, we've selected three types that align with our expectations regarding services: recreation, institutions and facilities, and transportation. Each of these types has its own subcategories.
+
+- The key idea is to calculate the accessibility to these services within a 400-meter buffer around a given location. This buffer represents a reasonable distance that individuals are willing to travel to access essential services.
+
 ---
 
-.image-75[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
-.caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. Scenario for the equal preferences for each attribute.]]
+.image-30[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
+.caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. <br>(b) Result for the scenario for the equal preferences for each attribute.]]
 
----
+.image-30[![](../imgs/accservices_scenarios.jpg)]
+.caption[.center[Figure. the theory of life in ABM and the key events to segregation. <br> (a): (2,1,1); (b): (1,2,1), (c): (1,1,2), (d): (2, 2,1)]]
 
-.image-75[![](../imgs/accservices_scenarios.jpg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]
+???
+
+These two maps shows the utility calculated from the accessibility to different services. The four scenarios are the perceived utility across the city for different preferences. For example, for the recreation-oriented household (probably younger household without child), they see the utility of all the residence grid as the first map. Of course, household does not have to evaluate all the grids, but only the reachable grids, which we will talk about it next.
 
 ---
 
 #### The housing decision process
 preference, expectation, affordability, decision
 
-.right[.image-80[![](../imgs/design/housingdecisionprocess.svg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation]]]
+.right[![](../imgs/design/housingdecisionprocess.svg)
+.caption[.center[Figure. The housing search process at one round of searching.]]]
 
 Rules:
 
-- The household will not move if the utility of the current housing is higher than the expected utility of the new housing.
+- The household will start the housing searching process if the utility of the current housing is lower than the expected utility.
 
-- The household will not move if the affordability is lower than the expected price of the new housing.
+- Household with higher disposable income on housing has <u>the priority</u> to select the housing units. Therefore, the household will not move if <u>the affordability is lower than the expected cost</u> of any of available housing units in list.
 
-- The household will not move if the expected utility of the new housing is lower than the expected utility of the current housing.
+- The household will <u>increase the searching radius</u> if there is no qualified housing unit within the current searching radius.
 
-- The household will not move if the expected price of the new housing is higher than the affordability.
+- Currently the searching radius is fixed to their current residence for simplification reason, the following works could introduce <u>trigger-oriented searching radius</u> (e.g., job-oriented, education-oriented) and <u>social impacted searching radius</u> (e.g., proximity to relatives and current network).
 
 ???
 
-- A trigger aries for the household to relocate
+- To model the housing decision process, we need to establish specific rules that households follow. Here are the key rules:
 
-  *The trigger is passed from other components (e.g., economic mobility component, life trajectory component)*
+- The household initiates the housing searching process if the utility of their current housing is lower than their expected utility.
 
-  A number of agents will be moved out of the system to have regional migration.
+- Households with higher disposable income on housing enjoy priority in selecting housing units. Thus, they will not move if the affordability is lower than the expected cost of available housing units on their list.
 
-- Household evaluate the benefit and the cost of relocation
+- Households are willing to expand their searching radius if they cannot find a suitable housing unit within their current radius.
 
-- The household searches for the new housing unit
-
-- The household evaluates the housing unit based on utilities of housing, their preference and affordability
-
-- The household bids for the housing unit on the trade market / The household rent the housing unit from the rental market
-
-  The household bid from a certain range below the affordability, starting from smaller number and raise the price gradually as the unsucessful bids increase. 
-
-- The deal is made and the relocation is completed
-
-*Rent market is simplified here, as tenant normally has lower place attachment and simpler searching and bidding process*
+- Initially, the searching radius is fixed to the household's current residence. However, this radius can change based on specific circumstances. In future developments, we can consider trigger-oriented searching radius, such as job-oriented or education-oriented searches, as well as social-impact-oriented searching radius, which take into account factors like proximity to relatives and current social networks.
 
 ---
 
@@ -547,7 +601,7 @@ It includes two parts: population socioeconomic synthesis environment spatial sy
 Generation of synthetic population at the zonal-level, which fits the nature of the Netherlands.
 The population distribution matches the aged group population distribution and demographic characteristics in the aggregated 100 meter CBS grid and national household composition data.
 
-.image-40[![](../imgs/synthetics/synthetic_household.jpg#zoom)]
+.image-40[![](../imgs/synthetics/synthetic_household.jpg)]
 .caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
 
 
@@ -565,50 +619,14 @@ The under 25 population has large deviation from the real world. The issue mainl
 
 Create the space of land units where agents live, where each unit has a series of predefined spatial attributes:
 
-1. Assign the land use type to the land parcel based on the land use map.
+1. Assign the land use type to the spatial units based on the land use map.
 
-2. Calculate the basic fixed utility of housing.
+2. Calculate the fixed attributes of each spatial units of residence.
 
-3. Assign the development matrix to the potential land parcel based on the land use map.
-  
-  To mirroring the real development process, the matrix includes, the development time, the development type, estimated selling price etc.
+3. Assign the living units to the spatial units based on the CBS grids.
 
----
-
-.image-75[![](../imgs/synthetics/synthetic_livingunits.jpg)]
+.image-50[![](../imgs/synthetics/synthetic_livingunits.jpg)]
 .caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
-
----
-
-## Modelling example of residential mobility
-
-### Purpose
-
-This is to lay the foundation of model from the core of overall project, residential mobility, in a selected area with main mechanism of 
-
-### Entities, state variables and scales
-
-The model's entities are individuals and land units
-
-  - Individuals are described by their sociodemographic characteristics, economic states and
-  
-  - Land units are described by their function and carry capacity.
-
-The spatial extent is a district of Groningen, containing x street blocks, with units of 1 sq km2 that constitute a landscape (100 * 100 units)
-
-The temporal unit is 6 months (time to evaluate the current living condition and consider relocating).
-
-No input data were used for the test model but granular micro data will provide a more precise initialisation of layout and probability-based transition.
-
-Modelling components were not developed yet except for residential mobility, but modules from other components will be developed incrementally to comprehensive the overall framework.
-
-- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist on the component built up. As the research aim of SLR does not lay on it, the future 
-
-- There are, certainly, few literatures on economic mobility ABMs. However, there might be more economic theoretical research which could assist in the component built up. As the research aim of SLR does not lay on it, it requires additional reading on the relevant.
-
-  For example, the switching of housing mortgage, impacted by interest rate, is more researched in economic ABMs on housing market behaviour. Similarly, most of them are not included in SLR for completely focusing on trading behaviour than residential behaviour. Considering its impact on the housing market ([obeserved by WSJ](https://www.wsj.com/articles/in-todays-housing-market-its-timing-over-location-eefdb890)), the literature scope might be also expanded here.
-
-- The environmental exposure to economic change has been discussed in former research. We discussed it in the expected opportunity gain part of the residential decision part, but are we incorporating the spatial heterogeneity of opportunities in the probability of gaining economic dis or advantage? (citation here) used the distance from the city centre to measure it, while (citation here) weighted it from GDP by district.
 
 ---
 
@@ -784,9 +802,9 @@ Platforms to share the technical details and progress of the project:
   <br>
   [2] Pagani, A., Ballestrazzi, F. and Binder, C.R., 2022, March. Shrinking Housing’s Size: Using Agent-Based Modelling to Explore Measures for a Reduction of Floor Area Per Capita. In Advances in Social Simulation: Proceedings of the 16th Social Simulation Conference, 20–24 September 2021 (pp. 275-287). Cham: Springer International Publishing.
   <br>
-  [3] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [3] Clark, W.A. and Onaka, J.L., 1983. Life cycle and housing adjustment as explanations of residential mobility. Urban studies, 20(1), pp.47-57.
   <br>
-  [4] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [4] Chatterjee, K., Sherwin, H. and Jain, J., 2013. Triggers for changes in cycling: the role of life events and modifications to the external environment. Journal of transport geography, 30, pp.183-193.
   <br>
   [5] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
   <br>
