@@ -54,17 +54,17 @@ Hi, today I am going to introduce the current working progress about my PhD proj
 ???
 30s
 
-- I'd like to start by giving you a brief introduction to my background and academic journey.
+- I just want to give a brief introduction about myself first.
 
 - I grew up in a small town in the southern but close to middle of China.
 
-- Later, I migrated to the Guangzhou with my family, one of the biggest cities in the real southern part.
+- Later, I migrated to the Guangzhou with my family, one of the biggest cities in the southern part.
 
-- I finished my undergraduate studies in the Shanghai University, then steered myself for my master's degree in Geographical Information Science at Edinburgh.
+- I finished my undergraduate studies in urban planning at the Shanghai University, then steered myself for my master's degree in Geographical Information Science at Edinburgh.
 
-- After completing my master's degree, I took on the role of a GIS analyst in Reading. Then I joined a research team as a research assistant in Singapore, where I started my research career. Finally, I am here, as a PhD student.
+- After that, I took on the role of a GIS analyst in Reading. Then I joined a research team in Singapore for a year, where I started my research career. Finally, I am here, as a PhD student.
 
-- The crazy migration trajectory is not only a personal experience, but also an example of migration driven by life events, which is one of the key components of my research. I will talk about it later.
+- The crazy migration trajectory is not only a personal experience, but also an example of relocation driven by life events, which is one of the key components of my research. I will talk about it later.
 
 ---
 
@@ -87,25 +87,27 @@ Active agents **interact** with each other and the passive agents, altering thei
 
 ???
 
+Still, I will start with what is ABM?
+
 - ABM is a bottom-up approach to modelling.
 
-- It aims to understand complex social phenomena by simulating individual behaviours governed.
+- It aims to understand complex social phenomena by simulating individual behaviours.
 
-- The components of an agent-based model consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment within which they live.
+- The components of an ABM consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment where they live.
 
-- Active agents in agent-based modeling are the entities, often represented as human actors, capable of moving around and interacting with each other.
+- Active agents, one of the entities, often represented as human actors, capable of moving around and interacting with each other.
 
-- Passive agents represent the environment in which the active agents reside.
+- Passive agents represent the environment in which the active agents reside and act.
 
 - The behaviour of active agents is guided by rules that define how they behave and interact with each other.
 
-- These rules are based on both dynamic attributes (such as the agent's own states and social ties) and static attributes (such as social norms).
+- These rules are based on both dynamic attributes (such as the agent's own states or social ties) and static attributes (such as social norms).
 
-- Active agents interact with each other and with the environment.
+- Active agents interact with each other and with the environment. Also they can interact with passive agents, altering their states.
 
-- These interactions lead to changes in the state of the system.
+- These interactions lead to changes in the state of the system, also called the collective outcome of individual behaviours.
 
-- These social and environmental impacts collectively contribute to the emergence of phenomena within the system.
+- These social and environmental impacts collectively contribute to the emergence of phenomena or pattern.
 
 ---
 
@@ -140,11 +142,13 @@ There are three approaches to designing agents' behaviours in ABMs: theory-based
 
 - Heuristic ABMs are adaptable and allow for more exploratory modelling, making them suitable for case study and scenarios with uncertain or evolving dynamics. However, heuristic ABMs may not easily translate to different contexts due to their reliance on ad-hoc rules. These models may incorporate subjective judgments or assumptions, introducing potential bias.
 
-- Data-driven ABMs are based on empirical data, making them more accurate and realistic. However, these models are difficult to interpret and understand, and they may not be generalizable to other contexts.
+- Data-driven ABMs are based on empirical data, making them more accurate. However, these models are not made to interpret and understand the dynamics behind.
 
-The former two approaches are the main approaches of ABM, and the data-driven ABM is rising from the development of machine learning and big data. Rule-based ABM usually combine the theory-based and heuristic approaches. That's select the mechanism from established theories, parametrise the rules based on empirical data, and include the rule of thumb (based on practical experience rather than theory).
+The former two approaches are the classics, and the data-driven ABM is rising from the development of machine learning and big data. 
 
-The choice of approach depends on the specific goals and characteristics of the modelling study.
+The former two also widely applied as rule-based ABM. That's select the mechanism from established theories, parametrise the rules based on empirical data, and include the rule of thumb (based on practical experience rather than theory).
+
+Anyway, the choice of approach depends on the specific aims of the study. In our case, we will be using a combined approach, which is a theory-based ABM with some heuristic rules.
 
 ---
 
@@ -184,12 +188,9 @@ Two fundamental questions:
 - Therefore, we aim to address two fundamental questions:
 
   1. "Why do people live where they live?" - This question addresses the factor of residential choices. 
-  
-    This facet examines how a resident unit make decisions about where they choose to live within an urban area.
 
   2. "How does an individual's economic status change over time?" - This question pertains to the dynamics of economic mobility.
-  
-    This aspect explores how an individual's economic status evolves over their life course.
+
 
 - From the framework, the micro social simulation at large scale connects the housing decision, economic behaviours and the residential and economic states changes, leading to the emerged pattern of economic segregation.
 
@@ -217,7 +218,7 @@ Expected contribution and outcomes
 
 ???
 
-From theory development, scale of modelling and complexity, the project is divided into four phases, also the years of the PhD. 
+Based on theory development, scale of modelling and complexity, the project is divided into four phases, also the years of the PhD. 
 
 - The first phase is a systematic literature review of former ABMs of segregation, residential mobility and economic mobility. This is to gain the insights on what has been modelled or not, how they set up the rules and processes, and the gap between theory and practice. 
 
@@ -246,7 +247,7 @@ Expected contribution and outcomes
 
 - The third phase is to scale up the model to the regional and national level. The technical challenges of large scale ABM is expected, and the rising issue of exchange between different city and system after upscaling will be addressed.
 
-- The fourth phase is to conduct policy scenario analysis. The model will be extended to incorporate more contextual factors, such as the macroeconomic factors, the policy interventions, etc. The model will be used to test the impact of policy interventions on the urban economic segregation, and provide practical recommendations and strategies.
+- The fourth phase is to conduct policy scenario analysis. The model will be extended to incorporate more contextual factors, such as the macroeconomic factors, the policy interventions, etc.
 
 ---
 
@@ -364,8 +365,6 @@ Not all processes was modelled in former ABMs, and the processes are not always 
 
 ### Case study
 
-I propose **Groningen, the Netherlands** as the case study of this research. 
-
 .image-40[![](../imgs/nl_casestudy_locationdes.jpg)]
 .caption[.center[Figure. The case of Groningen and its population density.]]
 
@@ -375,11 +374,13 @@ The environment we used in the prototype model is the [Functional Urban Areas (F
 
 ???
 
-The reason is that it is more if a standalone city than a metropolitan region which is more suitable for the preliminary stage of this research without too much external influence. Even consider the out-of-system migration flow, it is easier to measure and parameterized from the micro data.
+I propose **Groningen** as the case study of this research. 
+
+The reason is that it is more of a standalone city than a metropolitan region which is more suitable for the preliminary stage without too much external influence. Even consider the out-of-system migration flow, it is easier to measure and parametrise from the historical data.
 
 The population of FUA of Groningen is around two hundred thousand. After being aggregated to household level, the total number of household will be around 80,000. The number is computable on a personal computer.
 
-I intend this preliminary work to highlight the role of residential mobility across individuals' life course to contribute to economic segregation.
+I intend this preliminary work to highlight the role of residential mobility across individuals' life course to economic segregation.
 
 ---
 
@@ -387,8 +388,6 @@ I intend this preliminary work to highlight the role of residential mobility acr
 
 .right[.image-100[![](../imgs/design/entity-des/entities_overview.svg)]
 .caption[.center[Figure. The entities in the model and their attributes.]]]
-
-There are two types of agents in the model: active agents and passive agents.
 
 Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
 
@@ -400,21 +399,23 @@ The attributes of entities was designed with extendability with other components
 
 ???
 
+There are two types of agents in the model: active agents and passive agents.
+
 Active agents consist of individuals and households. Let's break this down further:
+
 - Individuals: These are the people who make up the households.
 
-- Households: Think of households as the decision-making units. They are the smallest entities within our model that make choices.
+- Households: Think of households as the decision-making units. They are the major entities that make choices.
 
   Small notes on that one adult was seen as an one-person household in our model, this is also consistent with the definition of the CBS household summary.
 
-Passive agents represent the environment where active agents operate. These include spatial units and living units:
+Passive agents include spatial units and living units:
 
-- Spatial Units: These are essentially the grids that make up our city. They form the backdrop where our active agents interact.
+- Spatial Units are those are essentially the grids that make up our city. They form the backdrop where our active agents interact.
 
-- Living Units: These are the housing units within the grids of residence. They provide the physical spaces where our active agents live.
+- Living Units: These are the housing units within the spatial unit of residence. They provide the physical spaces where our active agents reside.
 
-We designed the attributes of these entities to incorporate more mechanisms from other components such as marriage preferences, social ties, and residence tenure types.
-
+We designed the attributes of these entities to incorporate more mechanisms for other future components such as marriage preferences, social ties, and residence tenure types.
 
 Among these attributes, some attributes are fixed, while others change dynamically as the model runs.
 
@@ -433,9 +434,9 @@ At neighbourhood level, there are some neighbourhood characteristics to be assig
 
 ???
 
-There are some native attributes, but also some derivative attributes, such as occupy status and neighbourhood social group, which will be calculated for each step.
+Upper level than each land unit is the neighbourhood, which is defined by spatial continuity. Similar with accessibility to service, but this threshold is 400 meters. 
 
-Upper level than each land unit is the neighbourhood, which is defined by spatial continuity. Similar with accessibility to service, but this threshold is 400 meters. But overall, these attributes will be assigned to the land units instead of creating a new type of agent.
+Overall, these attributes will be assigned to the spatial units instead of creating a new type of agent.
 
 ---
 
@@ -450,13 +451,13 @@ The life course model will be a simplified version of the real life course with 
 
 ???
 
-- Our goal with this model is to capture the key milestones and transitions that were validated in former studies. 
+The basic component is the life course component. Our goal with it is to capture the key milestones and transitions that were validated in former studies. 
 
-- We've divided the life course into several fundamental stages and essential events. These stages and events are parametrized based on probability distributions that mirror real-world data. For example, we consider birth rates, marriage rates, and death rates when defining these events.
+- We've divided the life course into several fundamental stages and essential events. These stages and events are parametrised based on probability distributions that mirror historical trends. For example, we consider birth rates, marriage rates, and death rates when defining these events.
 
-- Some of these events follow a specific sequence or schedule. For instance, you have to have a partner to break up, you have to have a job to retire, ect.
+- Some of these events follow a specific sequence or schedule. For instance, you have to have a partner to break up, or you have to have a job to be fired or retire, ect.
 
-- This diagram showcases an example life trajectory of two people, highlighting various events and their impact on household characteristics. It's a snapshot of how our model brings together events and transitions that shape individuals' and households' life courses.
+- This diagram shows an example life trajectory of two people and the household they formed, highlighting various events and their impact on household characteristics. It's a snapshot of how our model brings together events and transitions that shape the individuals' and households' life courses.
 
 ---
 
@@ -488,15 +489,13 @@ These events will act as trigger<sup>b</sup> of further responses on residential
 
 ???
 
-- This diagram illustrates the essential life stages and life events that households and individuals experience and how they impact house size requirement, preferences and disposable income on housing, that is affordability.
+Life events have the potential to trigger relocation desires, influence preferences for residence and economic states.
 
-- These are events that occur within individual or household life trajectories, and they have the potential to trigger relocation desires and influence preferences for residence and affordability for moving.
+- This diagram shows the essential life stages and life events that households and individuals experience and how they impact house size requirement, preferences and disposable income on housing, that is affordability.
 
-- As a note, the life events included in life course component is micro life events, we're focusing on micro events within our model. While macro events such as economic crises, pandemics, and wars exist in the real world, we've excluded them to concentrate on more consistent long-term macro regulators like interest rates, immigration numbers, and employment rates, which we'll address separately in the exogenous dynamics section.
+- As a note, the life events included in life course component is micro life events. While macro events such as economic crises, pandemics, and wars exist in the real world, we've excluded them to concentrate on more consistent long-term macro regulators like interest rates, immigration numbers, and employment rates, which we'll address separately in the macro-level regulation component.
 
 - It can be categorized into two main types: individual events and family events. They can occur within individual or household life trajectories, served as triggers for subsequent responses in terms of residential and economic mobility.
-
-- Different kinds of trigger events can have different mechanism and influence intensity in the further responses. It will be internalised in a specific process.
 
 ---
 
@@ -517,11 +516,11 @@ The preference is simplified to impact perceived utility of housing, which is ba
 
 ???
 
-- To simplify this complex concept of preference, we've distilled it into something more manageable: the perceived utility of housing. Residential Utility is defined with static attributes and the preference for different residential options based on various economic, demographic, and social attributes of households.
+Residential utility, in our research, is a combination of objective attributes and subjective judgements based on preferences. To make it more manageable, the subjective preference for different residential options based on economic, demographic, and social attributes of households.
 
 - The diagram display some expectations from economic, demographic and social aspects. They impact the weight of the preference for different residential attributes.
 
-- As a note, the preference level for residing with similar economic and demographic neighbors is a crucial aspect. It is common to parametrise it as a global parameter, allowing us to create different scenarios.
+- As a note, the preference level for residing with similar economic and demographic neighbors is a crucial aspect. It is common to simplify it as a global parameter, allowing us to create different scenarios.
 
 ---
 
@@ -538,9 +537,9 @@ From the land use data, we selected three types to match the expectation on the 
 
 ???
 
-- Let's illustrate this with an example of utility calculation based on the accessibility to services. Services here refer to amenities like recreation areas, institutions, facilities, and transportation options. 
+Let's illustrate this with an example of utility calculation based on the accessibility to services. Services here refer to amenities like recreation areas, institutions, facilities, and transportation options. 
 
-- This diagram illustrates the composition of utility based on accessibility to services. It shows how different types of services contribute to the overall utility calculation.
+- This diagram shows how different types of services contribute to the overall utility calculation.
 
 - To measure accessibility to services, we use land use data. From this data, we've selected three types that align with our expectations regarding services: recreation, institutions and facilities, and transportation. Each of these types has its own subcategories.
 
@@ -556,7 +555,11 @@ From the land use data, we selected three types to match the expectation on the 
 
 ???
 
-These two maps shows the utility calculated from the accessibility to different services. The four scenarios are the perceived utility across the city for different preferences. For example, for the recreation-oriented household (probably younger household without child), they see the utility of all the residence grid as the first map. Of course, household does not have to evaluate all the grids, but only the reachable grids, which we will talk about it next.
+These first map shows the utility map from land use and the right one is the equal preference scenario.
+
+The four scenarios below are the perceived utility across the city for different preferences. For example, for the recreation-oriented household (probably younger household without child), they see the utility of all the residence grid as the first map. 
+
+Of course, household does not have to evaluate all the grids, but only their current residence and the one on potential relocation list, which we will talk about it next.
 
 ---
 
@@ -574,11 +577,11 @@ Rules:
 
 - The household will <u>increase the searching radius</u> if there is no qualified housing unit within the current searching radius.
 
-- Currently the searching radius is fixed to their current residence for simplification reason, the following works could introduce <u>trigger-oriented searching radius</u> (e.g., job-oriented, education-oriented) and <u>social impacted searching radius</u> (e.g., proximity to relatives and current network).
+- At the phase, the searching radius is fixed to their current residence for simplification reason, the following works could introduce <u>trigger-oriented searching radius</u> (e.g., job-oriented, education-oriented) and <u>social impacted searching radius</u> (e.g., proximity to relatives and current network).
 
 ???
 
-- To model the housing decision process, we need to establish specific rules that households follow. Here are the key rules:
+To model the housing decision process, we need to establish specific rules that households follow. Here are the key rules:
 
 - The household initiates the housing searching process if the utility of their current housing is lower than their expected utility.
 
@@ -586,7 +589,7 @@ Rules:
 
 - Households are willing to expand their searching radius if they cannot find a suitable housing unit within their current radius.
 
-- Initially, the searching radius is fixed to the household's current residence. However, this radius can change based on specific circumstances. In future developments, we can consider trigger-oriented searching radius, such as job-oriented or education-oriented searches, as well as social-impact-oriented searching radius, which take into account factors like proximity to relatives and current social networks.
+- The searching radius is fixed to the household's current residence. However, this radius can change based on specific circumstances. In future developments, we may consider trigger-oriented searching radius, such as job-oriented or education-oriented searches, as well as social-impact-oriented searching radius, which take into account factors like proximity to relatives and current social networks.
 
 ---
 
@@ -604,74 +607,101 @@ The population distribution matches the aged group population distribution and d
 .image-40[![](../imgs/synthetics/synthetic_household.jpg)]
 .caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
 
-
 ???
 
-Notes:
+Apart from the previous utility calculation, we also have already start the baseline model building, which includes the the synthetic population and the environment.
 
-There are some inconsistency in the population grid by CBS (for example, the total number of age groups != the total number of genders != total number provided), but in this case, as we will only be using the age and gender distribution, we just need these two to be consistent.
+For the synthetic population, we use the population distribution matches the aged group and gender distribution in the aggregated 100 meter CBS grid and national household composition data. Because, currently, I am using the open governmental data instead of the micro data, there are some comprises we made. 
 
-The under 25 population has large deviation from the real world. The issue mainly comes from the highly aggregated data doest not reflect the real age of leaving original household. It could be solved by using the micro data. But considering they are not the key actor, rather than a factor of choice preference of their parents, we will not be focusing on this issue.
+For example, the parents composing the household only limited to the more than 25 years old and the household with more than three children are regarded as three children household. But overall, we can still argue that the population we captured is the representative group in the city. 
 
 ---
 
 #### Environment spatial synthesis
 
-Create the space of land units where agents live, where each unit has a series of predefined spatial attributes:
+Create the space of spatial units and living units, where each unit has a series of predefined spatial attributes:
 
 1. Assign the land use type to the spatial units based on the land use map.
 
 2. Calculate the fixed attributes of each spatial units of residence.
 
-3. Assign the living units to the spatial units based on the CBS grids.
+3. Assign the households to the living units based on the empirical data.
 
 .image-50[![](../imgs/synthetics/synthetic_livingunits.jpg)]
-.caption[.center[Figure. the synthetic household distribution by number of child in Groningen.]]
+.caption[.center[Figure. The synthetic living units and their value in Groningen.]]
+
+???
+
+- We begin by assigning land use types to the spatial units based on a land use map.
+
+- Next, we calculate fixed attributes for each spatial unit of residence.
+
+  Fixed attributes include data such as number of living units contained, estimated value, function, and accessibility, which we have seen before. 
+
+- The household spatial units' belong has been defined according to the aggregated grid data. Finally, we just need to assign households to the specific living units. But still, given the possible situation of sharing flat, we will assign the household as reasonable as possible until the micro data is available.
 
 ---
 
 ## Limitations of the prototype model to be developed
 
-*Clearly, the prototype of model describes a type of idea space and decision making, which does not occur in practice. However, the ideal residential choice serves as a starting point for introducing further behaviours and mechanism, mentioned in other components, from our target of an ideal comprehensive model.*
+### Error term (the uncaptured factors and randomness)
 
-### Error term
+The error term is not included in the prototype model yet.
 
-The error term is not included in the prototype model for simplification reason, which will be added into calculation.
+### Decision rule
 
-### Connection with other components
+Some of rules are largely simplified, for example, the behaviour in housing market.
 
-The prototype model is a standalone model, which will be connected with other components in the future development.
+### Triggers and their influence
 
-### Environment initialisation without granular data input
+A determinant decision to move might be triggered by particular events, such as a job change or a divorce. In these case, they still look for the best option but also with a larger tolerance.
 
-For example, the heterogeneity of the type of living units in a spatial unit is generated from the probability distribution of the type of living units in the whole city. It will be further improved with granular data input. Same with household characteristics.
+### Synthetics
+
+The data has certain inconsistency and measurement error. It might be solved when the micro data is applied.
+
+Not all the factors have reliable data source, if it is not available in the end, we will distribute them based on some highly aggregated data.
 
 ### Absence of migration flow in and out of the system
 
-The long-distance migration flow in and out of the system is not included in the prototype model. As it is not correlated to utilities of specific living units, other potential decision-making process will be identified (e.g., expected utility model under risks) and modelled in the future development. Or, simplified as number summarised from the empirical data.
+The long-distance migration flow in and out of the system is not included in the prototype model. Other potential decision-making process (e.g., expected utility model under risks) might provide better theory basis for it. Or, simplified as number summarised from the empirical data.
 
 ???
 
-The error term is not included in the prototype model, which is a common practice in ABM. However, the error term is crucial in the model accuracy against the real world. The error term will be included in the future development of the model.
+The prototype model has several limitations. 
+
+Firstly, the absence of an error term in the model means that it fails to capture the influence of unaccounted factors and randomness. 
+
+Additionally, the decision rules in the prototype are notably simplified, particularly in contexts such as the housing market, where more established economic theory driven rules are required. 
+
+
+Furthermore, the model acknowledges that certain decisions to relocate are triggered by specific events like job changes or divorces, introducing a greater tolerance for final choice. 
+
+In terms of data quality, the prototype faces issues related to inconsistencies and measurement errors, which could be addressed through the application of micro data or, in the absence of reliable data, distribution based on empirical data. 
+
+Perhaps one of the most prominent limitations is the absence of long-distance migration. Future iterations may need to consider incorporating alternative decision-making models, like expected utility models under risk, to provide a more robust theoretical basis.
 
 ---
 
-## Overall limitations and challenges
+## Overall challenges
 
 - The balance between the complexity and the simplicity of the model
 
   The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take.
 
-  Modelling a city or country could be extremely computational consuming but not impossible as the development of computing power and new framework (e.g., distributed discrete event simulation)
+- The interpretability of the model
 
-  Several mechanisms may have little impact on the overall outcome of economic segregation. The model will be developed incrementally, and the impact of each mechanism will be evaluated.
-
-  The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take.
-
-  Modelling a city or country could be extremely computational consuming but not impossible as the development of computing power and new framework (e.g., distributed discrete event simulation)
+  As the intercorrelation between different mechanisms, the impact of each mechanism is difficult to be isolated. 
+  
+  Sensitivity analysis and modelling them in building block will be the key to address this issue.
 
 ???
 
+The overall challenges in developing the model also crucial: 
+
+First, there's a delicate balance to strike between model complexity and simplicity. Increasing the number of elements and detailed behavior and interaction rules can lead to a larger and more time-consuming model. 
+
+More seriously, the interpretability of the model poses a challenge due to the intercorrelation between different mechanisms, making it challenging to isolate the impact of each mechanism. To address this, sensitivity analysis and a modular approach to modelling are potential solutions.
 
 ---
 
@@ -707,19 +737,17 @@ Platforms to share the technical details and progress of the project:
 
 ???
 
----
+Finally, we are committed to keeping the project open.
 
-## Planned conferences, workshops and events
+So, we will open source all the scripts on github, and the outcomes after data masking will be shared publicly.
 
-### Conference
+We will also develop a simplified web-based ABM to let the public to interact with the model.
 
-- European Colloquium on Theoretical and Quantitative Geography 2023; 14th to 17th of 2023
+Today's slides is accessible via the QR code on the screen.
 
-- Social Simulation Conference by The European Social Simulation Association (Around September each year, alongside with summer school and workshops)
+Further progress can be also tracked online. Currently, it is hosted on my personal website, but a project website is coming soon. There are more supplementary information and references in the following slides, but I will not go through them.
 
-### Workshop
-
-- eX Modelo Workshop: Model Evaluation & Exploration with OpenMOLE; 13th and 14th of 2023
+Thank you!
 
 ---
 
