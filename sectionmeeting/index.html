@@ -255,44 +255,50 @@ Expected contribution and outcomes
 
 ## The key actors
 
-The key actors 
-
-Depending on the social phenomena and mechanism selected, the key actors of the model are different. The key actors of the model are summarised as the following table:
-
 - **Household**
 
-  The household is the key actor of the model, which is the basic unit of the model. The household is the agent of the model, which is the active agent of the model. The household is the environment of the model, which is the passive agent of the model.
+  Household is the most common actor modelled in related ABM (N = 16).
 
-- **Renter/Tenant and homeowner**
+- **Individual**
+
+  Individual, may called agent<sup>5, 6, 10</sup>, is commonly modelled as the member of household<sup>7, 8, 9</sup>. 
+  
+  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors, such as the individual economic entity<sup>11</sup> for wealth growth modelling, tenant or houseowner<sup>12</sup> for rent market modelling, and job-seeker or worker<sup>13</sup> for job-oriented mobility modelling, etc.
+
+- **Other actors**
+  
+  The other actors, developer<sup>14</sup>, urban sector or government<sup>10, 14</sup>, etc, are modelled as actor of interests in some ABMs which involves dynamic planning process.  
 
 ---
 
+.right[![](../imgs/design/Combine_Process_granularFramework.svg)
+.caption[.center[Figure. The key mechanisms and their sub-processes in the model]]]
+
 # Review
 
-## The key components
+## Mechanisms and processes
 
-  The theory-based model is prominent in the literature of ABM of urban economic segregation. The key actors and their decision and behaviour rules are summarised as the following table:
+Among the potential mechanisms and processes, some are well modelled before (green box), and some are not widely included (red box).
 
-- **Life transition**
+The migration is widely modelled, but the migration were not distinguished with residential mobility. The drive of migration was always modelled as attractiveness of uneven development but no further, where the migration is more modelled as input than output.
 
-  Life course is widely used for modelling long term social phenomena. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>[1, ]</sup> to the more dynamic life course model <sup>[2, ]</sup>.
+Overall, aside from the housing market behaviours, the mechanism within economic mobility is less modelled within spatial context.
 
-  The evolution of household (e.g., household formation, household dissolution, etc), the individual (e.g., birth, death, etc) have been investigated and validated to have impact on residential choice ().
+Land use policy often modelled as land use supply, but some of them included the other actors (e.g., developer, government) to model the dynamic planning process.
+
+Life course processes were mostly modelled as the early lifecycle model with probability-based transition, but the dynamic life course model is increasingly being modelled.
+
+*Notes: Commuting behaviours were connected to residential choice, but it lays on more transport research rather than social phenomena study*
+
 
 ???
 
-We are planning to simulate from when the data is available, the year 2011. The decade length period enables the agent to have sufficient time to more through their life course.
-
 ---
-
-# Review
-
-## The key components and their interplay
 
 .right[![](../imgs/design/ResearchDesignStructure_supersimplified.svg)
 .caption[.center[Figure. Diagram of the process components and their interplay]]]
 
-The decision making central is the core of the model, divided into five components:
+## The key components
 
 - **Life Course Component**
 
@@ -301,20 +307,6 @@ The decision making central is the core of the model, divided into five componen
 - **Residential Mobility Component**
 
   The household make their residential decision, the residence location change can impact the social network change and the economic states. 
-
-
-
-???
-
----
-
-
-# Review
-
-## The key components and their interplay
-
-.right[![](../imgs/design/ResearchDesignStructure_supersimplified.svg)
-.caption[.center[Figure. Diagram of the process components and their interplay]]]
 
 - **Economic Mobility Component**
 
@@ -326,36 +318,20 @@ The decision making central is the core of the model, divided into five componen
 
 - **Macro Level Regulation**  
   
-  The exogenous dynamics is the core of the model, which is the decision making central of the model. The exogenous dynamics is the environment of the model, which is the passive agent of the model.    
-
+  The macro level regulation was conceptualised  as the exogenous dynamics. It can impact the economic states and the residential decision. It imitates the role of policy interventions, and will be used to create the policy scenarios in the future.
 
 
 ???
 
----
+- **Life transition**
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg)
-.caption[.center[Figure. The key mechanisms and their sub-processes in the model]]]
+  Life course is widely used for modelling long term social phenomena like migration, urban decay<sup>18, 19</sup>. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>1, 15, 17</sup> to the more dynamic life course model <sup>2, 12</sup>.
 
-# Review
+  The key event being modelling in life transitions, including birth and death, marriage and divorce, being independent etc.<sup>1, 2, 12, 17, 19, 20, 21</sup>
 
-## Mechanisms and processes
+- **Residential mobility**
 
-- Pure theory-based ABM 
-
-- The life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>[1, ]</sup> to the more dynamic life course model <sup>[2, ]</sup>.
-
-Three central components of migration behaviour include (Wolpert, 1965):
-
-- The notion of place utility
-
-- The field theory approach to search behaviour
-
-- The life-cycle approach to threshold formation
-
-Not all processes was modelled in former ABMs, and the processes are not always consistent with the theory. The key mechanisms and their sub-processes are summarised as the following table:
-
-???
+  As we use both economic and residential mobility to search for the literature, the ABM focus on economic mobility 
 
 ---
 
@@ -834,57 +810,41 @@ Thank you!
   <br>
   [4] Chatterjee, K., Sherwin, H. and Jain, J., 2013. Triggers for changes in cycling: the role of life events and modifications to the external environment. Journal of transport geography, 30, pp.183-193.
   <br>
-  [5] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [5] Tabata, M. and Eshima, N., 2003. A self-referential agent-based model that consists of a large number of agents moving stochastically in a discrete bounded domain. Applied mathematics and computation, 143(2-3), pp.443-483.
   <br>
-  [6] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [6] Cui, J., Pan, Q., Qian, Q., He, M. and Sun, Q., 2013. A multi-agent dynamic model based on different kinds of bequests. Physica A: Statistical Mechanics and its Applications, 392(6), pp.1393-1397.
   <br>
-  [7] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [7] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modeling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
   <br>
-  [8] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [8] Acheampong, R.A. and Asabere, S.B., 2021. Simulating the co-emergence of urban spatial structure and commute patterns in an African metropolis: A geospatial agent-based model. Habitat International, 110, p.102343.
   <br>
-  [9] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [9] Jordan, R., Birkin, M. and Evans, A., 2011. Agent-based modelling of residential mobility, housing choice and regeneration. In Agent-based models of geographical systems (pp. 511-524). Dordrecht: Springer Netherlands.
   <br>
-  [10] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [10] Gil-Quijano, J., 2008. Mechanisms of automated formation and evolution of social-groups: A multi-agent system to model the intra-urban mobilities of Bogotá city. In Social Simulation: Technologies, Advances and New Discoveries (pp. 151-168). IGI Global.
   <br>
-  [11] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [11] Gonzalez-Estevez, J., Cosenza, M.G., López-Ruiz, R. and Sanchez, J.R., 2008. Pareto and Boltzmann–Gibbs behaviors in a deterministic multi-agent system. Physica A: Statistical Mechanics and its Applications, 387(18), pp.4637-4642.
   <br>
-  [12] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [12] Pagani, A., Ballestrazzi, F., Massaro, E. and Binder, C.R., 2022. ReMoTe-S. Residential mobility of tenants in Switzerland: an agent-based model. Journal of Artificial Societies and Social Simulation, 25(2).
   <br>
-  [13] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [13] Silveira, J.J., Espíndola, A.L. and Penna, T.J.P., 2006. Agent-based model to rural–urban migration analysis. Physica A: Statistical Mechanics and its Applications, 364, pp.445-456.
   <br>
-  [14] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [14] Sun, S. and Manson, S.M., 2015. Simple agents, complex emergent city: agent-based modeling of intraurban migration. Computational approaches for urban environments, pp.123-147.
   <br>
-  [15] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [15] Boulahbel-Bachari, S. and El Saadi, N., 2022. Understanding the Labor Market from the Bottom Up with an Agent-Based Model. In Proceedings of the Computational Methods in Systems and Software (pp. 754-769). Cham: Springer International Publishing.
   <br>
-  [16] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [16] Taniguchi, T., Takahashi, Y. and Nishikawa, I., 2010, August. Multi-agent simulation on relationship between individuals' travel behavior and residential choice behavior. In Proceedings of SICE Annual Conference 2010 (pp. 1728-1733). IEEE.
   <br>
-  [17] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [17] Fatmi, M.R. and Habib, M.A., 2017. Baseline synthesis and microsimulation of life-stage transitions within an agent-based integrated urban model. Procedia Computer Science, 109, pp.608-615.
   <br>
-  [18] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [18] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modeling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
   <br>
-  [19] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [19] Shen, Z., Ma, Y., Kawakami, M. and Nishino, T., 2012. Development of Agent-Based Model for Simulation on Residential Mobility Affected by Downtown Regeneration Policy. In Intelligent Interactive Multimedia: Systems and Services: Proceedings of the 5th International Conference on Intelligent Interactive Multimedia Systems and Services (IIMSS 2012) (pp. 201-211). Springer Berlin Heidelberg.
   <br>
-  [20] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [20] Buchmann, C.M. and Schwarz, N., 2014. Residential mobility and model complexity-an agent-based modelling experiment on a small shrinking town in Eastern Germany.
   <br>
-  [21] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  [21] Rosenfield, A., Chingcuanco, F. and Miller, E.J., 2013. Agent-based housing market microsimulation for integrated land use, transportation, environment model system. Procedia Computer Science, 19, pp.841-846.
   <br>
   [22] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [23] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [24] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [25] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [26] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [27] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [28] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [29] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [30] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
 </div>
 
 ???
