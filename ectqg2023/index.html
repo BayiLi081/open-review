@@ -34,9 +34,9 @@ ECTQG 2023
 
 <br>
 
-Bayi Li
+Bayi Li and Clémentine Cottineau
 
-Date: September 2023
+September 2023
  
 ???
 10s
@@ -219,11 +219,13 @@ Life course processes were mostly modelled as the early lifecycle model with pro
 ---
 
 .right[![](../imgs/design/Combine_Process_granularFramework.svg)
-.caption[.center[Figure. The key mechanisms and their sub-processes in the model]]]
+.caption[.center[Figure. The key mechanisms and their sub-processes]]]
 
 # Review
 
-## Gap and Potential (example of certain mechanism of well modelled and overlooked.)
+## Gap and Potential
+
+(example of certain mechanism of well modelled and overlooked.)
 
 Among the potential mechanisms and processes, some are well modelled before (green box), and some are not widely included (red box).
 
@@ -244,26 +246,15 @@ Life course processes were mostly modelled as the early lifecycle model with pro
 
 ## The key components
 
-- **Life Course Component**
+- Life Course Component
 
-  The life course regulates the internal attributes of the agent, posing event and transition as a trigger of further responses on residential and economic mobility.
+- Residential Mobility Component
 
-- **Residential Mobility Component**
+- Economic Mobility Component
 
-  The household make their residential decision, the residence location change can impact the social network change and the economic states. 
+- Social Network Component
 
-- **Economic Mobility Component**
-
-  The economic states change can impact the residential decision.
-
-- **Social Network Component**
-
-  The social network can impact the residential decision through social impact.  
-
-- **Macro Level Regulation**  
-  
-  The macro level regulation was conceptualised  as the exogenous dynamics. It can impact the economic states and the residential decision. It imitates the role of policy interventions, and will be used to create the policy scenarios in the future.
-
+- Macro Level Regulation
 
 ???
 
@@ -288,9 +279,11 @@ Life course processes were mostly modelled as the early lifecycle model with pro
 .image-40[![](../imgs/nl_casestudy_locationdes.jpg)]
 .caption[.center[Figure. The case of Groningen and its population density.]]
 
-The environment we used in the prototype model is the [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm). The population of FUA of Groningen is 194, 340 (474, 000 (total population) \* 41%) in 2011 census.
+The [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm) of Groningen.
 
-*Notes: <sup>a</sup>: developed by OECD and the European Commission, each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*
+The population of FUA of Groningen is <u>194, 340</u> in 2011 census, aggregated to around <u>80, 000</u> households.
+
+*Notes: <sup>a</sup>: each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*
 
 ???
 
@@ -298,46 +291,11 @@ I propose **Groningen** as the case study of this research.
 
 The reason is that it is more of a standalone city than a metropolitan region which is more suitable for the preliminary stage without too much external influence. Even consider the out-of-system migration flow, it is easier to measure and parametrise from the historical data.
 
+developed by OECD and the European Commission, 
+
 The population of FUA of Groningen is around two hundred thousand. After being aggregated to household level, the total number of household will be around 80,000. The number is computable on a personal computer.
 
 I intend this preliminary work to highlight the role of residential mobility across individuals' life course to economic segregation.
-
----
-
-### Entities (**change it more design related**)
-
-.right[.image-100[![](../imgs/design/entity-des/entities_overview.svg)]
-.caption[.center[Figure. The entities in the model and their attributes.]]]
-
-Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
-
-Passive agents, including **spatial units and living units**, are the environment where the active agents live in. The spatial units are the grids of the city, and the living units are the housing units in the grids of residence.
-
-The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
-
-*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*
-
-???
-
-There are two types of agents in the model: active agents and passive agents.
-
-Active agents consist of individuals and households. Let's break this down further:
-
-- Individuals: These are the people who make up the households.
-
-- Households: Think of households as the decision-making units. They are the major entities that make choices.
-
-  Small notes on that one adult was seen as an one-person household in our model, this is also consistent with the definition of the CBS household summary.
-
-Passive agents include spatial units and living units:
-
-- Spatial Units are those are essentially the grids that make up our city. They form the backdrop where our active agents interact.
-
-- Living Units: These are the housing units within the spatial unit of residence. They provide the physical spaces where our active agents reside.
-
-We designed the attributes of these entities to incorporate more mechanisms for other future components such as marriage preferences, social ties, and residence tenure types.
-
-Among these attributes, some attributes are fixed, while others change dynamically as the model runs.
 
 ---
 
@@ -345,10 +303,36 @@ Among these attributes, some attributes are fixed, while others change dynamical
 
 ### The life course component
 
-The life course model will be a simplified version of the real life course with **fundamental stages and essential events**. Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
+.right[![](../imgs/design/lifecoursemodel/example_life_course_001.svg)
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
 
-.image-90[![](../imgs/design/lifecoursemodel/example_life_course.svg)]
-.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]
+**Fundamental stages and essential micro life events**
+
+- The trajectories of individuals and households are intertwined with each other through the life events.
+
+- Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); 
+
+- some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
+
+---
+
+
+<!-- The life course component -->
+
+### The life course component
+
+.right[![](../imgs/design/lifecoursemodel/example_life_course_002.svg)
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
+
+A simplified version of the real life course with **fundamental stages and essential micro life events**. 
+
+- The trajectories of individuals and households are intertwined with each other through the life events.
+
+- Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); 
+
+- some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
+
+- 
 
 ???
 
@@ -361,42 +345,6 @@ The basic component is the life course component. Our goal with it is to capture
 - This diagram shows an example life trajectory of two people and the household they formed, highlighting various events and their impact on household characteristics. It's a snapshot of how our model brings together events and transitions that shape the individuals' and households' life courses.
 
 ---
-
-<!-- The life course component -->
-
-### The life course component
-
-#### The life events
-
-.right[.image-100[![](../imgs/design/lifecoursemodel/example_life_event.svg)]
-.caption[.center[Figure. The key life stages and life events of a household <br> and their impact on other components.]]]
-
-Micro life events<sup>a</sup>, happening in a household or individual life trajectory, could trigger the relocation desire and affect the preference for residence and affordability for the move. 
-
-These micro events can be further categorised into individual and family events. These two types of events are applied to the household and individual respectively.
-
-<!-- the table of representative life events -->
-
-| Type | | Event |
-| --- | - | --- |
-| **Individual Event** |:| Job switch, decease, etc. |
-| **Family Event** |:| Marry, divorce, give birth, etc. |
-
-These events will act as trigger<sup>b</sup> of further responses on residential and economic mobility.
-
-*Notes: <sup>a</sup>: Macro events included unexpected events such as the economic crisis, the pandemic, the war, etc. They will not be included for not being our focus, but the **more consistent long-term macro regulators** such as the interest rate, immigrants number and employment rate will be included in the exogenous dynamics section.*
-
-*<sup>b</sup>: Triggering events resulting from the progression in a households’ life course career can be categorised into **opportunities, problems to solve, and radical changes**.<sup>3, 4</sup>*
-
-???
-
-Life events have the potential to trigger relocation desires, influence preferences for residence and economic states.
-
-- This diagram shows the essential life stages and life events that households and individuals experience and how they impact house size requirement, preferences and disposable income on housing, that is affordability.
-
-- As a note, the life events included in life course component is micro life events. While macro events such as economic crises, pandemics, and wars exist in the real world, we've excluded them to concentrate on more consistent long-term macro regulators like interest rates, immigration numbers, and employment rates, which we'll address separately in the macro-level regulation component.
-
-- It can be categorized into two main types: individual events and family events. They can occur within individual or household life trajectories, served as triggers for subsequent responses in terms of residential and economic mobility.
 
 <!-- Residential mobility component -->
 
@@ -444,6 +392,7 @@ Let's illustrate this with an example of utility calculation based on the access
 
 - The key idea is to calculate the accessibility to these services within a 400-meter buffer around a given location. This buffer represents a reasonable distance that individuals are willing to travel to access essential services.
 
+
 .image-30[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
 .caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. <br>(b) Result for the scenario for the equal preferences for each attribute.]]
 
@@ -487,6 +436,104 @@ To model the housing decision process, we need to establish specific rules that 
 - Households are willing to expand their searching radius if they cannot find a suitable housing unit within their current radius.
 
 - The searching radius is fixed to the household's current residence. However, this radius can change based on specific circumstances. In future developments, we may consider trigger-oriented searching radius, such as job-oriented or education-oriented searches, as well as social-impact-oriented searching radius, which take into account factors like proximity to relatives and current social networks.
+
+---
+
+<!-- Entities introduction starts here -->
+
+### Entities (**change it more design related**)
+
+.right[![](../imgs/design/entity-des/entities_individual_50.svg)
+.caption[.center[Figure. The entities in the model and their attributes.]]]
+
+#### Individuals
+
+Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+
+The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
+
+???
+
+There are two types of agents in the model: active agents and passive agents.
+
+Active agents consist of individuals and households. Let's break this down further:
+
+- Individuals: These are the people who make up the households.
+
+- Households: Think of households as the decision-making units. They are the major entities that make choices.
+
+  Small notes on that one adult was seen as an one-person household in our model, this is also consistent with the definition of the CBS household summary.
+
+Passive agents include spatial units and living units:
+
+- Spatial Units are those are essentially the grids that make up our city. They form the backdrop where our active agents interact.
+
+- Living Units: These are the housing units within the spatial unit of residence. They provide the physical spaces where our active agents reside.
+
+We designed the attributes of these entities to incorporate more mechanisms for other future components such as marriage preferences, social ties, and residence tenure types.
+
+Among these attributes, some attributes are fixed, while others change dynamically as the model runs.
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../imgs/design/entity-des/entities_household_50.svg)
+.caption[.center[Figure. The entities in the model and their attributes.]]]
+
+#### Household
+
+Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+
+*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*
+
+???
+
+There are two types of agents in the model: active agents and passive agents.
+
+Active agents consist of individuals and households. Let's break this down further:
+
+- Individuals: These are the people who make up the households.
+
+- Households: Think of households as the decision-making units. They are the major entities that make choices.
+
+  Small notes on that one adult was seen as an one-person household in our model, this is also consistent with the definition of the CBS household summary.
+
+Passive agents include spatial units and living units:
+
+- Spatial Units are those are essentially the grids that make up our city. They form the backdrop where our active agents interact.
+
+- Living Units: These are the housing units within the spatial unit of residence. They provide the physical spaces where our active agents reside.
+
+We designed the attributes of these entities to incorporate more mechanisms for other future components such as marriage preferences, social ties, and residence tenure types.
+
+Among these attributes, some attributes are fixed, while others change dynamically as the model runs.
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../imgs/design/entity-des/entities_livingunit_50.svg)
+.caption[.center[Figure. The entities in the model and their attributes.]]]
+
+#### Living Unit
+
+The living units are the housing units in the grids of residence.
+
+???
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../imgs/design/entity-des/entities_spatialunit_50.svg)
+.caption[.center[Figure. The entities in the model and their attributes.]]]
+
+#### Spatial Unit
+
+The spatial units are the environment where the active agents live in. are the grids of the city.
+
+<!-- Entities introduction ends here -->
 
 ---
 
@@ -701,7 +748,7 @@ Thank you!
   <br>
   [6] Cui, J., Pan, Q., Qian, Q., He, M. and Sun, Q., 2013. A multi-agent dynamic model based on different kinds of bequests. Physica A: Statistical Mechanics and its Applications, 392(6), pp.1393-1397.
   <br>
-  [7] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modeling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
+  [7] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modelling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
   <br>
   [8] Acheampong, R.A. and Asabere, S.B., 2021. Simulating the co-emergence of urban spatial structure and commute patterns in an African metropolis: A geospatial agent-based model. Habitat International, 110, p.102343.
   <br>
@@ -715,7 +762,7 @@ Thank you!
   <br>
   [13] Silveira, J.J., Espíndola, A.L. and Penna, T.J.P., 2006. Agent-based model to rural–urban migration analysis. Physica A: Statistical Mechanics and its Applications, 364, pp.445-456.
   <br>
-  [14] Sun, S. and Manson, S.M., 2015. Simple agents, complex emergent city: agent-based modeling of intraurban migration. Computational approaches for urban environments, pp.123-147.
+  [14] Sun, S. and Manson, S.M., 2015. Simple agents, complex emergent city: agent-based modelling of intraurban migration. Computational approaches for urban environments, pp.123-147.
   <br>
   [15] Boulahbel-Bachari, S. and El Saadi, N., 2022. Understanding the Labor Market from the Bottom Up with an Agent-Based Model. In Proceedings of the Computational Methods in Systems and Software (pp. 754-769). Cham: Springer International Publishing.
   <br>
@@ -743,11 +790,12 @@ Thank you!
     <script src="../src/custom.js" type="text/javascript">
     </script>
     <script type="text/javascript">
-      var slideshow = remark.create({ ratio: "16:9" ,
-      navigation: {
-        scroll: false
-      }});
-      
+      var slideshow = remark.create({ 
+        ratio: "16:9" , 
+        navigation: {
+          scroll: false
+        },
+      });
     </script>
   </body>
 </html>
