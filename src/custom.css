@@ -50,13 +50,13 @@ h6 { font-size: 0.8em; }
 
 em { 
   font-size: 0.75em;
-  line-height: 90%;
+  line-height: 0.9em;
   font-style: italic; 
   color: #777872;
 }
 
 ul { 
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 90%;
   margin-top: 0%;
   margin-bottom: 0%;
@@ -94,6 +94,11 @@ div.references {
   float: center;
   font-size: 0.8em;
   color: #777873;
+}
+
+.note {
+  position: fixed;
+	bottom: 40px;
 }
 
 blockquote { 

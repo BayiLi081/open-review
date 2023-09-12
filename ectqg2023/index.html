@@ -45,26 +45,86 @@ Hi, today I am going to introduce the current working progress about my PhD proj
 
 ---
 
+<!-- About Agent-Based Modelling: Layers -->
+
+.right[.image-90[![](../imgs/whatisABM/whatisABM_layers.svg)]]
+
+## Agent-Based Modelling 
+
+ABM is a bottom-up approach to modelling, starting at the individual level and simulating the collective social phenomena from micro behaviours.
+
+### Entities
+
+There are generally two layers of entities in ABM: actor and environment layer.
+
+- Actors
+
+  The <u>human actors</u>, active agents, can move around and interact with other entities. 
+
+- Environment
+
+  The <u>environment</u>, passive agents, is where the active agents live in.
+
+???
+
+- ABM is a bottom-up approach to modelling.
+
+- It aims to understand complex social phenomena by simulating individual behaviours.
+
+- The components of an ABM consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment where they live.
+
+- Active agents, one of the entities, often represented as human actors, capable of moving around and interacting with each other.
+
+- Passive agents represent the environment in which the active agents reside and act.
+
+---
+
+<!-- About Agent-Based Modelling: Rules and interactions -->
+
+.right[.image-90[![](../imgs/whatisABM/whatisABM_envimpact.svg)]]
+
+## Agent-Based Modelling 
+
+The **individual behaviours** in ABM regulated by <u>simple rules and interactions</u>.
+
+### Rules
+
+- The behaviour of active agents is guided by rules that define how they behave and interact with each other.
+
+- These rules are based on both dynamic attributes and static attributes.
+
+### Interactions
+
+- Active agents interact with each other and with the environment, altering their states.
+
+- The interactions can change over time and space, driven by dynamic rules in response to changing circumstances.
+
+???
+
+
+- These interactions lead to changes in the state of the system, also called the collective outcome of individual behaviours.
+
+- These social and environmental impacts collectively contribute to the emergence of phenomena or pattern.
+
+The former two also widely applied as rule-based ABM. That's select the mechanism from established theories, parametrise the rules based on empirical data, and include the rule of thumb (based on practical experience rather than theory).
+
+Anyway, the choice of approach depends on the specific aims of the study. In our case, we will be using a combined approach, which is a theory-based ABM with some heuristic rules.
+
+---
+
 <!-- About Agent-Based Modelling -->
 
-## The role of agent-based modelling in segregation studies
+.right[.image-90[![](../imgs/whatisABM/whatisABM_outcomes.svg)]]
 
-**why abm? what it can solve other cannot solve?**
+## Agent-Based Modelling 
 
-.right[.image-90[![](../imgs/whatisABM.svg)]
-.caption[.center[Figure. The basic structure of an agent-based model <br> adapted from (Nikolic, 2012; Manley, 2013)]]]
+These emergent phenomena are result from the collective actions of the agents.
 
-ABM is a bottom-up approach to modelling, which builds understanding of **complex social phenomena** from **individual behaviours** regulated by <u>simple rules and interactions</u>.
+### Emergent Phenomena
 
-**Active agents** are the <u>entities (human actors)</u> that can move around and interact with each other. 
+- These interactions lead to changes in the state of the system.
 
-  The active agents are guided by **rules** that define their behaviour and interaction.
-
-**Passive agents** are the <u>environment</u> where the active agents live in.
-
-The rules are based on the **dynamic attributes** (e.g., own states, social tie, etc) and the **static attributes** (e.g., the social norms, etc).
-
-  Active agents **interact** with each other and the passive agents, altering their states. The <u>social and environmental impacts</u> contribute to **the phenomena of the system** collectively.
+- The <u>social and environmental impacts</u> contribute to **the phenomena of the system** collectively.
 
 ???
 
@@ -102,9 +162,7 @@ Still, I will start with what is ABM?
   
   The pros of data-driven model is that it is more accurate, but the cons is that it is hard to interpret and understand the model.
 
-*Notes: Data driven ABM rises from the development of machine learning and big data. But given that one of our research aim is to understand the mechanism of urban economic segregation, we will not be focusing on this approach.*
-
-???
+.note[*Notes: Data driven ABM rises from the development of machine learning and big data. But given that one of our research aim is to understand the mechanism of urban economic segregation, we will not be focusing on this approach.*]
 
 There are three approaches to designing agents' behaviours in ABMs: theory-based, heuristic, and data-driven. The major difference is the rule and the theory basis of the rule.
 
@@ -126,9 +184,6 @@ Anyway, the choice of approach depends on the specific aims of the study. In our
 
 # Overview
 
-.right[.image-80[![](../imgs/design/theoreticalframework.svg)]
-.caption[.center[Figure. Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
-
 ## The target social phenomena
 
 **Urban economic segregation**
@@ -141,17 +196,24 @@ Two fundamental questions:
 
 - How the their economic status change over time?
 
+--
+
+### Research question
+
+How can agent-based modelling help the understanding of the dynamics of urban economic segregation patterns through individual residential and economic behaviors and interactions in cities?
+
 ???
 
 ---
+
+.right[![](../imgs/design/theoreticalframework.svg)
+.caption[.center[Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
 
 # Overview
 
 ## Purpose
 
-- To simulate the urban economic segregation as collective social phenomena of <u>micro residential mobility and economic mobility behaviours</u> over individual's life course.
-
-- To gain a deeper understanding of the broader social dynamics and their interplay that contribute to urban economic segregation.
+- To simulate <u>the interplay of residential and economic behaviours over individual's life course</u> in forming urban economic segregation using micro-level data.
 
 - To provide simulated evidence from scenarios modelling of policy interventions for policy makers.
 
@@ -174,28 +236,90 @@ The purpose is to build a reliable modelling framework to have better understand
 
 ---
 
+.right[![](../imgs/slr/slr_classificationclusters.svg)
+.caption[.center[Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
+
+# Review
+
+## Identify the key mechanisms
+
+---
+
 # Review
 
 ## The key actors
 
 - **Household**
 
-  Household is the most common actor modelled in related ABM (N = 16).
+  Household is the most common actor modelled in related ABM.
 
 - **Individual**
 
-  Individual, may called agent<sup>5, 6, 10</sup>, is commonly modelled as the member of household<sup>7, 8, 9</sup>. 
+  Individual, may called agent, is commonly modelled as the member of household. 
   
-  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors, such as the individual economic entity<sup>11</sup> for wealth growth modelling, tenant or houseowner<sup>12</sup> for rent market modelling, and job-seeker or worker<sup>13</sup> for job-oriented mobility modelling, etc.
+  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors, such as the individual economic entity for wealth growth modelling, tenant or houseowner for rent market modelling, and job-seeker or worker for job-oriented mobility modelling, etc.
 
 - **Other actors**
   
-  The other actors, developer<sup>14</sup>, urban sector or government<sup>10, 14</sup>, etc, are modelled as actor of interests in some ABMs which involves dynamic planning process.  
+  The other actors, developer, urban sector or government, etc, are modelled as actor of interests in some ABMs which involves dynamic planning process. 
+  
+---
+
+.right[![](../imgs/design/component_design/components_lifecourse_80.svg)]
+
+## The key components
+
+**Life Course Component**
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg)
-.caption[.center[Figure. The key mechanisms and their sub-processes in the model]]]
+.right[![](../imgs/design/component_design/components_residentialmobility_80.svg)]
+
+## The key components
+
+**Residential Mobility Component**
+
+---
+
+.right[![](../imgs/design/component_design/components_economicmobility_80.svg)]
+
+## The key components
+
+**Economic Mobility Component**
+
+---
+
+.right[![](../imgs/design/component_design/components_socialnetwork_80.svg)]
+
+## The key components
+
+**Social Network Component**
+
+---
+
+.right[![](../imgs/design/component_design/components_macroregulation_80.svg)]
+
+## The key components
+
+**Macro Level Regulation**
+  
+???
+
+From the literature, we identify five key components of the related decision making.
+  
+- **Life transition**
+
+  Life course is widely used for modelling long term social phenomena like migration, urban decay<sup>18, 19</sup>. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>1, 15, 17</sup> to the more dynamic life course model <sup>2, 12</sup>.
+
+  The key event being modelling in life transitions, including birth and death, marriage and divorce, being independent etc.<sup>1, 2, 12, 17, 19, 20, 21</sup>
+
+- **Residential mobility**
+
+  As we use both economic and residential mobility to search for the literature, the ABM focus on economic mobility 
+
+---
+
+.right[![](../imgs/design/Combine_Process_granularFramework.svg)]
 
 # Review
 
@@ -207,19 +331,12 @@ The migration is widely modelled, but the migration were not distinguished with 
 
 Overall, aside from the housing market behaviours, the mechanism within economic mobility is less modelled within spatial context.
 
-Land use policy often modelled as land use supply, but some of them included the other actors (e.g., developer, government) to model the dynamic planning process.
-
-Life course processes were mostly modelled as the early lifecycle model with probability-based transition, but the dynamic life course model is increasingly being modelled.
-
-*Notes: Commuting behaviours were connected to residential choice, but it lays on more transport research rather than social phenomena study*
-
 
 ???
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg)
-.caption[.center[Figure. The key mechanisms and their sub-processes]]]
+.right[![](../imgs/design/Combine_Process_granularFramework.svg)]
 
 # Review
 
@@ -227,46 +344,11 @@ Life course processes were mostly modelled as the early lifecycle model with pro
 
 (example of certain mechanism of well modelled and overlooked.)
 
-Among the potential mechanisms and processes, some are well modelled before (green box), and some are not widely included (red box).
-
-The migration is widely modelled, but the migration were not distinguished with residential mobility. The drive of migration was always modelled as attractiveness of uneven development but no further, where the migration is more modelled as input than output.
-
-Overall, aside from the housing market behaviours, the mechanism within economic mobility is less modelled within spatial context.
-
 Land use policy often modelled as land use supply, but some of them included the other actors (e.g., developer, government) to model the dynamic planning process.
 
 Life course processes were mostly modelled as the early lifecycle model with probability-based transition, but the dynamic life course model is increasingly being modelled.
 
-*Notes: Commuting behaviours were connected to residential choice, but it lays on more transport research rather than social phenomena study*
-
----
-
-.right[![](../imgs/design/ResearchDesignStructure_supersimplified.svg)
-.caption[.center[Figure. Diagram of the process components and their interplay]]]
-
-## The key components
-
-- Life Course Component
-
-- Residential Mobility Component
-
-- Economic Mobility Component
-
-- Social Network Component
-
-- Macro Level Regulation
-
-???
-
-- **Life transition**
-
-  Life course is widely used for modelling long term social phenomena like migration, urban decay<sup>18, 19</sup>. Especially for the ABM with long term simulation, life stage transition is increasingly being modelled in ABMs of residential mobility, approached by early lifecycle model <sup>1, 15, 17</sup> to the more dynamic life course model <sup>2, 12</sup>.
-
-  The key event being modelling in life transitions, including birth and death, marriage and divorce, being independent etc.<sup>1, 2, 12, 17, 19, 20, 21</sup>
-
-- **Residential mobility**
-
-  As we use both economic and residential mobility to search for the literature, the ABM focus on economic mobility 
+.note[*Notes: Commuting behaviours were connected to residential choice, but it lays on more transport research particularly*]
 
 ---
 
@@ -283,7 +365,7 @@ The [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regional
 
 The population of FUA of Groningen is <u>194, 340</u> in 2011 census, aggregated to around <u>80, 000</u> households.
 
-*Notes: <sup>a</sup>: each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*
+.note[*Notes: <sup>a</sup>: each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*]
 
 ???
 
@@ -348,18 +430,21 @@ The basic component is the life course component. Our goal with it is to capture
 
 <!-- Residential mobility component -->
 
+.right[.image-80[![](../imgs/design/preference/preference_composition.svg)]
+.caption[.center[Expectation, preference and affordability of a household and a house unit.]]]
+
 ### Residential mobility component
 
 #### The residential utility
 
-Residential Utility is defined by static attributes and the preference for different residential options based on various economic, demographic, and social attributes of households. We assume that the households with similar characteristics have similar preference.
+Residential Utility is defined by static attributes and the preference for different residential options based on various economic, demographic, and social attributes of households.
+
+--
+
 
 The preference is simplified to impact perceived utility of housing, which is based on the accessibility to services, the living unit size fits the household size and the social group by income and demographic background<sup>a</sup>.
 
-.image-50[![](../imgs/design/preference/preference_composition.svg)]
-.caption[.center[Figure. Expectation, preference and affordability of a household and a house unit.]]
-
-*Notes: <sup>a</sup>: The preference level of residing with similar economic and demographic neighbours.*
+.note[*Notes: <sup>a</sup>: The preference level of residing with similar economic and demographic neighbours.*]
 
 ???
 
@@ -409,33 +494,39 @@ Of course, household does not have to evaluate all the grids, but only their cur
 
 ---
 
-#### The housing decision process
-preference, expectation, affordability, decision
+.right[![](../imgs/design/housingsearchprocess/utility_comparison.svg)]
 
-.right[![](../imgs/design/housingdecisionprocess.svg)
-.caption[.center[Figure. The housing search process at one round of searching.]]]
+#### The housing decision process
+
+<!-- preference, expectation, affordability, decision -->
 
 Rules:
 
-- The household will start the housing searching process if the utility of the current housing is lower than the expected utility.
+  The household will start the housing searching process if the utility of the current housing is lower than the expected utility.
 
-- Household with higher disposable income on housing has <u>the priority</u> to select the housing units. Therefore, the household will not move if <u>the affordability is lower than the expected cost</u> of any of available housing units in list.
+---
 
-- The household will <u>increase the searching radius</u> if there is no qualified housing unit within the current searching radius.
+.right[![](../imgs/design/housingsearchprocess/bidding_simplified.svg)]
 
-- At the phase, the searching radius is fixed to their current residence for simplification reason, the following works could introduce <u>trigger-oriented searching radius</u> (e.g., job-oriented, education-oriented) and <u>social impacted searching radius</u> (e.g., proximity to relatives and current network).
+#### The housing decision process
 
-???
+<!-- preference, expectation, affordability, decision -->
 
-To model the housing decision process, we need to establish specific rules that households follow. Here are the key rules:
+Rules:
 
-- The household initiates the housing searching process if the utility of their current housing is lower than their expected utility.
+  Household with higher disposable income on housing has <u>the priority</u> to select the housing units. Therefore, the household will not move if <u>the affordability is lower than the expected cost</u> of any of available housing units in list.
 
-- Households with higher disposable income on housing enjoy priority in selecting housing units. Thus, they will not move if the affordability is lower than the expected cost of available housing units on their list.
+---
 
-- Households are willing to expand their searching radius if they cannot find a suitable housing unit within their current radius.
+.right[![](../imgs/design/housingsearchprocess/finalisethelist.svg)]
 
-- The searching radius is fixed to the household's current residence. However, this radius can change based on specific circumstances. In future developments, we may consider trigger-oriented searching radius, such as job-oriented or education-oriented searches, as well as social-impact-oriented searching radius, which take into account factors like proximity to relatives and current social networks.
+#### The housing decision process
+
+<!-- preference, expectation, affordability, decision -->
+
+Rules:
+
+  The household will <u>increase the searching radius</u> if there is no qualified housing unit within the current searching radius.
 
 ---
 
@@ -443,16 +534,27 @@ To model the housing decision process, we need to establish specific rules that 
 
 ### Entities (**change it more design related**)
 
-.right[![](../imgs/design/entity-des/entities_individual_50.svg)
-.caption[.center[Figure. The entities in the model and their attributes.]]]
+.right[![](../imgs/design/entity-des/entities_individual_50.svg)]
 
 #### Individuals
 
-Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+The individuals are the members of the household<sup>a</sup>.
 
-The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
+Their attributes include the static attributes and dynamic attributes. 
+
+--
+
+The dynamic choice attributes are the preference, tolerance and expectation, which are updated based on the experience of the household. 
+
+--
+
+The dynamic state attributes are the current residence, current job, current income, current wealth, etc.
 
 ???
+
+Active agents, including the **individuals and household**, are the key actors of the model. 
+
+The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
 
 There are two types of agents in the model: active agents and passive agents.
 
@@ -478,14 +580,13 @@ Among these attributes, some attributes are fixed, while others change dynamical
 
 ### Entities (**change it more design related**)
 
-.right[![](../imgs/design/entity-des/entities_household_50.svg)
-.caption[.center[Figure. The entities in the model and their attributes.]]]
+.right[![](../imgs/design/entity-des/entities_household_50.svg)]
 
 #### Household
 
-Active agents, including the **individuals and household**, are the key actors of the model. The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
 
-*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*
+.note[*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*]
 
 ???
 
@@ -514,7 +615,7 @@ Among these attributes, some attributes are fixed, while others change dynamical
 ### Entities (**change it more design related**)
 
 .right[![](../imgs/design/entity-des/entities_livingunit_50.svg)
-.caption[.center[Figure. The entities in the model and their attributes.]]]
+]
 
 #### Living Unit
 
@@ -527,7 +628,7 @@ The living units are the housing units in the grids of residence.
 ### Entities (**change it more design related**)
 
 .right[![](../imgs/design/entity-des/entities_spatialunit_50.svg)
-.caption[.center[Figure. The entities in the model and their attributes.]]]
+]
 
 #### Spatial Unit
 
@@ -575,6 +676,8 @@ Furthermore, the model acknowledges that certain decisions to relocate are trigg
 In terms of data quality, the prototype faces issues related to inconsistencies and measurement errors, which could be addressed through the application of micro data or, in the absence of reliable data, distribution based on empirical data. 
 
 Perhaps one of the most prominent limitations is the absence of long-distance migration. Future iterations may need to consider incorporating alternative decision-making models, like expected utility models under risk, to provide a more robust theoretical basis.
+
+At the phase, the searching radius is fixed to their current residence for simplification reason, the following works could introduce <u>trigger-oriented searching radius</u> (e.g., job-oriented, education-oriented) and <u>social impacted searching radius</u> (e.g., proximity to relatives and current network).
 
 ---
 
@@ -666,7 +769,9 @@ Thank you!
 ##### Input data sources
 
 - OECD report
+
 - CBS Microdata
+
 - Secondary survey data and former reports
 
 ##### Design concepts
@@ -683,13 +788,13 @@ Thank you!
 
   The active agent adjusts their preference, tolerance and expectation to their current condition and the environment.
 
-- Fitness
-
-  The goal of the household is to acquire the most suitable residence, based on their knowledge and cognitive skill, that fits their current demand and affordability.
-
 ---
 
 ##### Design concepts
+
+- Fitness
+
+  The goal of the household is to acquire the most suitable residence, based on their knowledge and cognitive skill, that fits their current demand and affordability.
 
 - Learning
 
