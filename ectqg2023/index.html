@@ -34,14 +34,13 @@ ECTQG 2023
 
 <br>
 
-Bayi Li and Clémentine Cottineau
+**Bayi Li and Clémentine Cottineau**
 
 September 2023
  
 ???
-10s
 
-Hi, today I am going to introduce the current working progress about my PhD project, that is agent-based modelling of urban economic segregation.
+Hi, I am Bayi Li. Today, I am going to introduce the work progress of my PhD project, which focuses on agent-based modelling of urban economic segregation. Supervised by Clementine. We are from the Urban Studies section at TU Delft.
 
 ---
 
@@ -51,19 +50,7 @@ Hi, today I am going to introduce the current working progress about my PhD proj
 
 ## Agent-Based Modelling 
 
-ABM is a bottom-up approach to modelling, starting at the individual level and simulating the collective social phenomena from micro behaviours.
-
-### Entities
-
-There are generally two layers of entities in ABM: actor and environment layer.
-
-- Actors
-
-  The <u>human actors</u>, active agents, can move around and interact with other entities. 
-
-- Environment
-
-  The <u>environment</u>, passive agents, is where the active agents live in.
+ABM is a bottom-up approach to modelling, simulating collective social phenomena from micro behaviors.
 
 ???
 
@@ -71,11 +58,35 @@ There are generally two layers of entities in ABM: actor and environment layer.
 
 - It aims to understand complex social phenomena by simulating individual behaviours.
 
-- The components of an ABM consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment where they live.
+---
 
-- Active agents, one of the entities, often represented as human actors, capable of moving around and interacting with each other.
+<!-- About Agent-Based Modelling: Layers -->
 
-- Passive agents represent the environment in which the active agents reside and act.
+.right[.image-90[![](../imgs/whatisABM/whatisABM_layers.svg)]]
+
+## Agent-Based Modelling 
+
+ABM is a bottom-up approach to modelling, simulating collective social phenomena from micro behaviors.
+
+### Entities
+
+In ABM, there are typically two layers of entities: the actor layer and the environment layer:
+
+- Actors
+
+  The human actors, <u>active agents</u>, can move around and interact with other entities. 
+
+- Environment
+
+  The environment, <u>passive agents</u>, is where the active agents reside.
+
+???
+
+So in ABM, entities refer to the actors and the environment.
+
+- Active agents, often represented as human actors, capable of moving around and interacting with each other.
+
+- Passive agents represent the environment in which the human actors reside and act.
 
 ---
 
@@ -83,32 +94,33 @@ There are generally two layers of entities in ABM: actor and environment layer.
 
 .right[.image-90[![](../imgs/whatisABM/whatisABM_envimpact.svg)]]
 
-## Agent-Based Modelling 
-
-The **individual behaviours** in ABM regulated by <u>simple rules and interactions</u>.
+## Agent-Based Modelling
 
 ### Rules
 
-- The behaviour of active agents is guided by rules that define how they behave and interact with each other.
+- The rules guides how the agents behave and interact with each other.
 
-- These rules are based on both dynamic attributes and static attributes.
+- These rules are based on both dynamic and static attributes.
 
 ### Interactions
 
-- Active agents interact with each other and with the environment, altering their states.
+- Actors interact with each other and the environment, altering their states.
 
-- The interactions can change over time and space, driven by dynamic rules in response to changing circumstances.
+- The interactions can vary over time and space.
 
 ???
 
+Another key component of ABM is the rules.
 
-- These interactions lead to changes in the state of the system, also called the collective outcome of individual behaviours.
+- Rule-based ABM is the most common approach, where rules govern behaviours and interaction. 
 
-- These social and environmental impacts collectively contribute to the emergence of phenomena or pattern.
+- These rules could be based on both dynamic attributes (such as the agent's own states or social ties) and static attributes (such as social norms).
 
-The former two also widely applied as rule-based ABM. That's select the mechanism from established theories, parametrise the rules based on empirical data, and include the rule of thumb (based on practical experience rather than theory).
+Rules guide interactions.
 
-Anyway, the choice of approach depends on the specific aims of the study. In our case, we will be using a combined approach, which is a theory-based ABM with some heuristic rules.
+- And interactions lead to changes in the state of other agents and environment.
+
+- The interactions can be dynamic, varying over time and space, in response to changing circumstances.
 
 ---
 
@@ -118,69 +130,69 @@ Anyway, the choice of approach depends on the specific aims of the study. In our
 
 ## Agent-Based Modelling 
 
-These emergent phenomena are result from the collective actions of the agents.
-
 ### Emergent Phenomena
 
-- These interactions lead to changes in the state of the system.
+- The actors' and environment's changing states indicate <u>social and environmental impacts</u> on the system.
 
-- The <u>social and environmental impacts</u> contribute to **the phenomena of the system** collectively.
+- The social and environmental impacts contribute to <u>the phenomena of the system</u> collectively.
 
 ???
 
-Still, I will start with what is ABM?
+The social and environmental impacts can be observed through the changing states of the actors and the environment.
 
-- ABM is a bottom-up approach to modelling.
+These social and environmental impacts, collectively, contribute to the emergence of certain phenomena or pattern. 
 
-- It aims to understand complex social phenomena by simulating individual behaviours.
+In our case, it is the urban economic segregation.
 
-- The components of an ABM consist of three key elements: a collection of agents and their states, the rules governing the interactions of the agents, and the environment where they live.
+---
 
-- Active agents, one of the entities, often represented as human actors, capable of moving around and interacting with each other.
+<!-- About Agent-Based Modelling -->
 
-- Passive agents represent the environment in which the active agents reside and act.
+.right[.image-90[![](../imgs/whatisABM/whatisABM_outcomes.svg)]]
 
-- The behaviour of active agents is guided by rules that define how they behave and interact with each other.
+## Agent-Based Modelling 
 
-- These rules are based on both dynamic attributes (such as the agent's own states or social ties) and static attributes (such as social norms).
+### Emergent Phenomena
 
-- Active agents interact with each other and with the environment. Also they can interact with passive agents, altering their states.
+- The actors' and environment's changing states indicate <u>social and environmental impacts</u> on the system.
 
-- These interactions lead to changes in the state of the system, also called the collective outcome of individual behaviours.
+- The social and environmental impacts contribute to <u>the phenomena of the system</u> collectively.
 
-- These social and environmental impacts collectively contribute to the emergence of phenomena or pattern.
+In form of **urban economic segregation**:
 
-- **Theory-based ABM**
+- What are the key entities?
 
-  The pros of theory-based model is that it is more interpretable and generalisable, but the cons is that it may oversimplify the reality.
+- What are the key behaviour rules?
 
-- **Heuristic ABM**
+???
 
-  The pros of heuristic model is that it is more flexible and exploratory, but the cons is that it has limited generalisability and more subjectivity.
+Going back to the basics, we can ask ourselves:
 
-- **Data-driven ABM**
-  
-  The pros of data-driven model is that it is more accurate, but the cons is that it is hard to interpret and understand the model.
+In the evolution of urban economic segregation:
 
-.note[*Notes: Data driven ABM rises from the development of machine learning and big data. But given that one of our research aim is to understand the mechanism of urban economic segregation, we will not be focusing on this approach.*]
+- What are the key entities?
 
-There are three approaches to designing agents' behaviours in ABMs: theory-based, heuristic, and data-driven. The major difference is the rule and the theory basis of the rule.
-
-- Theory-based ABMs are grounded in established theories, making it easier to understand and explain the model's behavior. These models can be applied to various scenarios, thanks to their theoretical foundations. However, theory-based ABMs may oversimplify the complex reality they aim to simulate, potentially missing important nuances and interactions.
-
-- Heuristic ABMs are adaptable and allow for more exploratory modelling, making them suitable for case study and scenarios with uncertain or evolving dynamics. However, heuristic ABMs may not easily translate to different contexts due to their reliance on ad-hoc rules. These models may incorporate subjective judgments or assumptions, introducing potential bias.
-
-- Data-driven ABMs are based on empirical data, making them more accurate. However, these models are not made to interpret and understand the dynamics behind.
-
-The former two approaches are the classics, and the data-driven ABM is rising from the development of machine learning and big data. 
-
-The former two also widely applied as rule-based ABM. That's select the mechanism from established theories, parametrise the rules based on empirical data, and include the rule of thumb (based on practical experience rather than theory).
-
-Anyway, the choice of approach depends on the specific aims of the study. In our case, we will be using a combined approach, which is a theory-based ABM with some heuristic rules.
+- What are the key behaviour rules?
 
 ---
 
 <!-- The overview of the ABM's theoretical framework -->
+
+# Overview
+
+## The target social phenomena
+
+**Urban economic segregation**
+
+> The uneven distribution of groups with **different economic status** across **residential neighbourhoods** of a city or an urban region (adapted from Van Ham et al. (2021)).
+
+???
+
+But first, we interpret this term as the spatial differences of groups with different economic status across neighbourhoods. 
+
+It indicates two essential aspects: location and economic status.
+
+---
 
 # Overview
 
@@ -196,52 +208,110 @@ Two fundamental questions:
 
 - How the their economic status change over time?
 
---
+???
+
+Therefore, we aim to address two fundamental questions:
+
+- "Why do people live where they live?"
+  
+  This question addresses the factor of residential choices.
+
+- And "How does an individual's economic status change over time?" 
+
+  This question pertains to the dynamics of economic mobility.
+
+---
+
+# Overview
+
+## The target social phenomena
+
+**Urban economic segregation**
+
+> The uneven distribution of groups with **different economic status** across **residential neighbourhoods** of a city or an urban region (adapted from Van Ham et al. (2021)).
+
+Two fundamental questions:
+
+- Why do people choose to live where they live?
+
+- How the their economic status change over time?
 
 ### Research question
 
-How can agent-based modelling help the understanding of the dynamics of urban economic segregation patterns through individual residential and economic behaviors and interactions in cities?
+How can agent-based modelling enhance our understanding of the <u>dynamics driving urban economic segregation patterns</u> through the study of **individual residential and economic behaviors and interactions** in cities?
 
 ???
+
+Then, we form our research question as:
+
+How can agent-based modelling help the understanding of the dynamics behind urban economic segregation patterns through individual residential and economic behaviors and interactions in cities?
 
 ---
 
 .right[![](../imgs/design/theoreticalframework.svg)
-.caption[.center[Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
+.caption[.center[Theoretical framework from micro behaviours <br>to social phenomena through ABM]]]
+
+# Overview
+
+???
+
+From the framework, the micro social simulation at large scale connects the housing decision, economic behaviours and the residential and economic states changes, leading to the emerged pattern of economic segregation.
+
+---
+
+.right[![](../imgs/design/theoreticalframework.svg)
+.caption[.center[Theoretical framework from micro behaviours <br>to social phenomena through ABM]]]
 
 # Overview
 
 ## Purpose
 
-- To simulate <u>the interplay of residential and economic behaviours over individual's life course</u> in forming urban economic segregation using micro-level data.
+- To create a versatile and adaptable ABM framework
+  
+- To model the intricate interplay of residential and economic behaviors
 
-- To provide simulated evidence from scenarios modelling of policy interventions for policy makers.
+- To provide simulated evidence for policymakers.
 
 ???
 
-- Our research focuses on the social phenomenon: "Urban economic segregation". We interpret this term as the spatial differences of groups with different economic status across neighbourhoods. It indicates two essential aspects: location and economic status. 
+Our purpose is threefold: 
 
-  (Van Ham et al., 2021: Urban Socio-Economic Segregation and Income Inequality: A Global Perspective)
+- To build an ABM on <u>a general, flexible and extendable framework</u> in forming urban economic segregation.
 
-- Therefore, we aim to address two fundamental questions:
+- To simulate <u>the interplay of residential and economic behaviours over individual's life course</u>.
 
-  1. "Why do people live where they live?" - This question addresses the factor of residential choices. 
-
-  2. "How does an individual's economic status change over time?" - This question pertains to the dynamics of economic mobility.
-
-
-- From the framework, the micro social simulation at large scale connects the housing decision, economic behaviours and the residential and economic states changes, leading to the emerged pattern of economic segregation.
-
-The purpose is to build a reliable modelling framework to have better understand the broader social dynamics and their interplay that contribute to urban economic segregation. Further development regarding the multi policy scenario analysis will provide simulated evidence for policy makers.
+- and to provide <u>simulated evidence from scenarios modelling of policy interventions</u> for policy makers.
 
 ---
 
-.right[![](../imgs/slr/slr_classificationclusters.svg)
-.caption[.center[Theoretical framework of connecting behaviours,<br>simulation and social phenomena using ABM]]]
-
 # Review
 
-## Identify the key mechanisms
+.right[![](../imgs/slr/slr_classificationclusters.svg)
+.caption[.center[Collection of the related ABMs from the literature]]]
+
+- ABMs of residential mobility are well developed, but the economic mobility is less modelled.
+
+- Rather small number of ABMs (N = 5) captured the residential mobility and economic mobility simultaneously in the same segregation model.
+
+- Segregation
+
+???
+
+Notes:
+
+a: residential mobility: these, mostly, explain the inequality using the residential mobility and the social network from the residential perspective.
+
+b: economic mobility: these, mostly, explain the inequality using the assets transfer and the social network from the economic perspective.
+
+c: segregation: these, mostly, are extended from the Schelling's segregation model. It does not focus how the residential choice is made or how the economic status is changed. It usually focus on only one mechanism. Although location choice is included as intermedia variable, it is hardly to be used to explain the segregation.
+
+d: residential mobility and economic mobility: these talked about the residential mobility and economic mobility in the same model, but simulate other social phenomena.
+
+e: residential mobility and segregation: these, mostly, explain the inequality using the residential mobility and the social network from the residential perspective.
+
+f: economic and segregation: these, mostly, explain the inequality using the assets transfer and the social network from the economic perspective.
+
+g: residential mobility, economic mobility and segregation: these, mostly, explain the inequality using the residential mobility and the social network from the residential perspective.
 
 ---
 
@@ -253,15 +323,69 @@ The purpose is to build a reliable modelling framework to have better understand
 
   Household is the most common actor modelled in related ABM.
 
+???
+
+In the former ABMs:
+
+   - The household is a central and widely modelled actor.
+
+   - It represents the basic unit of residential organization and decision-making.
+
+---
+
+# Review
+
+## The key actors
+
+- **Household**
+
+  Household is the most common actor modelled in related ABM.
+   
 - **Individual**
 
   Individual, may called agent, is commonly modelled as the member of household. 
   
-  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors, such as the individual economic entity for wealth growth modelling, tenant or houseowner for rent market modelling, and job-seeker or worker for job-oriented mobility modelling, etc.
+  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors. 
+
+???
+
+  - individuals are commonly modelled as members of households. Non-household individual agents are also modelled in some ABMs.
+
+  Depending on the specific social phenomena and mechanisms, individual agents can take on various roles. for example:
+    
+    - For modelling wealth growth, they may become individual economic entities.
+    
+    - In rent market modelling, they can be tenants or houseowners.
+    
+    - In job-oriented mobility modelling, they might be job-seekers or workers.
+
+---
+
+# Review
+
+## The key actors
+
+- **Household**
+
+  Household is the most common actor modelled in related ABM.
+    
+- **Individual**
+
+  Individual, may called agent, is commonly modelled as the member of household. 
+  
+  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors.
 
 - **Other actors**
   
   The other actors, developer, urban sector or government, etc, are modelled as actor of interests in some ABMs which involves dynamic planning process. 
+
+???
+
+In some ABMs, additional actors such as developers, the urban sector, or government entities are introduced.
+
+- These actors play distinct roles and are typically involved in dynamic planning processes.
+
+- They are especially used as stakeholders of interests in examining policy interventions or urban development scenarios.
   
 ---
 
@@ -271,6 +395,8 @@ The purpose is to build a reliable modelling framework to have better understand
 
 **Life Course Component**
 
+The life course regulates the internal attributes of the agent, posing event and transition as a trigger of further responses on residential and economic mobility.
+
 ---
 
 .right[![](../imgs/design/component_design/components_residentialmobility_80.svg)]
@@ -278,6 +404,8 @@ The purpose is to build a reliable modelling framework to have better understand
 ## The key components
 
 **Residential Mobility Component**
+
+The household make their residential decision, the residence location change can impact the social network change and the economic states.
 
 ---
 
@@ -287,6 +415,8 @@ The purpose is to build a reliable modelling framework to have better understand
 
 **Economic Mobility Component**
 
+The economic states change can impact the residential decision.
+
 ---
 
 .right[![](../imgs/design/component_design/components_socialnetwork_80.svg)]
@@ -295,6 +425,10 @@ The purpose is to build a reliable modelling framework to have better understand
 
 **Social Network Component**
 
+The social network is the key mechanism to model the social influence and the social capital.
+
+The social network can impact the residential decision through social impact.  
+
 ---
 
 .right[![](../imgs/design/component_design/components_macroregulation_80.svg)]
@@ -302,6 +436,8 @@ The purpose is to build a reliable modelling framework to have better understand
 ## The key components
 
 **Macro Level Regulation**
+
+The macro level regulation was conceptualised  as the exogenous dynamics. It can impact the economic states and the residential decision. It imitates the role of policy interventions, and will be used to create the policy scenarios in the future.
   
 ???
 
@@ -319,7 +455,7 @@ From the literature, we identify five key components of the related decision mak
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg)]
+.right[![](../imgs/design/Combine_Process_granularFramework_50.svg)]
 
 # Review
 
@@ -327,16 +463,31 @@ From the literature, we identify five key components of the related decision mak
 
 Among the potential mechanisms and processes, some are well modelled before (green box), and some are not widely included (red box).
 
+???
+
 The migration is widely modelled, but the migration were not distinguished with residential mobility. The drive of migration was always modelled as attractiveness of uneven development but no further, where the migration is more modelled as input than output.
 
 Overall, aside from the housing market behaviours, the mechanism within economic mobility is less modelled within spatial context.
 
+---
 
-???
+.right[![](../imgs/design/Wellresearched_ResearchDesignStructure_50.svg)]
+
+# Review
+
+## Gap and Potential
+
+(example of certain mechanism of well modelled and overlooked.)
+
+Land use policy often modelled as land use supply, but some of them included the other actors (e.g., developer, government) to model the dynamic planning process.
+
+Life course processes were mostly modelled as the early lifecycle model with probability-based transition, but the dynamic life course model is increasingly being modelled.
+
+.note[*Notes: Commuting behaviours were connected to residential choice, but it lays on more transport research particularly*]
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework.svg)]
+.right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)]
 
 # Review
 
@@ -390,31 +541,7 @@ I intend this preliminary work to highlight the role of residential mobility acr
 
 **Fundamental stages and essential micro life events**
 
-- The trajectories of individuals and households are intertwined with each other through the life events.
-
-- Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); 
-
-- some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
-
----
-
-
-<!-- The life course component -->
-
-### The life course component
-
-.right[![](../imgs/design/lifecoursemodel/example_life_course_002.svg)
-.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
-
-A simplified version of the real life course with **fundamental stages and essential micro life events**. 
-
-- The trajectories of individuals and households are intertwined with each other through the life events.
-
-- Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); 
-
-- some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
-
-- 
+The trajectories of individuals and households are intertwined with each other through the life events.
 
 ???
 
@@ -426,12 +553,34 @@ The basic component is the life course component. Our goal with it is to capture
 
 - This diagram shows an example life trajectory of two people and the household they formed, highlighting various events and their impact on household characteristics. It's a snapshot of how our model brings together events and transitions that shape the individuals' and households' life courses.
 
+- Most of them will be parametrised based on probability distribution mirroring the empirical data (e.g., birth rate, marriage rate, death rate); 
+
+- some of them follows a certain sequence or schedule (e.g., Birth -> being independent).
+
+---
+
+<!-- The life course component -->
+
+### The life course component
+
+.right[![](../imgs/design/lifecoursemodel/example_life_course_002.svg)
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
+
+**Fundamental stages and essential micro life events**
+
+Life events have the potential to trigger relocation desires, influence preferences for residence and economic states.
+
+???
+
+This diagram shows the essential life stages and life events that households and individuals experience and how they impact house size requirement, preferences and disposable income on housing, that is affordability.
+As a note, the life events included in life course component is micro life events. While macro events such as economic crises, pandemics, and wars exist in the real world, we've excluded them to concentrate on more consistent long-term macro regulators like interest rates, immigration numbers, and employment rates, which we'll address separately in the macro-level regulation component.
+It can be categorized into two main types: individual events and family events. They can occur within individual or household life trajectories, served as triggers for subsequent responses in terms of residential and economic mobility.
+
 ---
 
 <!-- Residential mobility component -->
 
-.right[.image-80[![](../imgs/design/preference/preference_composition.svg)]
-.caption[.center[Expectation, preference and affordability of a household and a house unit.]]]
+.right[![](../imgs/design/utility_preference/preferencebasedutilitycalculation.svg)]
 
 ### Residential mobility component
 
@@ -453,44 +602,6 @@ Residential utility, in our research, is a combination of objective attributes a
 - The diagram display some expectations from economic, demographic and social aspects. They impact the weight of the preference for different residential attributes.
 
 - As a note, the preference level for residing with similar economic and demographic neighbors is a crucial aspect. It is common to simplify it as a global parameter, allowing us to create different scenarios.
-
----
-
-### The preference (**add more thinking of design the preference, such as the dynamic distance for different service, etc. **)
-
-#### Utility-based comparison
-
-Example of utility calculation based on the accessibility to services.
-
-From the land use data, we selected three types to match the expectation on the services: recreation, institutions and facilities, and transportation. Each of these has its own sub categories. The accessibility to services is counted within a 400 meter buffer.
-
-.image-40[![](../imgs/design/place_accessibility_utility_calculation.svg)]
-.caption[.center[Figure. The composition of utility based on accessibility to services.]]
-
-???
-
-Let's illustrate this with an example of utility calculation based on the accessibility to services. Services here refer to amenities like recreation areas, institutions, facilities, and transportation options. 
-
-- This diagram shows how different types of services contribute to the overall utility calculation.
-
-- To measure accessibility to services, we use land use data. From this data, we've selected three types that align with our expectations regarding services: recreation, institutions and facilities, and transportation. Each of these types has its own subcategories.
-
-- The key idea is to calculate the accessibility to these services within a 400-meter buffer around a given location. This buffer represents a reasonable distance that individuals are willing to travel to access essential services.
-
-
-.image-30[![](../imgs/example_service_accessibility_calculation_simplified.jpg)]
-.caption[.center[Figure. Map of utility calculated from the accessibility to services based on the urban functions. <br>(b) Result for the scenario for the equal preferences for each attribute.]]
-
-.image-30[![](../imgs/accservices_scenarios.jpg)]
-.caption[.center[Figure. the theory of life in ABM and the key events to segregation. <br> (a): (2,1,1); (b): (1,2,1), (c): (1,1,2), (d): (2, 2,1)]]
-
-???
-
-These first map shows the utility map from land use and the right one is the equal preference scenario.
-
-The four scenarios below are the perceived utility across the city for different preferences. For example, for the recreation-oriented household (probably younger household without child), they see the utility of all the residence grid as the first map. 
-
-Of course, household does not have to evaluate all the grids, but only their current residence and the one on potential relocation list, which we will talk about it next.
 
 ---
 
@@ -648,19 +759,13 @@ The error term is not included in the prototype model yet.
 
 Some of rules are largely simplified, for example, the behaviour in housing market.
 
-### Triggers and their influence
+### The tolerance of the decision
 
-A determinant decision to move might be triggered by particular events, such as a job change or a divorce. In these case, they still look for the best option but also with a larger tolerance.
-
-### Synthetics
-
-The data has certain inconsistency and measurement error. It might be solved when the micro data is applied.
-
-Not all the factors have reliable data source, if it is not available in the end, we will distribute them based on some highly aggregated data.
+At circumstances of certain events, such as job change or divorce, the tolerance of the residential decision will be increased.
 
 ### Absence of migration flow in and out of the system
 
-The long-distance migration flow in and out of the system is not included in the prototype model. Other potential decision-making process (e.g., expected utility model under risks) might provide better theory basis for it. Or, simplified as number summarised from the empirical data.
+The long-distance migration flow in and out of the system is not included in the prototype model. 
 
 ???
 
@@ -683,18 +788,19 @@ At the phase, the searching radius is fixed to their current residence for simpl
 
 ## Overall challenges
 
-- The balance between the complexity and the simplicity of the model
+### Diversity of individuals
+
+  Without the diversity of individuals, the model might fail to capture endogenous dynamics of the main actors.
+
+### The balance between the complexity and the simplicity of the model
 
   The more elements and the more detailed the behaviour and interaction rules, the larger the model needs to be and the longer the simulation will take.
 
-- The interpretability of the model
+### The interpretability of the model
 
   As the intercorrelation between different mechanisms, the impact of each mechanism is difficult to be isolated. 
   
   Sensitivity analysis and modelling them in building block will be the key to address this issue.
-
-
-**Diversity issue: address the diversity capture challenge here**
 
 ???
 
@@ -718,9 +824,9 @@ More seriously, the interpretability of the model poses a challenge due to the i
 
 <!-- Further contact -->
 
-## Keep it open
+.right[![](../imgs/qrcode_ectqg.png)]
 
-.right[.image-60[![](../imgs/qrcode_sectionmeeting.png)]]
+## Keep it open
 
 - Scripts and Data
 
@@ -730,23 +836,13 @@ More seriously, the interpretability of the model poses a challenge due to the i
 
 - A simplified web-based model to share with public
 
-- Today's slides is accessible via https://www.bayi.in/open-review/sectionmeeting
+- Today's slides is accessible via https://www.bayi.in/open-review/ectqg2023
 
 <br>
 
-Platforms to share the technical details and progress of the project:
+--
 
-<!-- GitHub Logo and Link -->
-<a href="https://github.com/BayiLi081">
-    <img src="../imgs/github-mark.svg" alt="GitHub Logo" width="30" height="30" class="icon">
-    GitHub/BayiLi081
-</a>
-<!-- add a vertical line -->
-
-<a href="https://www.bayi.in">
-  <img src="../imgs/personal.svg" alt="GitHub Logo" width="30" height="30" class="icon">
-  bayi.in
-</a>
+.center[**Q&A**]
 
 ???
 

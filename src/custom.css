@@ -192,6 +192,10 @@ keyword {
   width: 90%;
 }
 
+.image-200 img {
+  width: 200%;
+}
+
 img:active[src*="#zoom"] {
   cursor: zoom-out;
   transform: scale(2.0);
