@@ -40,9 +40,11 @@ September 2023
  
 ???
 
+press four '-' and quickly switch from slide 2 to 1 to start the timer
+
 Hi, I am Bayi Li. 
 
-Today, I am going to introduce the work progress of my PhD project, which focuses on agent-based modelling of urban economic segregation.
+Today, I am going to introduce the working progress of my PhD project, which focuses on agent-based modelling of urban economic segregation.
 
 Supervised by Clementine. We are from the Urban Studies section at TU Delft.
 
@@ -248,7 +250,7 @@ How can agent-based modelling enhance our understanding of the <u>dynamics drivi
 
 Then, we form our research question as:
 
-How can agent-based modelling help to understand the dynamics behind urban economic segregation patterns through individual residential and economic behaviours and interactions in cities?
+How can agent-based modelling help to understand 'the dynamics behind urban economic segregation patterns' through individual residential and economic 'behaviours and interactions' in cities?
 
 ---
 
@@ -346,7 +348,7 @@ Rather small number of ABMs captured the residential mobility and economic mobil
 
 ???
 
-There were only few ABMs captured the residential mobility and economic mobility simultaneously in the same segregation model. Among these, a significant simplification of the residential choice and economic behaviour was made.
+There were only few ABMs captured the residential mobility and economic mobility simultaneously in the same segregation model. Even though, among these, a significant simplification of the residential choice and economic behaviour was made.
 
 ---
 
@@ -360,7 +362,7 @@ There were only few ABMs captured the residential mobility and economic mobility
 
 ???
 
-In the former ABMs:
+The key actor identified in those former ABMs is the household:
 
    - The household is a central and widely modelled actor.
 
@@ -438,7 +440,7 @@ The first one is the life course component.
 
 It regulate the life transition of agents, posing them as a trigger of further responses on residential and economic mobility. It also alters ties between agents.
 
-Especially for the ABM with long term simulation, life stage transition is increasingly being modelled, approached by early lifecycle model to a more dynamic life course model.
+Especially for the ABM with long term simulation period, life stage transition is increasingly being modelled, approached by early lifecycle model to a more dynamic life course model.
 
 ---
 
@@ -500,7 +502,7 @@ The macro level regulation was conceptualised  as the exogenous dynamics. It can
 
 The last one is the macro level regulation component.
 
-It was always coupled with other four components, and conceptualised as the exogenous dynamics. It imitates the role of policy interventions, and commonly be used to create the policy scenarios in the future.
+It was always coupled with other four components, and conceptualised as the exogenous dynamics. It imitates the role of policy interventions, and commonly be used to create the policy scenarios.
 
 ---
 
@@ -526,11 +528,13 @@ Among the potential mechanisms and processes, some are widely included before, c
 
 ## The knowledge base
 
-For example, the opportunities
+The location-based opportunity is well captured in the ABMs of urban migration by uneven development or specific function-oriented location choice such as job-oriented or education-oriented. 
 
 ???
 
-For example, the opportunities, which is the potential housing units, are well modelled in the former ABMs.
+As an example, former ABMs effectively captured location-based opportunities, considering factors like uneven development or choices centred around specific functions, such as job or education.
+
+By the way, this mechanism usually be modelled with path dependency, for example, the economic advantage draws more people to this area, and the advantage is accumulated through more manpower or investment over time.
 
 ---
 
@@ -540,11 +544,13 @@ For example, the opportunities, which is the potential housing units, are well m
 
 ## Gap
 
-For example, the tenure choice in residential mobility was widely researched theoretically, but rarely modelled together in ABM.
+The tenure choice in residential mobility was widely researched theoretically, but rarely modelled together in ABM.
 
 ???
 
-For example, tenure choice, theoretically, has substantial impact on housing security. Especially in the context of the Netherlands, the tenure choice is a key factor to explain the housing inequality. However, it is rarely modelled in ABM.
+However, the tenure choice, in spite of the vibrant theoretical basis of tenure preference in residential choice. This was not modelled thoroughly at least. 
+
+For instance, house sale market and rent market coexist in real life, but mostly modelled as separate system. The transition of identification from renter to homeowner were rarely modelled, similar with the role of housing security brought by house ownership. In our project, it's more important under the context of housing crisis at the Netherlands.
 
 ---
 
@@ -631,7 +637,7 @@ Residential Utility is defined by static attributes and dynamic preference varyi
 
 Residential mobility is another important component we started to design.
 
-Residential utility, in our research, is a combination of objective attributes and subjective judgements based on preferences. 
+Residential utility, in our research, is a measurement and combination of objective attributes and subjective judgements based on preferences. 
 
 To make it more manageable, the subjective preference is based on economic, demographic, and social attributes of households.
 
@@ -653,7 +659,7 @@ The factors of perceived utility of housing include the accessibility to service
 
 ???
 
-The diagram display some expectations from economic, demographic and social aspects. 
+The diagram display some expectations from these aspects. 
 
 They are translated numerically into the weight of the preference for different residential attributes.
 
@@ -689,7 +695,7 @@ Rules:
 
 ???
 
-The household with higher disposable income on housing has the priority to select. Therefore, the household will not move if the affordability is lower than the expected cost of any of available housing units in their list.
+The household with higher disposable income on housing has the priority to select. Therefore, the household will not move if the affordability is lower than 'the expected cost of any available housing units' in their list.
 
 ---
 
@@ -717,27 +723,25 @@ The household will increase the searching radius if there is no qualified housin
 
 #### Individuals
 
-The individuals are the members of the household.
+The individuals are the smallest active agent.
 
 ???
 
 After setting up the structure, we can have an idea of the entities and their attributes.
 
-The individuals are the members of the household.
+Individual is the smallest active unit. But it can form a higher group, such as household, neighbours.
 
 --
 
-Their attributes include the static attributes and dynamic attributes:
+The dynamic choice attributes are updated based on the former experience.
 
-The dynamic choice attributes are the preference, tolerance and expectation, which are updated based on the experience of the household.
-
-The dynamic state attributes are the current residence, current job, current income, current wealth, etc.
+The dynamic state attributes are the properties or characteristics of agents that can change over time as the simulation progresses.
 
 ???
 
-The dynamic choice attributes are the preference, tolerance and expectation, which are updated based on the experience of the household.
+The dynamic choice attributes are the preference, tolerance and expectation, which are updated based on the former experience.
 
-The dynamic state attributes are the current residence, current job, current income, current wealth, etc.
+The dynamic state attributes are the current residence, job, income, etc.
 
 ---
 
@@ -755,8 +759,6 @@ The individuals are the members of the household<sup>a</sup>, and the household 
 
 Similar with household with various attributes and states. They are the major entities that make choices.
 
-The attributes of entities was designed with extendability with other components (e.g., the marriage preference, tie, residence tenure type, etc.). Some of the attributes are fixed, while others are dynamic.
-
 ---
 
 ### Entities (**change it more design related**)
@@ -770,7 +772,8 @@ The living units are the housing units in the grids of residence.
 
 ???
 
-Living Units, one of the passive agents. These are the housing units.
+Living Units, as one of the passive agents where people live.
+
 ---
 
 ### Entities (**change it more design related**)
@@ -788,9 +791,9 @@ In our case, they are the grids of the city.
 
 ???
 
-- Spatial Units are those are essentially the grids that make up our city.
+Spatial Units are those are essentially the grids that make up our city. And where the active agents live, act and interact.
 
-We designed the attributes of these entities to incorporate more mechanisms for other future components such as marriage preferences, social ties, and residence tenure types.
+We designed the attributes of these entities to incorporate more mechanisms such as marriage preferences, social ties, and residence tenure types.
 
 ---
 
@@ -816,13 +819,13 @@ The long-distance migration flow in and out of the system is not included in the
 
 As we said, it is a prototype model, it haven't be programmed or test yet. But in term of design, there are several limitations we would make modifications soon:
 
-Firstly, the absence of an error term in the model means that it fails to capture the influence of unaccounted factors and randomness. 
+Firstly, the absence of an error term means that it fails to capture the influence of unaccounted factors and randomness. 
 
 Additionally, the decision rules in the prototype are notably simplified, such as the housing market or searching radius, where more established theory driven rules are required. 
 
-Furthermore, the model acknowledges that decisions are triggered by specific events like job changes or divorces, introducing a greater tolerance for final choice. 
+Furthermore, the model acknowledges that decisions are triggered by specific events can introduce a greater tolerance for final choice, like job changes or divorces.
 
-Last but not the least is the absence of long-distance migration. When we upscale the case to region or national scale, the migration flow and diversity of commuting cannot be ignores.
+Last but not the least is the absence of long-distance migration. When we upscale the case to region or national scale, the migration flow and diverse commuting ways cannot be ignored.
 
 ---
 
@@ -844,11 +847,11 @@ Last but not the least is the absence of long-distance migration. When we upscal
 
 ???
 
-The overall challenges in developing the model also crucial:
+The overall challenges for the whole landscape are also crucial:
 
-First, the diversity of individuals is essential. Although, we select the most representative population group, but without the diversity of individuals, the model might fail to capture endogenous dynamics of the main actors.
+First, we select the most representative population group, but without the diversity of individuals, the model might fail to capture endogenous dynamics of the main actors.
 
-There's a delicate balance to strike between model complexity and simplicity. Increasing the number of elements and detailed behaviour and interaction rules can lead to a larger and more time-consuming model. 
+There's a delicate balance to strike between model complexity and simplicity. Increasing the number of elements, detailed behaviour and interaction rules can lead to a larger and more time-consuming model. 
 
 More seriously, the interpretability of the model poses a challenge due to the intercorrelation between different mechanisms, making it challenging to isolate the impact of each mechanism. 
 
@@ -870,17 +873,17 @@ To address this, sensitivity analysis and a modular approach to modelling are po
 
 ???
 
-So, what is the ABM of urban economic segregation we are looking for?
+So, what is the ABM we are looking for?
 
-Exhibit a general decision-making mindset is essential to replicate it on other cities and larger scale.
+First, it has to exhibit a general decision-making mindset, is essential to replicate it on other cities and larger scale.
 
-Agents' behaviors should accurately represent the outcomes of mechanisms in the real world. What I mean here, it is not predictive accuracy, but the reliability of the mechanisms.
+Agents' behaviors should accurately represent the outcomes of mechanisms in the real world. What I mean here, it is not predictive accuracy, but the reliability of the processes and their outcome.
 
 The model should be extensible for future enhancements and expansion.
 
-And most importantly, the model should include the essential actors and mechanism that represents the target social phenomena.
+And most importantly, the model should include the essential actors and mechanism that represents urban economic segregation.
 
-A model meeting these criteria can provide insights into the complex dynamics of urban economic segregation.
+A model meeting these criteria can provide a clear strategy to disaggregate the complex dynamics of urban economic segregation.
 
 ---
 
@@ -898,13 +901,9 @@ A model meeting these criteria can provide insights into the complex dynamics of
 
 - A simplified web-based model to share with public
 
-- Today's slides is accessible via https://www.bayi.in/open-review/ectqg2023
+- Project website via https://www.erc-segue.nl
 
 <br>
-
---
-
-.center[**Q&A**]
 
 ???
 
@@ -916,9 +915,15 @@ We will also develop a simplified web-based ABM to let the public to interact wi
 
 Today's slides is accessible via the QR code on the screen.
 
-Further progress can be also tracked online. Currently, it is hosted on my personal website, but a project website is coming soon. There are more supplementary information and references in the following slides, but I will not go through them.
+Further progress can be also tracked online through the project website https://www.erc-segue.nl.
 
-Thank you!
+--
+
+.center[**Q&A**]
+
+???
+
+Thank you and is there any question?
 
 ---
 
