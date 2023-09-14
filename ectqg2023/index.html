@@ -496,7 +496,11 @@ They allow researchers to explore how individual interactions and connections in
 
 **Macro Level Regulation**
 
-The macro level regulation was conceptualised  as the exogenous dynamics. It can impact the economic states and the residential decision. It imitates the role of policy interventions, and will be used to create the policy scenarios.
+The macro level regulation was conceptualised  as the exogenous dynamics. 
+
+It can impact the economic states and the residential decision. 
+
+It imitates the role of policy interventions, and will be used to create the policy scenarios.
   
 ???
 
@@ -573,7 +577,7 @@ The population of FUA of Groningen is <u>194, 340</u> in 2011 census, aggregated
 
 To start the practice of ABM, I propose **Groningen** as the case study of this research. 
 
-The reason is that it is more of a standalone city than a metropolitan region which is more suitable for the preliminary stage without too much external influence.
+The reason is that it is more of a standalone city than a region which is more suitable for the preliminary stage without too much external influence.
 
 The population of the functional urban area of Groningen is one hundred ninety four thousand and three hundred forty. After being aggregated to household level, the total number of household will be around 80,000. The number is manageable and computable on a personal computer.
 
@@ -639,8 +643,6 @@ Residential mobility is another important component we started to design.
 
 Residential utility, in our research, is a measurement and combination of objective attributes and subjective judgements based on preferences. 
 
-To make it more manageable, the subjective preference is based on economic, demographic, and social attributes of households.
-
 ---
 
 <!-- Residential mobility component -->
@@ -659,9 +661,11 @@ The factors of perceived utility of housing include the accessibility to service
 
 ???
 
+To make it more manageable, the subjective preference is based on economic, demographic, and social attributes of households.
+
 The diagram display some expectations from these aspects. 
 
-They are translated numerically into the weight of the preference for different residential attributes.
+They will be translated numerically into the weight of the preference for different residential attributes.
 
 ---
 
@@ -727,7 +731,7 @@ The individuals are the smallest active agent.
 
 ???
 
-After setting up the structure, we can have an idea of the entities and their attributes.
+After setting up the structure, we could already have an idea of the entities and their attributes in our model.
 
 Individual is the smallest active unit. But it can form a higher group, such as household, neighbours.
 
@@ -751,7 +755,7 @@ The dynamic state attributes are the current residence, job, income, etc.
 
 #### Household
 
-The individuals are the members of the household<sup>a</sup>, and the household is the minimum decision making unit of the model.
+The individuals are the members of the household<sup>a</sup>, and the household is the minimum relocation decision making unit of the model.
 
 .note[*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*]
 
@@ -793,15 +797,11 @@ In our case, they are the grids of the city.
 
 Spatial Units are those are essentially the grids that make up our city. And where the active agents live, act and interact.
 
-We designed the attributes of these entities to incorporate more mechanisms such as marriage preferences, social ties, and residence tenure types.
+We designed the attributes of these entities to incorporate more mechanisms in the future such as marriage preferences, social ties, and residence tenure types.
 
 ---
 
 ## Limitations of the prototype model to be developed
-
-### Error term (the overlooked factors and randomness)
-
-The error term is not included in the prototype model yet.
 
 ### Decision rule
 
@@ -817,15 +817,13 @@ The long-distance migration flow in and out of the system is not included in the
 
 ???
 
-As we said, it is a prototype model, it haven't be programmed or test yet. But in term of design, there are several limitations we would make modifications soon:
+As we said, it is a prototype model, it haven't be programmed or test yet. We are incrementally add more mechanisms. But in term of design, there are several limitations we would make modifications soon:
 
-Firstly, the absence of an error term means that it fails to capture the influence of unaccounted factors and randomness. 
+Firstly, the decision rules in the prototype are notably simplified, such as the housing market or searching radius, where more established theory driven rules are required. 
 
-Additionally, the decision rules in the prototype are notably simplified, such as the housing market or searching radius, where more established theory driven rules are required. 
+Furthermore, the model acknowledges that decisions are triggered by specific events can introduce a greater tolerance for final choice, like job changes or divorces. In other words, it might be too constrained to miss the flexibility of the decision.
 
-Furthermore, the model acknowledges that decisions are triggered by specific events can introduce a greater tolerance for final choice, like job changes or divorces.
-
-Last but not the least is the absence of long-distance migration. When we upscale the case to region or national scale, the migration flow and diverse commuting ways cannot be ignored.
+Additionally is the absence of long-distance migration. When we upscale the case to region or national scale, the migration flow and diverse commuting ways cannot be ignored.
 
 ---
 
@@ -937,6 +935,8 @@ Thank you and is there any question?
 
 - Secondary survey data and former reports
 
+---
+
 ##### Design concepts
 
 - Basic principles
@@ -951,13 +951,13 @@ Thank you and is there any question?
 
   The active agent adjusts their preference, tolerance and expectation to their current condition and the environment.
 
----
-
-##### Design concepts
-
 - Fitness
 
   The goal of the household is to acquire the most suitable residence, based on their knowledge and cognitive skill, that fits their current demand and affordability.
+
+---
+
+##### Design concepts
 
 - Learning
 
@@ -993,11 +993,11 @@ Thank you and is there any question?
 
 - Observation
 
-  A continuous time series of measurement on the uneven distribution of the household by income group and the economic status of the household.
-
-  Other measurements depends on the calibration and validation process. For example, to validate the social network component, the evolution of social network of the household will be monitored.
+  A continuous time series of measurement on the spatial distribution of the household by income group and the economic status of the household.
 
 ???
+
+Other measurements depends on the calibration and validation process. For example, to validate the social network component, the evolution of social network of the household will be monitored.
 
 ---
 
@@ -1070,8 +1070,6 @@ g: residential mobility, economic mobility and segregation: these, mostly, expla
   [20] Buchmann, C.M. and Schwarz, N., 2014. Residential mobility and model complexity-an agent-based modelling experiment on a small shrinking town in Eastern Germany.
   <br>
   [21] Rosenfield, A., Chingcuanco, F. and Miller, E.J., 2013. Agent-based housing market microsimulation for integrated land use, transportation, environment model system. Procedia Computer Science, 19, pp.841-846.
-  <br>
-  [22] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
 </div>
 
 ???
