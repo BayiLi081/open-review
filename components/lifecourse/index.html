@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bayi's Design Plan for Life Course Component</title>
+    <link href="../../imgs/logo.svg" rel="icon" type="../../image/svg"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="../../src/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../src/font-awesome.min.css">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: true
+<div class="my-footer"><img src="../../imgs/TUBK_Logo_ URBA.svg" alt></div>
+
+---
+
+# Review
+
+## The key actors
+
+- **Household**
+
+  Household is the most common actor modelled in related ABM.
+    
+- **Individual**
+
+  Individual, may called agent, is commonly modelled as the member of household. 
+  
+  Depending on the social phenomena and mechanism selected, the individual agent can be substituted by other actors.
+
+- **Other actors**
+  
+  The other actors, developer, urban sector or government, etc, are modelled as actor of interests in some ABMs which involves dynamic planning process. 
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Gray, J., Hilton, J., Bijak, J., 2017. Choosing the choice: Reflections on modelling decisions and behaviour in demographic agent-based models. Population Studies 71, 85–97. https://doi.org/10.1080/00324728.2017.1350280
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Zinn, S., 2017. Simulating Synthetic Life Courses of Individuals and Couples, and Mate Matching, in: Grow, A., Van Bavel, J. (Eds.), Agent-Based Modelling in Population Studies: Concepts, Methods, and Applications, The Springer Series on Demographic Methods and Population Analysis. Springer International Publishing, Cham, pp. 113–157. https://doi.org/10.1007/978-3-319-32283-4_5
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Devisch, O.T.J., Timmermans, H.J.P., Arentze, T.A., Borger, A.W.J., 2009. An Agent-Based Model of Residential Choice Dynamics in Nonstationary Housing Markets. Environ Plan A 41, 1997–2013. https://doi.org/10.1068/a41158
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Macal, C.M., 2015. Agent-Based Modeling and Artificial Life, in: Meyers, R.A. (Ed.), Encyclopedia of Complexity and Systems Science. Springer Berlin Heidelberg, Berlin, Heidelberg, pp. 1–25. https://doi.org/10.1007/978-3-642-27737-5_7-5  
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Klabunde, A., Willekens, F.J., Zinn, S., Leuchter, M., 2015. An agent-based decision model of migration, embedded in the life course - Model description in ODD+D format. MPIDR Working Papers, MPIDR Working Papers.
+
+---
+
+# Review
+  
+  ## Paper example
+
+  > Klabunde, A., Willekens, F., 2016. Decision-Making in Agent-Based Models of Migration: State of the Art and Challenges. Eur J Population 32, 73–97. https://doi.org/10.1007/s10680-015-9362-0
+
+
+
+
+
+
+  
+---
+
+.right[![](../../imgs/design/component_design/components_lifecourse_80.svg)]
+
+## The key components
+
+**Life Course Component**
+
+The life course regulates the internal attributes of the agent, posing event and transition as a trigger of further responses on residential and economic mobility.
+
+---
+
+.right[![](../../imgs/design/Combine_Process_granularFramework_50.svg)]
+
+# Review
+
+## Mechanisms and processes
+
+Green box: widely included
+
+Red box: not well modelled
+
+---
+
+<!-- The life course component -->
+
+### The life course component
+
+.right[![](../../imgs/design/lifecoursemodel/example_life_course_001.svg)
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
+
+**Fundamental stages and essential micro life events**
+
+The trajectories of individuals and households are intertwined with each other through the life events.
+
+---
+
+<!-- The life course component -->
+
+### The life course component
+
+.right[![](../../imgs/design/lifecoursemodel/example_life_course_002.svg)
+.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
+
+**Fundamental stages and essential micro life events**
+
+Life events have the potential to trigger relocation desires, influence preferences for residence and economic states.
+
+---
+
+<!-- Entities introduction starts here -->
+
+### Entities (**change it more design related**)
+
+.right[![](../../imgs/design/entity-des/entities_individual_50.svg)]
+
+#### Individuals
+
+The individuals are the smallest active agent.
+
+--
+
+The dynamic choice attributes are updated based on the former experience.
+
+The dynamic state attributes are the properties or characteristics of agents that can change over time as the simulation progresses.
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../../imgs/design/entity-des/entities_household_50.svg)]
+
+#### Household
+
+The individuals are the members of the household<sup>a</sup>, and the household is the minimum relocation decision making unit of the model.
+
+.note[*Notes: <sup>a</sup> The household covers the family and non-family household. The family household is the household with at least two members, and the non-family household is the household with one adult member.*]
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../../imgs/design/entity-des/entities_livingunit_50.svg)
+]
+
+#### Living Unit
+
+The living units are the housing units in the grids of residence.
+
+---
+
+### Entities (**change it more design related**)
+
+.right[![](../../imgs/design/entity-des/entities_spatialunit_50.svg)
+]
+
+#### Spatial Unit
+
+The spatial units are the environment where the active agents live in. 
+
+In our case, they are the grids of the city.
+
+<!-- Entities introduction ends here -->
+
+---
+
+**References**
+
+<div class="references">
+  [1] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
+  <br>
+</div>
+
+    </textarea>
+
+    <script src="../../src/remark-latest.min.js" type="text/javascript">
+    </script>
+    <script src="../../src/custom.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create({ 
+        ratio: "16:9" , 
+        navigation: {
+          scroll: false
+        },
+      });
+    </script>
+  </body>
+</html>
