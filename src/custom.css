@@ -30,6 +30,20 @@ img {
   transition: transform ease-in-out 0.3s;
 }
 
+.bar-grey {
+  color:#000!important;
+  background-color:#00A6D6!important;
+  opacity: 0.3;
+  height:3px;
+}
+
+.bar-light-grey {
+  color:#000!important;
+  background-color:#d8f1f9!important;
+  margin-left: 3em;
+  margin-right: 20em;
+}
+
 h1 { 
   font-size: 1.8em;
   color: #00A6D6;
@@ -62,8 +76,19 @@ ul {
   margin-bottom: 0%;
 }
 
+div.probar-footer {
+  border-top: 0px solid #ccc;
+  font-size: 10pt;
+	text-align: left;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	height: 10px;
+	width: 100%;
+}
+
 div.my-footer {
-  border-top: 1px solid #ccc;
+  border-top: 0px solid #ccc;
   font-size: 10pt;
 	text-align: left;
 	position: fixed;
@@ -75,10 +100,14 @@ div.my-footer {
 
 div.my-footer img {
   display: block;
+  position: absolute;
+  opacity: 0.6;
+  right: 10px;
+  bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-	height: 30px;
-  padding: 3px;
+	height: 40px;
+  padding: 1px;
 }
 
 img.icon{
