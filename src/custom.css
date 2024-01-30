@@ -76,6 +76,20 @@ ul {
   margin-bottom: 0%;
 }
 
+div.summary-footer {
+  border-top: 0px solid #ccc;
+  color: #00A6D6;
+  font-size: 12pt;
+	text-align: left;
+	position: fixed;
+	bottom: 25px;
+	left: 0px;
+	height: 10px;
+	width: 100%;
+  margin-left: 3em;
+  margin-right: 20em;
+}
+
 div.probar-footer {
   border-top: 0px solid #ccc;
   font-size: 10pt;
