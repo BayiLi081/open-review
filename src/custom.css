@@ -45,7 +45,7 @@ img {
 }
 
 h1 { 
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: #00A6D6;
   font-weight: bold;
 }
@@ -56,6 +56,7 @@ h2 {
 }
 h3 {
   font-size: 1.2em;
+  color: #747474;
   font-weight: bold;
 }
 h4 { font-size: 1.2em; }
