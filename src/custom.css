@@ -232,8 +232,16 @@ keyword {
   width: 80%;
 }
 
+.image-85 img {
+  width: 85%;
+}
+
 .image-90 img {
   width: 90%;
+}
+
+.image-100 img {
+  width: 100%;
 }
 
 .image-200 img {
