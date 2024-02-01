@@ -11,6 +11,7 @@
       @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
       @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
     </style>
+
   </head>
   <body>
     <textarea id="source">
@@ -24,6 +25,7 @@ layout: true
 ---
 
 class: top, center
+<!-- background-image: url(/imgs/background.gif) -->
 
 <!-- Slide 01: Title Page -->
 
@@ -169,17 +171,19 @@ Hence, the aim is to build an agent-based model, involving the main mechanisms o
 
 ---
 
-<!-- Slide 05: Sub aims and outcomes (1-2) -->
-
-# Overview
+<!-- Slide 05: Sub aims and outcomes (1) -->
 
 ## Sub aims and outcomes
+
+<!-- ## Sub aims and outcomes -->
+
+![](../imgs/research_process/paper_01.svg)
 
 **Aim 1**: Investigate the current knowledge basis of constructing an agent-based model of segregation and their theoretical basis
 
 **Paper 1**: Review of mechanisms and process design in agent-based models of urban economic segregation
 
-<div class="summary-footer"> Understanding and a test on single city to start the model.</div>
+<div class="summary-footer">Understanding and building the conceptual framework.</div>
 <div class="probar-footer">
   <div class="bar-light-grey">
     <div class="bar-grey" style="width:20%"></div>
@@ -192,13 +196,26 @@ Four sub amis was further divided to address different aspects.
 
 The first one is to investigate the current knowledge basis of constructing an agent-based model of segregation and their theoretical basis. It corresponds to the paper 1, which is a integrated review of theoretical works and agent-based models of segregation.
 
---
+---
 
-<br>
+<!-- Slide 05: Sub aims and outcomes (2) -->
 
-**Aim 2**: Develop an ABM to explain the segregation landscape in Groningen, the Netherlands during 2011-2023
+## Sub aims and outcomes
+
+<!-- ## Sub aims and outcomes -->
+
+![](../imgs/research_process/paper_02.svg)
+
+**Aim 2**: Develop a single city ABM to explain the segregation landscape in the case study
 
 **Paper 2**: Simulating the evolution of urban economic segregation pattern using agent-based modelling: case study of Groningen, the Netherlands
+
+<div class="summary-footer">A single city ABM of urban economic segregation</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:20%"></div>
+  </div>
+</div>
 
 ???
 
@@ -206,18 +223,20 @@ In the second one, we will select one city as an example to build our single-cit
 
 ---
 
-<!-- Slide 05: Sub aims and outcomes (3-4) -->
-
-# Overview
+<!-- Slide 05: Sub aims and outcomes (3) -->
 
 ## Sub aims and outcomes
+
+<!-- ## Sub aims and outcomes -->
+
+![](../imgs/research_process/paper_03.svg)
 
 **Aim 3**: Develop a national scale ABM to explain the segregation pattern at multi-level scale in the Netherlands during 2011-2023
 
 **Paper 3**: A national scale simulation on urban
 economic segregation in the Netherlands
 
-<div class="summary-footer"> Upscale to a national model and vary the scenarios to evaluate policy strategies.</div>
+<div class="summary-footer"> A national model of urban economic segregation.</div>
 <div class="probar-footer">
   <div class="bar-light-grey">
     <div class="bar-grey" style="width:20%"></div>
@@ -228,13 +247,26 @@ economic segregation in the Netherlands
 
 Then, we will upscale the model to national scale, at this phase, we will conduct a national scale simulation.
 
---
+---
 
-<br>
+<!-- Slide 05: Sub aims and outcomes (4) -->
+
+## Sub aims and outcomes
+
+<!-- ## Sub aims and outcomes -->
+
+![](../imgs/research_process/paper_04.svg)
 
 **Aim 4**: Explore the potential of scenario modelling in the policy optimisation to tackle urban economic segregation in the Netherlands
 
 **Paper 4**: Scenario agent-based simulations of mitigating strategies on urban economic segregation in the Netherlands
+
+<div class="summary-footer"> Varying the scenarios to evaluate policy strategies.</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:20%"></div>
+  </div>
+</div>
 
 ???
 
@@ -251,6 +283,58 @@ The last one will be extending the validated national scale baseline model to a 
     <div class="bar-grey" style="width:20%"></div>
   </div>
 </div>
+
+---
+
+## Generative Mechanism and Empirically Grounded ABMs
+
+.image-60[![](../imgs/slr/metainfo_litreview.jpg)]
+
+Large scale empirically grounded agent-based models are not sufficiently address the issue of segregation, let alone in the context of the Netherlands.
+
+<div class="summary-footer">Empirically grounded ABMs are still in need to address generative realism.</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+---
+
+## Review of ABM of UES
+
+.image-60[![](../imgs/slr/metainfo_litreview.jpg)]
+
+Large scale empirically grounded agent-based models are not sufficiently address the issue of segregation, let alone in the context of the Netherlands.
+
+<div class="summary-footer">Empirically grounded ABMs are still in need to address generative realism.</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+---
+
+.right[![](../imgs/design/Combine_Process_granularFramework_50.svg)]
+
+## Mechanisms and processes
+
+Green box: widely included
+
+Red box: not well modelled
+
+<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:95%"></div></div></div>
+
+---
+
+.right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)]
+
+# Review
+
+## Gap
+
+The tenure choice in residential mobility was widely researched theoretically, but rarely modelled together in ABM.
 
 ---
 
@@ -305,18 +389,14 @@ In ABM, there are typically two layers of entities: the actor layer and the envi
 
 <!-- About Agent-Based Modelling: Rules and interactions -->
 
-.right[![](../imgs/design/theoreticalframework.svg)
-.caption[.center[Theoretical framework from micro behaviours <br>to social phenomena through ABM]]]
+## Main components and their interactions
 
-## Agent-Based Modelling
-
-### Rules
+.image-70[![](../imgs/design/components_interactions_entities.svg)]
+<!-- .caption[.center[Main components and their interactions]] -->
 
 - The rules guides how the agents behave and interact with each other.
 
 - These rules are based on both dynamic and static attributes.
-
-### Interactions
 
 - Actors interact with each other and the environment, altering their states.
 
@@ -329,106 +409,67 @@ In ABM, there are typically two layers of entities: the actor layer and the envi
   </div>
 </div>
 
----
-
-# Review of Mechanisms
-
-.right[![](../imgs/slr/slr_classificationclusters_rm.svg)
-.caption[.center[Collection of the related ABMs from the literature]]]
-
-Residential mobility is well-modelled due to its relevance in wide range of social phenomena.
-
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:45%"></div></div></div>
-
----
-
-# Review of Mechanisms
-
-.right[![](../imgs/slr/slr_classificationclusters_em.svg)
-.caption[.center[Collection of the related ABMs from the literature]]]
-
-Residential mobility is well-modelled due to its relevance in wide range of social phenomena.
-
-Economic mobility is less modelled, especially in spatial contexts.
-
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:50%"></div></div></div>
-
----
-
-# Review of Mechanisms
-
-.right[![](../imgs/slr/slr_classificationclusters_seg.svg)
-.caption[.center[Collection of the related ABMs from the literature]]]
-
-Residential mobility is well-modelled due to its relevance in wide range of social phenomena.
-
-Economic mobility is less modelled, especially in spatial contexts.
-
-ABMs of segregation primarily discussed location in segregation but not the complexity of residential choice or economic behaviour.
-
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:55%"></div></div></div>
-
----
-
-# Review of Mechanisms
-
-.right[![](../imgs/slr/slr_classificationclusters_tog.svg)
-.caption[.center[Collection of the related ABMs from the literature]]]
-
-Rather small number of ABMs captured the residential mobility and economic mobility simultaneously in the same segregation model.
-
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:60%"></div></div></div>
-
----
-
-.right[![](../imgs/design/component_design/components_residentialmobility_80.svg)]
-
-## The key components and their interplay
-
-**Residential Mobility Component**
+???
 
 The household make their residential decision, the residence location change can impact the social network change and the economic states.
 
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:75%"></div></div></div>
+Residential mobility is well-modelled due to its relevance in wide range of social phenomena.
 
----
-
-.right[![](../imgs/design/Combine_Process_granularFramework_50.svg)]
-
-## Mechanisms and processes
-
-Green box: widely included
-
-Red box: not well modelled
-
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:95%"></div></div></div>
-
----
-
-.right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)]
-
-# Review
-
-## Gap
-
-The tenure choice in residential mobility was widely researched theoretically, but rarely modelled together in ABM.
+Economic mobility is less modelled, especially in spatial contexts.
 
 ---
 
 <!-- Prototype Model design -->
 
-## Prototype Model design
+## Modular Modelling and Building Blocks
 
-### Case study
+### Multi-scale and multi-level modelling architecture.
 
-.image-40[![](../imgs/nl_casestudy_locationdes.jpg)]
-.caption[.center[Figure. The case of Groningen and its population density.]]
+![](../imgs/multilevelarch.svg)
 
-The [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm) of Groningen.
+<br>
 
-The population of FUA of Groningen is <u>194, 340</u> in 2011 census, aggregated to around <u>80, 000</u> households.
+A collection of interconnected modules, each responsible for specific processes.
 
-.note[*Notes: <sup>a</sup>: each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*]
+The city can be conceptualised as a distinct sub-system.
+
+???
+
+---
+
+## Tentative Mechanisms and Incremental Modelling
+
+.image-50[![](../imgs/design/incrementalmodelling/incmodel_basics.svg)]
+
+A collection of interconnected modules, each responsible for specific processes.
+
+The city can be conceptualised as a distinct sub-system.
+
+
+
+---
+
+## Tentative Mechanisms and Incremental Modelling
+
+<!-- .right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)] -->
+
+.image-50[![](../imgs/design/incrementalmodelling/incmodel_plugins.svg)]
+
+A collection of interconnected modules, each responsible for specific processes.
+
+The city can be conceptualised as a distinct sub-system.
+
+---
+
+## Tentative Mechanisms and Incremental Modelling
+
+<!-- .right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)] -->
+
+.image-50[![](../imgs/design/incrementalmodelling/incmodel_typesplugins.svg)]
+
+A collection of interconnected modules, each responsible for specific processes.
+
+The city can be conceptualised as a distinct sub-system.
 
 ---
 
@@ -498,6 +539,40 @@ The factors of perceived utility of housing include the accessibility to service
 
 ---
 
+<!-- Prototype Model design -->
+
+## Paper 02
+
+### Prototype Model design on Case Model of Groningen
+
+.image-40[![](../imgs/nl_casestudy_locationdes.jpg)]
+.caption[.center[Figure. The case of Groningen and its population density.]]
+
+The [Functional Urban Areas (FUA)<sup>a</sup>](https://www.oecd.org/cfe/regionaldevelopment/functional-urban-areas.htm) of Groningen.
+
+The population of FUA of Groningen is <u>194, 340</u> in 2011 census, aggregated to around <u>80, 000</u> households.
+
+.note[*Notes: <sup>a</sup>: each of FUA consists of a densely inhabited city and of a surrounding area (commuting zone)*]
+
+---
+
+<!-- Prototype Model design -->
+
+## Paper 02
+
+### Glimpse of Modelling Interface and Entities
+
+<div class="row">
+  <div class="column">
+    <img src="../imgs/nl_casestudy_locationdes.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="../imgs/design/entity-des/entities_overview.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
+
+---
+
 ## Overall challenges
 
 ### Diversity of individuals
@@ -545,53 +620,33 @@ We follows the open science principles:
 
 ---
 
-**References**
+Questions?
 
-<div class="references">
-  [1] Ma, Y., Zhenjiang, S.H.E.N. and Kawakami, M., 2013. Agent-based simulation of residential promoting policy effects on downtown revitalization. Journal of Artificial Societies and Social Simulation, 16(2), p.2.
-  <br>
-  [2] Pagani, A., Ballestrazzi, F. and Binder, C.R., 2022, March. Shrinking Housing’s Size: Using Agent-Based Modelling to Explore Measures for a Reduction of Floor Area Per Capita. In Advances in Social Simulation: Proceedings of the 16th Social Simulation Conference, 20–24 September 2021 (pp. 275-287). Cham: Springer International Publishing.
-  <br>
-  [3] Clark, W.A. and Onaka, J.L., 1983. Life cycle and housing adjustment as explanations of residential mobility. Urban studies, 20(1), pp.47-57.
-  <br>
-  [4] Chatterjee, K., Sherwin, H. and Jain, J., 2013. Triggers for changes in cycling: the role of life events and modifications to the external environment. Journal of transport geography, 30, pp.183-193.
-  <br>
-  [5] Tabata, M. and Eshima, N., 2003. A self-referential agent-based model that consists of a large number of agents moving stochastically in a discrete bounded domain. Applied mathematics and computation, 143(2-3), pp.443-483.
-  <br>
-  [6] Cui, J., Pan, Q., Qian, Q., He, M. and Sun, Q., 2013. A multi-agent dynamic model based on different kinds of bequests. Physica A: Statistical Mechanics and its Applications, 392(6), pp.1393-1397.
-  <br>
-  [7] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modelling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
-  <br>
-  [8] Acheampong, R.A. and Asabere, S.B., 2021. Simulating the co-emergence of urban spatial structure and commute patterns in an African metropolis: A geospatial agent-based model. Habitat International, 110, p.102343.
-  <br>
-  [9] Jordan, R., Birkin, M. and Evans, A., 2011. Agent-based modelling of residential mobility, housing choice and regeneration. In Agent-based models of geographical systems (pp. 511-524). Dordrecht: Springer Netherlands.
-  <br>
-  [10] Gil-Quijano, J., 2008. Mechanisms of automated formation and evolution of social-groups: A multi-agent system to model the intra-urban mobilities of Bogotá city. In Social Simulation: Technologies, Advances and New Discoveries (pp. 151-168). IGI Global.
-  <br>
-  [11] Gonzalez-Estevez, J., Cosenza, M.G., López-Ruiz, R. and Sanchez, J.R., 2008. Pareto and Boltzmann–Gibbs behaviours in a deterministic multi-agent system. Physica A: Statistical Mechanics and its Applications, 387(18), pp.4637-4642.
-  <br>
-  [12] Pagani, A., Ballestrazzi, F., Massaro, E. and Binder, C.R., 2022. ReMoTe-S. Residential mobility of tenants in Switzerland: an agent-based model. Journal of Artificial Societies and Social Simulation, 25(2).
-  <br>
-  [13] Silveira, J.J., Espíndola, A.L. and Penna, T.J.P., 2006. Agent-based model to rural–urban migration analysis. Physica A: Statistical Mechanics and its Applications, 364, pp.445-456.
-  <br>
-  [14] Sun, S. and Manson, S.M., 2015. Simple agents, complex emergent city: agent-based modelling of intraurban migration. Computational approaches for urban environments, pp.123-147.
-  <br>
-  [15] Boulahbel-Bachari, S. and El Saadi, N., 2022. Understanding the Labor Market from the Bottom Up with an Agent-Based Model. In Proceedings of the Computational Methods in Systems and Software (pp. 754-769). Cham: Springer International Publishing.
-  <br>
-  [16] Taniguchi, T., Takahashi, Y. and Nishikawa, I., 2010, August. Multi-agent simulation on relationship between individuals' travel behaviour and residential choice behaviour. In Proceedings of SICE Annual Conference 2010 (pp. 1728-1733). IEEE.
-  <br>
-  [17] Fatmi, M.R. and Habib, M.A., 2017. Baseline synthesis and microsimulation of life-stage transitions within an agent-based integrated urban model. Procedia Computer Science, 109, pp.608-615.
-  <br>
-  [18] Haase, D., Lautenbach, S. and Seppelt, R., 2010. Modeling and simulating residential mobility in a shrinking city using an agent-based approach. Environmental Modelling & Software, 25(10), pp.1225-1240.
-  <br>
-  [19] Shen, Z., Ma, Y., Kawakami, M. and Nishino, T., 2012. Development of Agent-Based Model for Simulation on Residential Mobility Affected by Downtown Regeneration Policy. In Intelligent Interactive Multimedia: Systems and Services: Proceedings of the 5th International Conference on Intelligent Interactive Multimedia Systems and Services (IIMSS 2012) (pp. 201-211). Springer Berlin Heidelberg.
-  <br>
-  [20] Buchmann, C.M. and Schwarz, N., 2014. Residential mobility and model complexity-an agent-based modelling experiment on a small shrinking town in Eastern Germany.
-  <br>
-  [21] Rosenfield, A., Chingcuanco, F. and Miller, E.J., 2013. Agent-based housing market microsimulation for integrated land use, transportation, environment model system. Procedia Computer Science, 19, pp.841-846.
-</div>
+---
 
-    </textarea>
+**Appendix 01: what are our contributions of doing such ABM-UES?**
+
+Axelrod and Tesfatsion (2005) points out four goals of ABM:
+
+1. Empirical understanding: seek causal explanations
+
+  This corresponds to the overall project aim of understanding the crucial mechanisms of economic segregation in the Netherlands.
+
+2. Normative understanding: as laboratories for the discovery of good designs (e.g., policies)
+
+  This corresponds to our paper 4.
+
+3. Heuristic: this refers to the counterfactual outcomes could be generated from fundamental causal mechanism. 
+
+  Mostly for abstract ABM, not our goal
+
+4. Methodological advancement: To provide the researchers with rigorous tools to conduct controlled computational experiments.
+
+  This corresponds to our methodological principles such as large scale and modular ABM.
+
+    
+    </textarea> <!-- This is the end of the slides -->
+
 
     <script src="../src/remark-latest.min.js" type="text/javascript">
     </script>

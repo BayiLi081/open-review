@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.5em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -27,7 +27,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  transition: transform ease-in-out 0.3s;
 }
 
 .bar-grey {
@@ -186,15 +185,35 @@ keyword {
   color: #080;
   text-decoration: none;
 }
+.left {
+  float: left;
+  margin-left: 1em;
+}
 .right {
   float: right;
-  margin-left: 1em;
+  /* position: fixed; */
+  /* right: 10px; */
+  /* margin-left: 1em; */
 }
 .pushdown {
   margin-top: 12em;
 }
 
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 48%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 .image-20 img {
   width: 20%;
@@ -292,4 +311,9 @@ iframe { border: 0; width: 100%; }
 
 .remark-slide-number {
   display: none;
+}
+
+.remark-slide-content {
+  background-color: #fff;
+  background-size: contain;
 }
