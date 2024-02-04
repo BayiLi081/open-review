@@ -316,25 +316,94 @@ Large scale empirically grounded agent-based models are not sufficiently address
 
 ---
 
-.right[![](../imgs/design/Combine_Process_granularFramework_50.svg)]
+## Review of ABM of UES
+
+### Other observation
+
+- Single mechanism still dominant the literature, which means, the interplay between mechanisms were largely overlooked
+
+- Data was not well integrated with ABM
+
+- Calibration, validation and robustness analysis are not well conducted.
+
+Large scale empirically grounded agent-based models are not sufficiently address the issue of segregation, let alone in the context of the Netherlands.
+
+<div class="summary-footer">Empirically grounded ABMs are still in need to address generative realism.</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+---
+
+.image-60[.right[![](../imgs/place_holder.jpg)]]
 
 ## Mechanisms and processes
+
+<div class="summary-footer">There are 4 main steps to build the model</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+---
+
+## Model Design Processes
+
+.image-80[![](../imgs/empiricallymode/basics_empirically_mode.svg)]
 
 Green box: widely included
 
 Red box: not well modelled
 
-<div class="probar-footer"><div class="bar-light-grey"><div class="bar-grey" style="width:95%"></div></div></div>
+<div class="summary-footer">There are 4 main steps to build the model</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
 
 ---
 
-.right[![](../imgs/design/Gap_ResearchDesignStructure_50.svg)]
+<!-- Slide: Data driven ABMs -->
 
-# Review
+## Data
 
-## Gap
+.image-80[![](../imgs/empiricallymode/data-driven.svg)]
 
-The tenure choice in residential mobility was widely researched theoretically, but rarely modelled together in ABM.
+Datasource: Microdata from Statistics Netherlands (CBS)
+
+Contribution: Longitudinal, individual-level and national-wide data was rarely applied in ABM mostly due to the limited availability of such data.
+
+<div class="summary-footer">Data is deeply integrated with the model</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+???
+
+In this project, we will apply a longitudinal, individual-level and national-wide microdata from CBS in ABMs. Therefore, we can 
+
+
+
+--
+
+Combined with spatial data
+
+- Synthetic reconstruction of population
+
+  To attach attributes are as close to the real population as it is possible with privacy characteristics randomised.
+
+- Possible directly initialising the model by using the integrated HPC by CBS
+
+???
+
+
+
 
 ---
 
@@ -394,13 +463,11 @@ In ABM, there are typically two layers of entities: the actor layer and the envi
 .image-70[![](../imgs/design/components_interactions_entities.svg)]
 <!-- .caption[.center[Main components and their interactions]] -->
 
-- The rules guides how the agents behave and interact with each other.
+There are **5 main components** categorised by major theoretical expositions of residential economic segregation:
 
-- These rules are based on both dynamic and static attributes.
+- They contain mechanisms that regulate the corresponding activities of agents
 
-- Actors interact with each other and the environment, altering their states.
-
-- The interactions can vary over time and space.
+- They effect intermediate variables or generate signals
 
 <div class="summary-footer"> The mechanisms regulates .</div>
 <div class="probar-footer">
@@ -475,20 +542,37 @@ The city can be conceptualised as a distinct sub-system.
 
 <!-- The life course component -->
 
-### The mechanisms of life course component
+## Synthetic Household Population and their life course
+
+### Heterogeneity of Households
 
 .right[![](../imgs/design/lifecoursemodel/example_life_course_002.svg)
-.caption[.center[Figure. An example of life trajectory, events and impact on household characteristics.]]]
+.caption[.center[Example of life trajectory, events and impact on household characteristics.]]]
 
-**Fundamental stages and essential micro life events**
+- The role of life course component
 
-Life events have the potential to trigger relocation desires, influence preferences for residence and economic states.
+  - Described by probability, driven by summarised Statistics
+
+  - Described by mathematical process (e.g., Markov, Bayesian approach)
+
+- Fundamental stages and essential micro life events
+
+<div class="summary-footer"> The mechanisms regulates .</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+???
+
+
 
 ---
 
 <!-- Residential mobility component -->
 
-.right[![](../imgs/design/utility_preference/preferencebasedutilitycalculation.svg)]
+.right[![](../imgs/place_holder.jpg)]
 
 ### The mechanisms of economic mobility
 
@@ -643,6 +727,36 @@ Axelrod and Tesfatsion (2005) points out four goals of ABM:
 4. Methodological advancement: To provide the researchers with rigorous tools to conduct controlled computational experiments.
 
   This corresponds to our methodological principles such as large scale and modular ABM.
+
+---
+
+**Appendix 02: the challenge of large model**
+
+> More is Different
+
+- The model contains extensive number of agents with a variety of heterogeneity.
+
+- The multi mechanisms adopted
+
+  Modular approach makes it possible to introduce new mechanisms and reduce the non-significant mechanisms.
+
+---
+
+**Appendix 03: the potential changing optimal structure over time**
+
+We are not considering the change of decision making framework over time. It can explain there were rarely abrupt changes .
+
+???
+
+In our project, the mechanism at certain context was considered as stable over time. Of course, it is because we select the endogenous mechanisms on purpose and deliberately omit unexpected events, etc. For example, three years of pandemics significantly change people's worklocation and threfore, xxxx. We have the temporal variation in mind, and will examine it if any irregularity was observed from the empirical data or simulated outcomes.
+
+---
+
+**Appendix 04: the extensive computational cost**
+
+1. We have allocate the resources to computing task on a HPC
+
+2. Given that the aim of the project is to understand urban economic segregation, we will not consider mathematical approaches to reduce the complexity, in paper 2 and 3, for example, machine learning or dimension reduction. However, if time permits, we can explore the mathematically grounded simplification of ABM to balance the potential high computational power increase brought by varying multiple parameter set.
 
     
     </textarea> <!-- This is the end of the slides -->
