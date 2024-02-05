@@ -134,7 +134,7 @@ It generates the urban economic segregation through **autonomous residential and
 ???
 
 (2m'10s) Specifically, we are using agent-based modelling to describe complex behaviours as a generative process from bottom up to the collective segregation pattern.
-ABMs are a bottom-up approach of generative modelling where **heterogenous entities** make autonomous decisions of actions, based on their evolution and that of other entities.
+ABMs are a bottom-up approach of generative modelling where **heterogenous entities** make autonomous decisions of actions, based on their evolution and that of other entities. Agent-based models allow us to capture aspects of systems (such as emergent properties, which arise from the interaction of many agents) that conventional modelling does not permit. 
 
 It is capable of searching for causal mechanism that exhibit generative power of urban economic segregation.
 
@@ -320,13 +320,15 @@ Large scale empirically grounded agent-based models are not sufficiently address
 
 ### Other observation
 
-- Single mechanism still dominant the literature, which means, the interplay between mechanisms were largely overlooked
+- The interplay between mechanisms were largely overlooked
 
-- Data was not well integrated with ABM
+- Overly reliance on assumptions with hypothetical parameter set without empirical support
 
-- Calibration, validation and robustness analysis are not well conducted.
+- We need better ways of populating such models with realistic agent behaviours. 
 
-Large scale empirically grounded agent-based models are not sufficiently address the issue of segregation, let alone in the context of the Netherlands.
+- We has no sufficient scientific and engineering methodology for calibrating and validating such model.
+
+- There is a need of large ABMs to address the multi-scale of urban economic segregation.
 
 <div class="summary-footer">Empirically grounded ABMs are still in need to address generative realism.</div>
 <div class="probar-footer">
@@ -334,6 +336,20 @@ Large scale empirically grounded agent-based models are not sufficiently address
     <div class="bar-grey" style="width:25%"></div>
   </div>
 </div>
+
+???
+
+In addition, we have other observations on the former ABMs of segregation:
+
+- Single mechanism still dominant the literature, which means, the interplay between mechanisms were largely overlooked
+
+- There are huge amount of abstract ABMs. Among them, overly reliance on assumptions with hypothetical parameter set without empirical support
+
+- We need better ways of populating such models with realistic agent behaviours
+
+- Calibration, validation and robustness analysis are not well conducted, even in empirically grounded ABMs. We has no sufficient scientific and engineering methodology for calibrating and validating such model.
+
+- There is rarely large ABM that discuss segregation at multiple scale. Let alone in the context of the Netherlands.
 
 ---
 
@@ -350,13 +366,9 @@ Large scale empirically grounded agent-based models are not sufficiently address
 
 ---
 
-## Model Design Processes
+## Model Building Processes
 
 .image-80[![](../imgs/empiricallymode/basics_empirically_mode.svg)]
-
-Green box: widely included
-
-Red box: not well modelled
 
 <div class="summary-footer">There are 4 main steps to build the model</div>
 <div class="probar-footer">
@@ -365,17 +377,19 @@ Red box: not well modelled
   </div>
 </div>
 
+???
+
+(50s) There are 4 main steps to build the model: The initialisation is to create the initial entities, environment layer, and the interaction rules. After initial test, the calibration is to find an optimal parameter set to generate the observed pattern. Then, a validation test to find the fitness of the generated outputs against empirical observation and robustness of the model. The first three steps, basically, same for the phase 2 and 3 but with different scale. Lastly, parameter variation will be conducted in the last paper on the validated baseline model from phase 3. 
+
 ---
 
 <!-- Slide: Data driven ABMs -->
 
-## Data
+## Empirically Grounded Model with Micordata
 
 .image-80[![](../imgs/empiricallymode/data-driven.svg)]
 
 Datasource: Microdata from Statistics Netherlands (CBS)
-
-Contribution: Longitudinal, individual-level and national-wide data was rarely applied in ABM mostly due to the limited availability of such data.
 
 <div class="summary-footer">Data is deeply integrated with the model</div>
 <div class="probar-footer">
@@ -386,11 +400,9 @@ Contribution: Longitudinal, individual-level and national-wide data was rarely a
 
 ???
 
-In this project, we will apply a longitudinal, individual-level and national-wide microdata from CBS in ABMs. Therefore, we can 
+(30s) In this project, we will use the microdata from CBS to power the model. The application of such granular data, not usually accessible in other countries, can significantly contribute to a meaningful population creation of large ABM. We can also see that the data will be deeply integrated into different procedures of model building. Including interaction rule initiation, calibration and validation.
 
-
-
---
+---
 
 Combined with spatial data
 
@@ -401,9 +413,6 @@ Combined with spatial data
 - Possible directly initialising the model by using the integrated HPC by CBS
 
 ???
-
-
-
 
 ---
 
@@ -566,60 +575,49 @@ The city can be conceptualised as a distinct sub-system.
 
 ???
 
+---
+
 
 
 ---
 
-<!-- Residential mobility component -->
+## Target Simulated Outputs
 
-.right[![](../imgs/place_holder.jpg)]
-
-### The mechanisms of economic mobility
-
-Residential Utility is defined by static attributes and dynamic preference varying over households.
-
-The factors of perceived utility of housing include the accessibility to services, the living unit size fits the household size and the social group by income and demographic background<sup>a</sup>.
-
-.note[*Notes: <sup>a</sup>: The preference level of residing with similar economic and demographic neighbours.*]
-
----
-
-## Measurements of generated outcomes
+A streamlined yet robust baseline model: a model contains essential mechanisms that can generate reliable and consistent results of urban economic segregation. Specifically, the results to check:
 
 ### Statistical Measurements
 
+Rank-Order Information Theory Index (ROITI)<sup>a</sup>
+
 ### Spatial Measurements
 
----
+- Maps of household residences with their respective economic states attached
 
-## Model optimisation
+- clustering (local Moran's I) and concentration (global Moran's I)
 
+### Additional key variables
 
-## Model validation
+- Volume of moves
 
-### Sensitivity and robustness tests
+- Statistical distribution of economic attributes
 
-### Generative realism
+.note[*Notes: <sup>a</sup>: a measure on ranks of economic attributes and more sensitive to the residential concentration of poverty or affluence*]
+
+<div class="summary-footer"> The mechanisms regulates .</div>
+<div class="probar-footer">
+  <div class="bar-light-grey">
+    <div class="bar-grey" style="width:25%"></div>
+  </div>
+</div>
+
+???
+				
+	At each simulation cycle, the model produces a map of household residences with their respective economic states attached. Additionally, the spatial aspects of segregation are calculated using land units to ensure consistency in measurement at the microspatial level across different cities. Tentative measurements include clustering (local Moran's I) and concentration (global Moran's I). In this context, the areas of spatial concentration of poor and affluent can be compared to observed patterns of concentration.
 
 ---
 
 ## Scenario modelling
 
-
-
----
-
-## Evaluation
-
-**What is the ideal ABM of urban economic segregation we are looking for?**
-
-- A general decision making mindset
-
-- A framework that simulated reliable micro behaviours
-
-- A flexible and extendable framework
-
-- A representative model of the target social phenomena with essential actors and mechanisms
 
 ---
 
