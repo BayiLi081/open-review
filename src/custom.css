@@ -83,7 +83,7 @@ div.summary-footer {
 	text-align: left;
 	position: fixed;
 	bottom: 25px;
-	left: 0px;
+	left: 50px;
 	height: 10px;
 	width: 100%;
   margin-left: 3em;
@@ -191,6 +191,14 @@ keyword {
 }
 .right {
   float: right;
+  /* position: fixed; */
+  /* right: 10px; */
+  /* margin-left: 1em; */
+}
+
+.right_half {
+  float: right;
+  width: 50%;
   /* position: fixed; */
   /* right: 10px; */
   /* margin-left: 1em; */
@@ -310,7 +318,18 @@ a.md-logo img {
 iframe { border: 0; width: 100%; }
 
 .remark-slide-number {
-  display: none;
+  font-size: 10pt;
+  color: #000; /* white */
+  opacity: 0.3; /* default: 0.5 */
+  border-top: 0px solid #ccc;
+	text-align: left;
+	position: fixed;
+	bottom: 25px;
+	left: 0px;
+	height: 10px;
+	width: 100%;
+  margin-left: 3em;
+  margin-right: 20em;
 }
 
 .remark-slide-content {
