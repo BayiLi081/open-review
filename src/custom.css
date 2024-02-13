@@ -29,6 +29,11 @@ img {
   margin-bottom: 10px;
 }
 
+ul li {
+  line-height: 1.5em;
+  margin: 5px;
+}
+
 .bar-grey {
   color:#000!important;
   background-color:#00A6D6!important;
